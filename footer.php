@@ -40,7 +40,7 @@
               &copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>
             </div>
             <div class="col-md-4 col-md-offset-4 attribution">
-              <a href="http://www.danvswild.com/brew" target="_blank">BREW</a> theme by <a target="_blank" href="http://www.danvswild.com">Dan vs Wild</a>
+              Boiler theme by <a target="_blank" href="http://dd9.com">DD9</a>
             </div>
           </div> <!-- end .row -->
         </div>
@@ -50,7 +50,7 @@
 
     <!-- all js scripts are loaded in library/bones.php -->
     <?php wp_footer(); ?>
-    <!-- Hello? Doctor? Name? Continue? Yesterday? Tomorrow?  -->
+    
 
   </body>
 
