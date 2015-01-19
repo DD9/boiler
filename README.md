@@ -12,7 +12,7 @@ or perhaps
 
 Create the theme folder (wp-content/themes/boiler) and navigate to it
 
-git submodule add git@github.com:DD9/dd9v2.git .
+git submodule add git@github.com:DD9/boiler.git .
 
 git submodule init
 
