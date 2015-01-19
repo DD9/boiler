@@ -17,3 +17,10 @@ git submodule add git@github.com:DD9/boiler.git .
 git submodule init
 
 git submodule update 
+
+
+--
+
+or perhaps, from the repo root
+
+git submodule add git@github.com:DD9/boiler.git wp-content/themes/boilerdemo
