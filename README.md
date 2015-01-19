@@ -4,6 +4,21 @@ Boilerplate Theme
 ----
 Draft Instructions
 
+--
+
+
+Using Submodules
+
+http://git-scm.com/book/en/v2/Git-Tools-Submodules
+
+From superproject root: 
+
+git submodule add https://github.com/DD9/boiler wp-content/themes/themename
+
+--
+
+Notes:
+
 From the theme folder (wp-content/themes/) in an existing repo
 
 git submodule add https://github.com/DD9/boiler
