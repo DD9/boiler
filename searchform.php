@@ -1,8 +1,8 @@
 <?php
 /**
  * Search Form Template
-
- Author: 320press
+ *
+ * Author: 320press
 **/
 
 ?>

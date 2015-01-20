@@ -13,27 +13,16 @@ sidebars, comments, ect.
 require_once( 'library/navwalker.php' ); // needed for bootstrap navigation
 
 
-// REDUX.  Needed for custom admin panel
-// https://github.com/ReduxFramework/ReduxFramework
-// WIP
-
-if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/library/admin/ReduxCore/framework.php' ) ) {
-	require_once( dirname( __FILE__ ) . '/library/admin/ReduxCore/framework.php' );
-}
-if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/library/option-config.php' ) ) {
-	require_once( dirname( __FILE__ ) . '/library/option-config.php' );
-}
+/************* INSERT THEME FUNCTIONS HERE ********************/
 
 
-// Custom metaboxes and fields
-// https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress
-add_action( 'init', 'be_initialize_cmb_meta_boxes', 9999 );
-function be_initialize_cmb_meta_boxes() {
-  if ( !class_exists( 'cmb_Meta_Box' ) ) {
-    require_once( 'library/metabox/init.php' );
-  }
-}
 
+
+
+
+
+
+/************* BREW & BOILER FILES ********************/
 
 /* library/bones.php (functions specific to BREW)
   - navwalker
@@ -57,14 +46,47 @@ require_once( 'library/brew.php' ); // if you remove this, BREW will break
 	- adding custom fields to user profiles
 */
 require_once( 'library/bones.php' ); // if you remove this, bones will break
+
+
+
+// REDUX.  Needed for custom admin panel
+// https://github.com/ReduxFramework/ReduxFramework
+// WIP
 /*
+if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/library/admin/ReduxCore/framework.php' ) ) {
+  require_once( dirname( __FILE__ ) . '/library/admin/ReduxCore/framework.php' );
+}
+if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/library/option-config.php' ) ) {
+  require_once( dirname( __FILE__ ) . '/library/option-config.php' );
+}
+*/
+
+
+// DISABLED in Boiler
+// Custom metaboxes and fields
+// https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress
+/*
+add_action( 'init', 'be_initialize_cmb_meta_boxes', 9999 );
+function be_initialize_cmb_meta_boxes() {
+  if ( !class_exists( 'cmb_Meta_Box' ) ) {
+    require_once( 'library/metabox/init.php' );
+  }
+}
+*/
+
+
+// DISABLED in Boiler
+/* 
 2. library/custom-post-type.php
 	- an example custom post type
 	- example custom taxonomy (like categories)
 	- example custom taxonomy (like tags)
 */
-require_once( 'library/custom-post-type.php' ); // you can disable this if you like
-/*
+//require_once( 'library/custom-post-type.php' ); // you can disable this if you like
+
+
+// DISABLED in Boiler
+/*  
 3. library/admin.php
 	- removing some default WordPress dashboard widgets
 	- an example custom dashboard widget
@@ -81,9 +103,10 @@ require_once( 'library/custom-post-type.php' ); // you can disable this if you l
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
-add_image_size( 'post-featured', 750, 300, true );
+//add_image_size( 'bones-thumb-600', 600, 150, true );
+//add_image_size( 'bones-thumb-300', 300, 100, true );
+//add_image_size( 'post-featured', 750, 300, true );
+
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you
@@ -166,23 +189,7 @@ function bones_register_sidebars() {
 	and edit the above sidebar code. In order to call
 	your new sidebar just use the following code:
 
-	Just change the name to whatever your new
-	sidebar's id is, for example:
 
-	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __( 'Sidebar 2', 'bonestheme' ),
-		'description' => __( 'The second (secondary) sidebar.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-
-	To call the sidebar in your template, you can just copy
-	the sidebar.php file and rename it to your sidebar's name.
-	So using the above example, it would be:
-	sidebar-sidebar2.php
 
 	*/
 } // don't remove this bracket!

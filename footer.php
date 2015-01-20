@@ -40,7 +40,7 @@
               &copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>
             </div>
             <div class="col-md-4 col-md-offset-4 attribution">
-              Boiler theme by <a target="_blank" href="http://dd9.com">DD9</a>
+              Boiler theme by <a target="_blank" href="http://dd9.com">DD9</a> - <a href="/wp-admin">Admin Login</a>
             </div>
           </div> <!-- end .row -->
         </div>
@@ -48,10 +48,8 @@
 
     </footer> <!-- end footer -->
 
-    <!-- all js scripts are loaded in library/bones.php -->
+    <?php  #all js scripts are loaded in library/bones.php ?>
     <?php wp_footer(); ?>
     
-
   </body>
-
-</html> <!-- end page. what a ride! -->
+</html>

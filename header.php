@@ -31,6 +31,7 @@
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
     
+    <?php //Icluding external font-awesome for the time being ?>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 

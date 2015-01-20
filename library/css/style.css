@@ -295,12 +295,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #b40027;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #680016;
   text-decoration: underline;
 }
 a:focus {
@@ -533,10 +533,10 @@ mark,
   color: #777777;
 }
 .text-primary {
-  color: #337ab7;
+  color: #b40027;
 }
 a.text-primary:hover {
-  color: #286090;
+  color: #81001c;
 }
 .text-success {
   color: #3c763d;
@@ -564,10 +564,10 @@ a.text-danger:hover {
 }
 .bg-primary {
   color: #fff;
-  background-color: #337ab7;
+  background-color: #b40027;
 }
 a.bg-primary:hover {
-  background-color: #286090;
+  background-color: #81001c;
 }
 .bg-success {
   background-color: #dff0d8;
@@ -2268,8 +2268,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #b40027;
+  border-color: #9b0021;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2278,8 +2278,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #81001c;
+  border-color: #5d0014;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -2304,11 +2304,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #b40027;
+  border-color: #9b0021;
 }
 .btn-primary .badge {
-  color: #337ab7;
+  color: #b40027;
   background-color: #ffffff;
 }
 .btn-success {
@@ -2492,7 +2492,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #337ab7;
+  color: #b40027;
   font-weight: normal;
   border-radius: 0;
 }
@@ -2513,7 +2513,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #23527c;
+  color: #680016;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -2660,7 +2660,7 @@ tbody.collapse.in {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #337ab7;
+  background-color: #b40027;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -3086,7 +3086,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #337ab7;
+  border-color: #b40027;
 }
 .nav .nav-divider {
   height: 1px;
@@ -3179,7 +3179,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #337ab7;
+  background-color: #b40027;
 }
 .nav-stacked > li {
   float: none;
@@ -3806,7 +3806,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.428571429;
   text-decoration: none;
-  color: #337ab7;
+  color: #b40027;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   margin-left: -1px;
@@ -3826,7 +3826,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #23527c;
+  color: #680016;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -3838,8 +3838,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > span:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #b40027;
+  border-color: #b40027;
   cursor: default;
 }
 .pagination > .disabled > span,
@@ -3954,11 +3954,11 @@ a.label:focus {
   background-color: #5e5e5e;
 }
 .label-primary {
-  background-color: #337ab7;
+  background-color: #b40027;
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #286090;
+  background-color: #81001c;
 }
 .label-success {
   background-color: #5cb85c;
@@ -4021,7 +4021,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #337ab7;
+  color: #b40027;
   background-color: #ffffff;
 }
 .list-group-item > .badge {
@@ -4092,7 +4092,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #337ab7;
+  border-color: #b40027;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -4206,7 +4206,7 @@ a.thumbnail.active {
   line-height: 20px;
   color: #ffffff;
   text-align: center;
-  background-color: #337ab7;
+  background-color: #b40027;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
@@ -4358,8 +4358,8 @@ a.list-group-item:focus {
 .list-group-item.active:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #b40027;
+  border-color: #b40027;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
@@ -4375,7 +4375,7 @@ a.list-group-item:focus {
 .list-group-item.active .list-group-item-text,
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
-  color: #c7ddef;
+  color: #ff819c;
 }
 .list-group-item-success {
   color: #3c763d;
@@ -4723,22 +4723,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #dddddd;
 }
 .panel-primary {
-  border-color: #337ab7;
+  border-color: #b40027;
 }
 .panel-primary > .panel-heading {
   color: #ffffff;
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #b40027;
+  border-color: #b40027;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #337ab7;
+  border-top-color: #b40027;
 }
 .panel-primary > .panel-heading .badge {
-  color: #337ab7;
+  color: #b40027;
   background-color: #ffffff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #337ab7;
+  border-bottom-color: #b40027;
 }
 .panel-success {
   border-color: #d6e9c6;
@@ -5934,7 +5934,7 @@ Stylesheet: Comments
   border-left: 1px solid #eee;
 }
 .commentlist .bypostauthor {
-  background: #d5e5f3;
+  background: #ff93aa;
 }
 .commentlist .comment-author {
   width: 10%;
@@ -6164,7 +6164,7 @@ Stylesheet: Footer
 
 ******************************************************************/
 #footer {
-  border-top: 5px solid #337ab7;
+  border-top: 5px solid #b40027;
   background: #3b3b3b;
   padding-top: 30px;
   margin-top: 60px;
@@ -6579,15 +6579,101 @@ PAGINATION
 *********************/
 .pagination li a:hover,
 .pagination li a:focus {
-  background-color: #337ab7;
+  background-color: #b40027;
   color: #fff;
 }
 .pagination li .active,
 .pagination li span:hover {
-  background-color: #5094ce;
+  background-color: #e70032;
   color: #fff;
 }
 /* end pagination */
+/******************************************************************
+Site Name: DD9 Boiler 
+Author: DD9
+
+This is just for the sample Boiler site.  Feel free to delete
+
+******************************************************************/
+.featured {
+  margin-bottom: 40px;
+}
+@media (min-width: 992px) {
+  .featured {
+    margin-bottom: 0;
+  }
+}
+.homebanner {
+  margin-bottom: 60px;
+  padding-top: 30px;
+  text-align: center;
+  height: 350px;
+  background: url('../images/redbg_office_external.jpg') #b40027;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+}
+@media (min-width: 480px) {
+  .homebanner {
+    padding-top: 70px;
+  }
+}
+.homebanner p {
+  font-size: 18px;
+}
+.homebanner h1 {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.homebanner .btn-default {
+  background: none;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.homebanner .btn-primary {
+  background: none;
+  border: 2px solid #fff;
+  margin-left: 20px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.homebanner .btn-default:hover {
+  background: white;
+  color: #000;
+}
+.homebanner .btn-primary:hover {
+  background: white;
+  color: #000;
+}
+.about {
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .about {
+    margin-bottom: 0px;
+  }
+}
+.about a {
+  text-decoration: none;
+}
+.about i {
+  color: #929292;
+}
+.about p {
+  color: #929292;
+}
+.about h3 {
+  color: #b40027;
+}
+.about:hover i {
+  color: #626c72;
+  transition: all 0.35s ease;
+}
 /*
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
