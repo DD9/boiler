@@ -15,27 +15,17 @@ From superproject root:
 
 git submodule add https://github.com/DD9/boiler wp-content/themes/themename
 
---
-
-Notes:
-
-From the theme folder (wp-content/themes/) in an existing repo
-
-git submodule add https://github.com/DD9/boiler
-
-or perhaps
-
-Create the theme folder (wp-content/themes/boiler) and navigate to it
-
-git submodule add git@github.com:DD9/boiler.git .
-
-git submodule init
-
-git submodule update 
-
 
 --
 
-or perhaps, from the repo root
+Using Subtrees
 
-git submodule add git@github.com:DD9/boiler.git wp-content/themes/boilerdemo
+https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844
+
+From superproject root: 
+
+git remote add boiler git@github.com:dd9/boiler.git
+
+git subtree add --prefix=wp-content/themes/themename/ boiler master
+
+
