@@ -127,16 +127,16 @@ function bones_scripts_and_styles() {
 
     // js bootstrap
     // download a custom file @ getbootstrap.com/customize/ if you don't want all js components
-    wp_register_script( 'bones-bootstrap', get_template_directory_uri() . '/library/js/libs/bootstrap.min.js', array(), '3.0.0', true );
+    wp_register_script( 'boiler-bootstrap', get_template_directory_uri() . '/library/js/libs/bootstrap.min.js', array(), '3.3.2', true );
 
     // modernizr (without media query polyfill)
-    wp_register_script( 'bones-modernizr', get_template_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+    wp_register_script( 'boiler-modernizr', get_template_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
     // register main stylesheet
-    wp_register_style( 'bones-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+    wp_register_style( 'boiler-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '', 'all' );
 
     // ie-only style sheet
-    wp_register_style( 'bones-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '' );
+    wp_register_style( 'boiler-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '' );
 
     // FitVid (responsive video)
     wp_register_script( 'fitvids', get_template_directory_uri() . '/library/js/libs/FitVids.js-master/jquery.fitvids.js', array('jquery'), '', TRUE );
@@ -149,15 +149,15 @@ function bones_scripts_and_styles() {
     }
 
     //adding scripts file in the footer
-    wp_register_script( 'bones-js', get_template_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+    wp_register_script( 'boiler-js', get_template_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 
 
     // enqueue styles and scripts
-    wp_enqueue_script( 'bones-modernizr' );
-    wp_enqueue_style( 'bones-stylesheet' );
-    wp_enqueue_style( 'bones-ie-only' );
+    wp_enqueue_script( 'boiler-modernizr' );
+    wp_enqueue_style( 'boiler-stylesheet' );
+    wp_enqueue_style( 'boiler-ie-only' );
 
-    $wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+    $wp_styles->add_data( 'boiler-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
     /*
     I recommend using a plugin to call jQuery
@@ -165,8 +165,8 @@ function bones_scripts_and_styles() {
     and your site will load faster.
     */
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'bones-js' );
-    wp_enqueue_script( 'bones-bootstrap' );
+    wp_enqueue_script( 'boiler-js' );
+    wp_enqueue_script( 'boiler-bootstrap' );
     wp_enqueue_script( 'fitvids');
     wp_enqueue_script( 'fitvids-xtra');
 
@@ -204,6 +204,7 @@ function bones_theme_support() {
 	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
 
 	// adding post format support
+  /*
 	add_theme_support( 'post-formats',
 		array(
 			'aside',             // title less blurb
@@ -217,7 +218,7 @@ function bones_theme_support() {
 			'chat'               // chat transcript
 		)
 	);
-
+  */
 	// wp menus
 	add_theme_support( 'menus' );
 

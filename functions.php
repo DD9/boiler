@@ -23,6 +23,15 @@ require_once( 'library/navwalker.php' ); // needed for bootstrap navigation
 
 
 /************* BREW & BOILER FILES ********************/
+//Bootstrap 3.3.2 requires Jquery 1.9.1 or higher
+
+function enqueue_jquery_script() {
+  wp_deregister_script('jquery');
+  wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"), false);
+  wp_enqueue_script('jquery');
+}
+add_action('wp_enqueue_scripts', 'enqueue_jquery_script');
+
 
 /* library/bones.php (functions specific to BREW)
   - navwalker
