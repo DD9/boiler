@@ -28,4 +28,7 @@ git remote add boiler git@github.com:dd9/boiler.git
 
 git subtree add --prefix=wp-content/themes/themename/ boiler master
 
+To pull down upstream changes
+
+git subtree pull --prefix=wp-content/themes/themename/ --squash boiler master
 
