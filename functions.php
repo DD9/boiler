@@ -58,30 +58,6 @@ require_once( 'library/bones.php' ); // if you remove this, bones will break
 
 
 
-// REDUX.  Needed for custom admin panel
-// https://github.com/ReduxFramework/ReduxFramework
-// WIP
-/*
-if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/library/admin/ReduxCore/framework.php' ) ) {
-  require_once( dirname( __FILE__ ) . '/library/admin/ReduxCore/framework.php' );
-}
-if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/library/option-config.php' ) ) {
-  require_once( dirname( __FILE__ ) . '/library/option-config.php' );
-}
-*/
-
-
-// DISABLED in Boiler
-// Custom metaboxes and fields
-// https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress
-/*
-add_action( 'init', 'be_initialize_cmb_meta_boxes', 9999 );
-function be_initialize_cmb_meta_boxes() {
-  if ( !class_exists( 'cmb_Meta_Box' ) ) {
-    require_once( 'library/metabox/init.php' );
-  }
-}
-*/
 
 
 // DISABLED in Boiler
@@ -93,21 +69,6 @@ function be_initialize_cmb_meta_boxes() {
 */
 //require_once( 'library/custom-post-type.php' ); // you can disable this if you like
 
-
-// DISABLED in Boiler
-/*  
-3. library/admin.php
-	- removing some default WordPress dashboard widgets
-	- an example custom dashboard widget
-	- adding custom login css
-	- changing text in footer of admin
-*/
-// require_once( 'library/admin.php' ); // this comes turned off by default
-/*
-4. library/translation/translation.php
-	- adding support for other languages
-*/
-// require_once( 'library/translation/translation.php' ); // this comes turned off by default
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
