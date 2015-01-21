@@ -32,3 +32,9 @@ To pull down upstream changes
 
 git subtree pull --prefix=wp-content/themes/themename --squash boiler master
 
+To push changes back to boiler theme from within a different superproject root:
+
+git subtree push --prefix=wp-content/themes/themename boiler master
+
+(Pushes to master branch, will work for DD9 team authorized to deploy here)
+
