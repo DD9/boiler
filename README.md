@@ -6,7 +6,11 @@ Draft Instructions
 
 --
 
-#As a solo repo
+#Install Boiler
+
+--
+
+##As a solo repo
 
 Create a WordPress install (probably local)
 
@@ -18,7 +22,7 @@ git clone git@github.com:dd9/boiler.git .
 
 --
 
-#Using Submodules
+##Using Submodules
 
 http://git-scm.com/book/en/v2/Git-Tools-Submodules
 
@@ -30,7 +34,7 @@ git submodule add https://github.com/DD9/boiler wp-content/themes/themename
 
 --
 
-#Using Subtrees
+##Using Subtrees
 
 https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844
 
@@ -54,4 +58,24 @@ To push changes back to boiler theme from within a different superproject root:
 git subtree push --prefix=wp-content/themes/themename boiler master
 ```
 *(Pushes to master branch, will work for DD9 team authorized to deploy here)*
+
+---
+
+#Compile Boiler
+
+In /library/css
+
+Copy/clone/create
+
+```
+ie.css
+login.css
+style.css
+```
+Configure LESS compiler to target these files.
+
+*(These files have been removed from boiler because they should be generated on the theme level, not inherited from the parent repo)*
+
+
+
 
