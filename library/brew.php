@@ -45,7 +45,7 @@ function emm_paginate($args = null) {
     $output = "";
     if ($pages > 1) {   
         $output .= "$before";
-        $ellipsis = "<li>...</li>";
+        $ellipsis = "<li><span>...</span></li>";
 
         if ($page > 1 && !empty($previouspage)) {
             $output .= "<li><a href='" . get_pagenum_link($page - 1) . "'>$previouspage</a></li>";
