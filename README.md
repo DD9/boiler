@@ -63,18 +63,16 @@ git subtree push --prefix=wp-content/themes/themename boiler master
 
 #Compile Boiler
 
-In /library/css
-
-Copy/clone/create
+Configure LESS compiler to target these files in /library/css
 
 ```
 ie.css
 login.css
 style.css
 ```
-Configure LESS compiler to target these files.
 
-*(These files have been removed from boiler because they should be generated on the theme level, not inherited from the parent repo)*
+
+*(We may end up removing these files because they should be generated on the theme level, not inherited from the parent repo)*
 
 
 
