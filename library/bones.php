@@ -138,10 +138,8 @@ function bones_scripts_and_styles() {
     // ie-only style sheet
     wp_register_style( 'boiler-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '' );
 
-    // FitVid (responsive video)
+    // FitVid (responsive video) FYI: Script is initialized in /library/js/scripts.js by calling the container element
     wp_register_script( 'fitvids', get_template_directory_uri() . '/library/js/libs/FitVids.js-master/jquery.fitvids.js', array('jquery'), '', TRUE );
-    wp_register_script( 'fitvids-xtra', get_template_directory_uri() . '/library/js/fitvid.js', array(), '', TRUE );
-
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {

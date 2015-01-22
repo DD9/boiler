@@ -106,3 +106,16 @@ jQuery(document).ready(function($) {
 	w.addEventListener( "orientationchange", restoreZoom, false );
 	w.addEventListener( "devicemotion", checkTilt, false );
 })( this );
+
+
+
+/*
+Initialize FitVids
+*/
+(function($) {
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".container").fitVids();
+  });
+  
+})(jQuery);
