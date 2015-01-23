@@ -5807,6 +5807,18 @@ cite {
   border: 2px solid #cfcfcf;
 }
 /* end .gallery */
+@media (max-width: 768px) {
+  img.alignright,
+  .wp-caption.alignright,
+  img.alignleft,
+  .wp-caption.alignleft,
+  img.aligncenter,
+  .wp-caption.aligncenter {
+    display: block;
+    float: none;
+    margin: 0 auto 24px;
+  }
+}
 /******************************************************************
 Site Name: BREW
 Author: Dan Brown
@@ -6596,6 +6608,10 @@ This is just for the sample Boiler site.  Feel free to delete
 .about:hover i {
   color: #626c72;
   transition: all 0.35s ease;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 .reset-list {
   margin: 0;

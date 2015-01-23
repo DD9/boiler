@@ -13,7 +13,6 @@ This stylesheet contains various snippets of CSS needed for WP Core
   word-wrap: break-word;
 }
 
-
 .alignnone {
   margin: 5px 20px 20px 0;
 }
@@ -102,3 +101,12 @@ cite {
     }
   }
 } /* end .gallery */
+
+
+@media (max-width: @screen-sm-min) {
+  img.alignright, .wp-caption.alignright, img.alignleft, .wp-caption.alignleft, img.aligncenter, .wp-caption.aligncenter {
+    display: block;
+    float: none;
+    margin: 0 auto 24px;
+  }
+}
