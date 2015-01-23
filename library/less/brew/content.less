@@ -40,10 +40,6 @@ These are the styles for posts, pages, archive, & blog index
 
 .hentry, #comments, .respond-form {
   margin: 0 0 20px 0;
-  border-radius: 0px;
-  background: #fff;
-  .box-shadow(0 1px 1px rgba(0,0,0,0.05) );
-  border: 1px solid #ddd;
 }
 
 
@@ -53,10 +49,8 @@ These are the styles for posts, pages, archive, & blog index
 ********************************/
 
 // all headers
-.article-header, {
-  margin-bottom: 15px;
-  padding: 20px 20px 0;
-  h1, h2, h3, h4, h5, h6 {margin-top: 0;}
+.article-header {
+ 
 }
 
 // specific headers
@@ -67,21 +61,7 @@ These are the styles for posts, pages, archive, & blog index
 
 // all titles
 .entry-title {
-  margin: 0 0 5px;
-  font-weight: 400;
-  font-size: 28px;
-  @media (min-width: @screen-md) {
-    font-size: 38px;
-  }
-  line-height: 1.2;
-  a, a:visited { 
-  	color: #444; 
-  	.transition (color .2s ease);
-  }
-  a:hover, a:active { 
-    color: #888;
-    text-decoration: none;
-  }
+
 }
 
 // specific titles
@@ -92,7 +72,7 @@ These are the styles for posts, pages, archive, & blog index
 }
 
 .byline {
-  color: #999;
+  color: @gray-light;
   margin: 0;
   font-size: 14px;
   time {}
@@ -122,7 +102,6 @@ These are the styles for posts, pages, archive, & blog index
   margin-bottom: 20px;
 }
 
-
 .featured-img-bg {
   height: 300px;
   background-width: 100% !important;
@@ -139,116 +118,15 @@ These are the styles for posts, pages, archive, & blog index
 }
 
 
-
-/*******************************
-05. ENTRY CONTENT
-********************************/
-
-// all content
-.entry-content {
-	padding: 0 20px 20px;
-  p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  > ol, > ul {
-    margin: 0 0 20px 10px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  ul, ol, table, dl {}
-  
-  ul, ol {
-    li {}
-  }
-
-  ul {
-    li {}
-  }
-
-  ol {
-    li {}
-  }
-
-  blockquote {
-    &:before {}
-  }
-
-  dl {}
-  dt {}
-  dd {
-    margin-left: 0;
-    font-size: 0.9em;
-    color: #787878;
-    margin-bottom: 1.5em;
-  }
-
-  .alignleft, img.alignleft {}
-  .alignright, img.alignright {}
-  .aligncenter, img.aligncenter {}
-
-  video, object {
-    max-width: 100%;
-    height: auto;
-  }
-
-  pre {
-    background: #eee;
-    border: 1px solid #cecece;
-    padding: 10px;
-  }
-
-} /* end entry-content */
-
-// specific content
-.page-content {}
-.single-content {}
-
-// captions
-.wp-caption {
-  img {}
-  p.wp-caption-text {}
-}
-
-// image galleries
-
-.gallery {
-  dl {
-    a {}
-    img {}
-  }
-  dt {}
-  dd {}
-}
-
-// gallery caption styles
-.gallery-caption {}
-
-// target specific image sizes
-.size-full {}
-.size-large {}
-.size-medium {}
-.size-thumbnail {}
-
-
-
-
-
 /*******************************
 06. ENTRY FOOTER
 ********************************/
 
 // loop footer + single footer
 .article-footer  {
-  padding: 10px 20px 10px;
-  border-top: 1px solid #eee;
-  color: #888;
+  padding: 10px 0;
+  border-top: 1px solid @gray-lighter;
+  color: @gray-light;
   font-size: 12px;
   .commentnum {
   	text-align: right;
