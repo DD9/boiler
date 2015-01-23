@@ -1,0 +1,320 @@
+/* Shortcodes
+----------------------------------------------------------------------------------------*/
+
+/* Clear Floats
+================================================== */
+.symple-clear-floats {
+  clear: both;
+}
+
+.symple-clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* Special Link
+================================================== */
+.special_link {
+  padding: 0;
+  line-height: 18px;
+  &:hover {
+  }
+}
+
+/* Special List
+================================================== */
+.special_list ol {
+  counter-reset: li;
+  margin: 0 0 36px 0;
+  padding: 0;
+  li {
+    list-style: none outside none;
+    margin: 0 0 10px;
+    padding: 2px 0 0 40px;
+    position: relative;
+    min-height: 36px;
+  }
+   > li:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: none repeat scroll 0 0 @gray-lighter;
+    color: #FFF;
+    content: counter(li, decimal);
+    counter-increment: li;
+    display: block;
+    font-weight: 800;
+    left:0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+  }
+}
+
+.special_list > p:empty {
+  display: none;
+}
+
+
+.special_list ul {
+  .reset-list;
+
+  li {
+    .h5;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  li:before {
+    //.fa;
+    content: "\f054";
+    width:15px;
+    height: 10px;
+    display: inline-block;
+  }
+}
+
+/* Spacing
+================================================== */
+.symple-spacing {
+  display: block;
+  height: auto; 
+  margin: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.symple-divider {
+  clear: both;
+}
+
+/* Testimonial
+================================================== */
+// See Blockquote styles
+
+/* Pullquote
+================================================== */
+.pullquote {
+  font-size: 21px;
+  line-height: 32px;
+  margin-bottom: 24px;
+}
+
+.pullquote.right {
+  border-left: 1px solid @gray-lighter;
+  margin: 5px 0 12px 12px;
+  padding: 12px 0 12px 24px;
+  float: right;
+  width: 180px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.pullquote.left {
+  border-right: 1px solid @gray-lighter;
+  margin: 5px 24px 12px 0;
+  padding: 12px 12px 12px 0;
+  float: left;
+  width: 180px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Toggle
+================================================== */
+.symple-toggle {
+  margin: 0 0 3px;
+  border-top:1px solid @gray-lighter;
+}
+.symple-toggle.last {
+  margin-bottom: @line-height-base;
+}
+.symple-toggle .symple-toggle-trigger {
+  color: @gray;
+  display: block;
+  border:none;
+  font-size: 20px;
+  padding: 0;
+  background: none no-repeat right center transparent;
+  outline: 0;
+  margin: 0;
+  cursor: pointer;
+  .transition(all .2s ease-in);
+  .clearfix;
+  text-transform: none;
+  letter-spacing: normal;
+  position: relative;
+}
+
+.symple-toggle-trigger > span {
+  float: left;
+  font-size: 18px;
+  padding: 18px 0;
+  width: 82%;
+}
+
+.toggle_icon {
+  //#gradient > .vertical(lighten(@brand-primary, 5%), @brand-primary, 20%, 80%);  
+  display: block;
+  float: none;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  color: @gray;
+}
+
+.symple-toggle-trigger > .toggle_icon .fa {
+  display: block;
+  margin: 0 auto;
+  line-height: 70px;
+  width: 24px;
+  .transition(all .2s ease-in);
+  font-size: 1.1em;
+}
+
+.symple-toggle-trigger > .toggle_icon .fa-minus {
+  display: none;
+}
+
+.symple-toggle.last .symple-toggle-trigger {
+}
+
+.symple-toggle .symple-toggle-trigger:hover {
+  background: none no-repeat right center transparent;
+  color: @brand-primary;
+  text-decoration: none;
+}
+
+.symple-toggle .symple-toggle-trigger.active,
+.symple-toggle .symple-toggle-trigger.active:hover {
+  color: @brand-primary;
+  background: none no-repeat right center transparent;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.symple-toggle .symple-toggle-trigger:hover > .toggle_icon .fa {
+  color: @brand-primary;
+}
+
+.symple-toggle .symple-toggle-trigger.active > .toggle_icon .fa-minus,
+.symple-toggle .symple-toggle-trigger.active:hover  > .toggle_icon .fa-minus {
+  display: block;
+  color: @brand-primary;
+}
+
+.symple-toggle .symple-toggle-trigger.active > .toggle_icon .fa-plus,
+.symple-toggle .symple-toggle-trigger.active:hover > .toggle_icon .fa-plus {
+  display: none;
+  color: @brand-primary;
+}
+
+.symple-toggle .symple-toggle-container {
+  border:none;
+  display: none;
+  overflow: hidden;
+  margin: 0 0 @line-height-base 0;
+  padding: 0;
+}
+.symple-toggle.last .symple-toggle-container {
+  
+}
+
+.symple-toggle-container > p:empty {
+  display: none;
+}
+
+
+/* Columns
+================================================== */
+.symple-one-half {
+  width: 48%;
+}
+
+.symple-one-third {
+  width: 30.66%;
+}
+
+.symple-two-third {
+  width: 65.33%;
+}
+
+.symple-one-fourth {
+  width: 22%;
+}
+
+.symple-three-fourth {
+  width: 74%;
+}
+
+.symple-one-fifth {
+  width: 16.8%;
+}
+
+.symple-two-fifth {
+  width: 37.6%;
+}
+
+.symple-three-fifth {
+  width: 58.4%;
+}
+
+.symple-four-fifth {
+  width: 67.2%;
+}
+
+.symple-one-sixth {
+  width: 13.33%;
+}
+
+.symple-five-sixth {
+  width: 82.67%;
+}
+
+.symple-one-half, .symple-one-third, .symple-two-third, .symple-three-fourth, .symple-one-fourth, .symple-one-fifth, .symple-two-fifth,.symple-three-fifth, .symple-four-fifth, .symple-one-sixth, .symple-five-sixth {
+  position: relative;
+  margin-right: 4%;
+  margin-bottom: 2em;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.symple-column-last {
+  margin-right: 0!important;
+  clear: right;
+}
+.symple-column-last:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+
+@media (max-width: @screen-sm-min) {
+  .symple-column, .symple-one-half, .symple-one-third, .symple-two-third, .symple-three-fourth, .symple-one-fourth, .symple-one-fifth, .symple-two-fifth,.symple-three-fifth, .symple-four-fifth, .symple-one-sixth, .symple-five-sixth {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+
+
+
+

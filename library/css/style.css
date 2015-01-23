@@ -6597,6 +6597,27 @@ This is just for the sample Boiler site.  Feel free to delete
   color: #626c72;
   transition: all 0.35s ease;
 }
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*
+.fa {
+  -moz-font-feature-settings: normal;
+  -moz-font-language-override: normal;
+  -moz-osx-font-smoothing: grayscale;
+  //display: inline-block;
+  font-family: FontAwesome;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+*/
 /*
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
