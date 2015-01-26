@@ -1,0 +1,73 @@
+/******************************************************************
+Stylesheet: Global Stylesheet
+******************************************************************/
+
+
+
+// Headings
+// -------------------------
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+
+	a {}
+}
+
+h1, .h1 {}
+
+h2, .h2 {}
+
+h3, .h3 {}
+
+h4, .h4 {}
+
+h5, .h5 {}
+
+
+// Link Styles
+// -------------------------
+
+a, a:visited {
+
+	.transition(all .2s ease);
+
+	/* on hover */
+	&:hover, &:focus {
+		text-decoration: none;
+    outline: 0 none;
+	}
+
+	/* on click */
+	&:active {}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+	}
+}
+
+.post-edit-link{
+	.btn-sm;
+	.btn-warning;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2000;
+}
+
+a.full_width {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+
+// Blockquotes
+// -------------------------

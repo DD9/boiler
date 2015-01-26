@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name: Brew
-Author: Dan Brown
+Site Name: DD9 Boiler 
+Author: DD9
 
 Stylesheet: Body
 
@@ -8,6 +8,16 @@ Wordpress automatically adds classes to certain pages.  You can target
 pages with something such as  body.tag or body.archive
 ******************************************************************/
 
+
+body {
+  padding-top: @navbar-height; // THIS IS IF YOU HAVE top-nav-fixed ENABLED
+  &.admin-bar .navbar-fixed-top { // THIS FIXES THE TOP NAV WHEN ADMIN BAR IS ENABLED
+  	top: 46px;
+  	@media (min-width: 783px) {
+    	top: 32px;
+ 		}
+ 	}
+}
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
 .home {}                          /* home page */

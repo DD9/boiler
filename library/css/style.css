@@ -5724,8 +5724,8 @@ button.close {
   }
 }
 /******************************************************************
-Site Name: BREW
-Author: Dan Brown
+Site Name: DD9 Boiler 
+Author: DD9
 
 Stylesheet: WP Core Styles
 
@@ -5820,36 +5820,23 @@ cite {
   }
 }
 /******************************************************************
-Site Name: BREW
-Author: Dan Brown
-
 Stylesheet: Global Stylesheet
-
-Styles and classes used throughout the entire BREW framework
-
 ******************************************************************/
-body {
-  padding-top: 50px;
-}
-body.admin-bar .navbar-fixed-top {
-  top: 46px;
-}
-@media (min-width: 783px) {
-  body.admin-bar .navbar-fixed-top {
-    top: 32px;
-  }
-}
-/******************************************************************
-H1, H2, H3, H4, H5 STYLES
-******************************************************************/
-/*********************
-LINK STYLES
-*********************/
 a,
 a:visited {
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   /* on hover */
   /* on click */
   /* mobile tap color */
+}
+a:hover,
+a:visited:hover,
+a:focus,
+a:visited:focus {
+  text-decoration: none;
+  outline: 0 none;
 }
 a:link,
 a:visited:link {
@@ -5912,9 +5899,18 @@ fieldset[disabled] .post-edit-link.active {
   color: #f0ad4e;
   background-color: #ffffff;
 }
+a.full_width {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
 /******************************************************************
-Site Name: BREW
-Author: Dan Brown
+Site Name: DD9 Boiler 
+Author: DD9
 
 Stylesheet: Comments
 
@@ -6093,8 +6089,8 @@ Stylesheet: Tables
   border-top: 0;
 }
 /******************************************************************
-Site Name: BREW
-Author: Dan Brown
+Site Name: DD9 Boiler 
+Author: DD9
 
 Stylesheet: Form Styles
 
@@ -6199,8 +6195,8 @@ Stylesheet: Sidebars
   /* deep nesting */
 }
 /******************************************************************
-Site Name: BREW
-Author: Dan Brown
+Site Name: DD9 Boiler 
+Author: DD9
 
 Stylesheet: Footer
 
@@ -6263,13 +6259,12 @@ Stylesheet: Footer
   }
 }
 /******************************************************************
-Site Name: Brew
-Author: Dan Brown
+Site Name: DD9 Boiler 
+Author: DD9
 
 Stylesheet: Content Styles
 
 These are the styles for posts, pages, archive, & blog index
-
 
 
 ------------ MAP ------------
@@ -6376,8 +6371,8 @@ These are the styles for posts, pages, archive, & blog index
   text-decoration: none;
 }
 /******************************************************************
-Site Name: BREW
-Author: Dan Brown
+Site Name: DD9 Boiler 
+Author: DD9
 
 Stylesheet: Header & Navigation
 
@@ -6396,14 +6391,25 @@ and more scalable.
 }
 /* end .nav */
 /******************************************************************
-Site Name: Brew
-Author: Dan Brown
+Site Name: DD9 Boiler 
+Author: DD9
 
 Stylesheet: Body
 
 Wordpress automatically adds classes to certain pages.  You can target
 pages with something such as  body.tag or body.archive
 ******************************************************************/
+body {
+  padding-top: 50px;
+}
+body.admin-bar .navbar-fixed-top {
+  top: 46px;
+}
+@media (min-width: 783px) {
+  body.admin-bar .navbar-fixed-top {
+    top: 32px;
+  }
+}
 /* for sites that are read right to left (i.e. hebrew) */
 /* home page */
 /* blog template page */
@@ -6440,8 +6446,8 @@ pages with something such as  body.tag or body.archive
 /* paged items like search results or archives */
 /* individual paged (i.e. body.paged-3) */
 /******************************************************************
-Site Name: BREW Styles
-Author: Dan Brown
+Site Name: DD9 Boiler 
+Author: DD9
 
 Stylesheet: Components
 
@@ -6553,6 +6559,9 @@ PAGINATION
 }
 /* end pagination */
 /******************************************************************
+Site Name: DD9 Boiler 
+Author: DD9
+
 Stylesheet: Home Page
 ******************************************************************/
 /******************************************************************
@@ -6645,17 +6654,10 @@ img {
   max-width: 100%;
   height: auto;
 }
-.reset-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-/*
 .fa {
   -moz-font-feature-settings: normal;
   -moz-font-language-override: normal;
   -moz-osx-font-smoothing: grayscale;
-  //display: inline-block;
   font-family: FontAwesome;
   font-size-adjust: none;
   font-stretch: normal;
@@ -6665,7 +6667,6 @@ img {
   line-height: 1;
   text-rendering: auto;
 }
-*/
 /*
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
