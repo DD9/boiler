@@ -1,17 +1,15 @@
-				<div id="sidebar" class="col-md-4">
+<div id="sidebar" class="col-md-4">
 
-          <?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+  <?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+    <?php dynamic_sidebar( 'sidebar1' ); ?>
+  <?php else : ?>
 
-            <?php dynamic_sidebar( 'sidebar1' ); ?>
+    <!-- This content shows up if there are no widgets defined in the backend. -->
 
-          <?php else : ?>
+    <div class="alert alert-danger">
+      <p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
+    </div>
 
-            <!-- This content shows up if there are no widgets defined in the backend. -->
+  <?php endif; ?>
 
-            <div class="alert alert-danger">
-              <p><?php _e( 'Please activate some Widgets.', 'bonestheme' );  ?></p>
-            </div>
-
-          <?php endif; ?>
-
-        </div>
+</div>

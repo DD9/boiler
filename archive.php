@@ -65,7 +65,7 @@
               </section>
 
               <section class="entry-content clearfix">
-                <?php the_content('dddd'); ?>
+                <?php the_excerpt('<span class="read-more">' . __("Read more on","bonestheme") . ' "'.the_title('', '', false).'" &raquo;</span>'); ?>
                 <?php wp_link_pages(
                   array(
                     'before' => '<div class="page-link"><span>' . __( 'Pages:', 'brew' ) . '</span>',
