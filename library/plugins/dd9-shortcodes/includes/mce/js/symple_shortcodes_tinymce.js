@@ -54,14 +54,6 @@
 							}
 						}, // End special link
 						
-						/* Video */
-						{
-							text: 'Video',
-							onclick: function() {
-								editor.insertContent('[videowrap]<br />http://youtu.be/PQmOwjokBB8<br />[/videowrap]');
-							}
-						}, // End video
-						
 						/* Small */
 						{
 							text: 'Small',

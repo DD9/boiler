@@ -101,21 +101,7 @@ function lead_shortcode( $atts, $content = null ) {
 
 add_shortcode( 'lead', 'lead_shortcode' );
 
-// Video shortcode v2.0
 
-function videowrap_shortcode( $atts, $content = null ) {
-   return '<div class="video_container">' . $content . '</div>';
-}
-
-add_shortcode( 'videowrap', 'videowrap_shortcode' );
-
-// Video shortcode v1.0
-
-function video_shortcode( $atts, $content = null ) {
-   return '<div class="video_container">' . $content . '</div>';
-}
-
-add_shortcode( 'video', 'video_shortcode' );
 
 /*  END CUSTOM DD9 */
 
