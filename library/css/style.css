@@ -5859,6 +5859,59 @@ a:visited:link {
 		for mobile devices.
 		*/
 }
+.post-edit-link {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2000;
+}
+.post-edit-link:hover,
+.post-edit-link:focus,
+.post-edit-link.focus,
+.post-edit-link:active,
+.post-edit-link.active,
+.open > .dropdown-toggle.post-edit-link {
+  color: #ffffff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.post-edit-link:active,
+.post-edit-link.active,
+.open > .dropdown-toggle.post-edit-link {
+  background-image: none;
+}
+.post-edit-link.disabled,
+.post-edit-link[disabled],
+fieldset[disabled] .post-edit-link,
+.post-edit-link.disabled:hover,
+.post-edit-link[disabled]:hover,
+fieldset[disabled] .post-edit-link:hover,
+.post-edit-link.disabled:focus,
+.post-edit-link[disabled]:focus,
+fieldset[disabled] .post-edit-link:focus,
+.post-edit-link.disabled.focus,
+.post-edit-link[disabled].focus,
+fieldset[disabled] .post-edit-link.focus,
+.post-edit-link.disabled:active,
+.post-edit-link[disabled]:active,
+fieldset[disabled] .post-edit-link:active,
+.post-edit-link.disabled.active,
+.post-edit-link[disabled].active,
+fieldset[disabled] .post-edit-link.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.post-edit-link .badge {
+  color: #f0ad4e;
+  background-color: #ffffff;
+}
 /******************************************************************
 Site Name: BREW
 Author: Dan Brown

@@ -39,6 +39,8 @@
 
 <body <?php body_class(); ?>>
 
+<?php edit_post_link('Edit'); ?>  
+
 <header class="header">
 
   <nav role="navigation">

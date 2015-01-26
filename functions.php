@@ -15,8 +15,8 @@ require_once( 'library/navwalker.php' ); // needed for bootstrap navigation
 
 /************* INSERT THEME FUNCTIONS HERE ********************/
 
-
-
+// Disable the Admin Bar. 
+add_filter( 'show_admin_bar', '__return_false' );
 
 
 
