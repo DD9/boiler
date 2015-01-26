@@ -23,6 +23,13 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
 
+// Include Shortcodes plugin automatically
+// http://wordpress.stackexchange.com/questions/160255/how-to-include-plugin-without-activation
+// Also edited /dd9-shortcodes.php, /scripts.php, and /symple_shortcodes_tinymce.php to correct the path to all the included files
+define('mytheme_inc_path', TEMPLATEPATH . '/library/');
+define('mytheme_inc_url', get_template_directory_uri(). '/library/');
+require_once mytheme_inc_path. 'plugins/dd9-shortcodes/dd9-shortcodes.php';
+
 
 /************* BREW & BOILER FILES ********************/
 //Bootstrap 3.3.2 requires Jquery 1.9.1 or higher
