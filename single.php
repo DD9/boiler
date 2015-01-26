@@ -27,16 +27,15 @@
 							<section class="featured-content featured-img featured-img-bg" style="background: url('<?php echo $image[0]; ?>')">
           		</section>
 
-							<section class="entry-content single-content clearfix" itemprop="articleBody">
-								<?php the_content(); ?>
-								<?php wp_link_pages(
-                                	array(
-
-                                        'before' => '<div class="page-link"><span>' . __( 'Pages:', 'brew' ) . '</span>',
-                                        'after' => '</div>'
-                                	) 
-                                ); ?>
-							</section> <?php // end article section ?>
+							<section class="entry-content clearfix">
+								<?php the_content('dddd'); ?>
+                <?php wp_link_pages(
+                  array(
+                    'before' => '<div class="page-link"><span>' . __( 'Pages:', 'brew' ) . '</span>',
+                    'after' => '</div>'
+                  ) 
+                ); ?>
+              </section> <?php // end article section ?>
 
 							<footer class="article-footer single-footer clearfix">
 								<span class="tags pull-left"><?php printf( '<span class="">' . __( 'in %1$s&nbsp;&nbsp;', 'bonestheme' ) . '</span>', get_the_category_list(', ') ); ?> <?php the_tags( '<span class="tags-title">' . __( '<i class="fa fa-tags"></i>', 'bonestheme' ) . '</span> ', ', ', '' ); ?></span>
