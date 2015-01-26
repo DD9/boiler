@@ -1,0 +1,86 @@
+/******************************************************************
+Site Name: DD9 Boiler 
+Author: DD9
+
+Stylesheet: Ninja Forms, commented out in /style.less by default
+
+******************************************************************/
+
+
+.field-wrap .ninja-forms-field {
+	.form-control;
+	padding: 8px 14px;
+	display: inline-block;
+	color: @gray;
+	height: auto;
+	width: auto;
+	background-color: @gray-lighter;
+	border: 1px solid @gray-light;
+}
+
+.field-wrap.submit-wrap input[type=submit] {
+	.btn;
+	.btn-primary;
+	.transition(all .2s ease);
+	display: inline;
+	width: auto;
+}
+
+#content_wrapper .ninja-forms-form-wrap {
+	font-size: 15px;
+	color: @gray;
+}
+
+#content_wrapper .ninja-forms-form-wrap label {
+  font-weight: normal;
+}
+
+.text-center-wrap {
+	text-align: center;
+}
+
+.ninja-forms-required-items,
+.ninja-forms-field-error {
+  color: #DE5959;
+  font-size: 12px;
+  font-style: oblique;
+}
+
+.ninja-forms-required-items {
+	color: @gray-light;
+}
+
+.ninja-forms-error input, 
+.ninja-forms-error select, 
+.ninja-forms-error textarea {
+	border: 1px solid #DE5959;
+}
+
+.ninja-forms-required-items {
+	margin-bottom: 10px;
+}
+
+.ninja-forms-response-msg {
+	.border-radius(5px);
+	margin-bottom: 5px; 
+	p:empty {
+		display: none;
+	}
+	p {
+		margin:0;
+	}
+}
+
+.ninja-forms-success-msg {
+	background: none repeat scroll 0 0 #ebf6e0;
+  border: 1px solid #b3dc82;
+  color: #5f9025;
+  padding: 20px;
+}
+
+.ninja-forms-error-msg {
+	background: none repeat scroll 0 0 #ffe9e9;
+  border: 1px solid #fbc4c4;
+  color: #de5959;
+  padding: 20px;
+}

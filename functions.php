@@ -18,8 +18,10 @@ require_once( 'library/navwalker.php' ); // needed for bootstrap navigation
 // Disable the Admin Bar. 
 add_filter( 'show_admin_bar', '__return_false' );
 
-
-
+//http://www.advancedcustomfields.com/resources/features/options-page/
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
 
 
 /************* BREW & BOILER FILES ********************/
