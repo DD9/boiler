@@ -5871,10 +5871,6 @@ Stylesheet: Comments
   margin-bottom: 20px;
   /* number of comments span */
 }
-#comments > h3 {
-  line-height: 1;
-  margin: 0;
-}
 #comments .comment-container {
   padding: 20px 20px;
   border-bottom: 1px solid #eee;
@@ -5957,7 +5953,7 @@ Stylesheet: Comments
   height: auto;
 }
 .commentlist .alert {
-  margin: 10px 0 0 82px;
+  margin: 10px 0 0 0;
 }
 .commentlist .vcard cite.fn {
   font-weight: 700;
@@ -6005,31 +6001,14 @@ Stylesheet: Comments
 .comment-next {
   float: right;
 }
-#respond {
-  padding: 20px;
-}
 #pings {
   padding: 20px;
 }
 #pings h3 {
-  margin-top: 0;
   margin-bottom: 20px;
 }
 .havecomments > h3 {
-  border-bottom: 1px solid #eee;
-  padding: 20px 20px 20px;
-}
-.closed h3 {
-  padding: 20px 20px;
-  margin: 0;
-}
-.nocomments > p {
-  padding: 0 20px 10px;
-}
-.nocomments > h3 {
-  padding: 20px 20px 10px;
-  line-height: 1;
-  margin: 0;
+  padding-bottom: 20px;
 }
 /********************************************/
 /******************************************************************
