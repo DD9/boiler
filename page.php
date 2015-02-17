@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Page - Right Sidebar
-*/
-?>
-
 <?php get_header(); ?>
 
       <div class="container">
