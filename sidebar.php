@@ -12,4 +12,4 @@
 
   <?php endif; ?>
 
-</div>
+</div><!-- /sidebar.col -->

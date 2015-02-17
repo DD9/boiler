@@ -56,15 +56,14 @@
 
           <a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo('name'); ?></a>
 
-        </div>
+        </div><!-- /navbar-header -->
 
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <?php bones_main_nav(); ?>
-
-        </div>
-      </div>
-    </div> 
-    
+        </div><!-- /navbar-collapse -->
+        
+      </div><!-- /container -->
+    </div><!-- /navbar --> 
   </nav>
 
 </header> <?php // end header ?>
