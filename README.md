@@ -82,11 +82,15 @@ git read-tree --prefix=wp-content/themes/[THEMENAME] -u boiler/master
 git commit -m "Merge boiler as subtree"
 
 # Then to update the external subtree repo:
-git pull -s subtree boiler master 
-# TGD this brought in all the commits from the entire subtree history, try squashing or something else next time
 
-git pull -s subtree --squash boiler master
+git pull --squash -s subtree boiler master
 # no commit history from subtree, appears as though code changes were made directly to code in super project repo
+
+#or
+
+git pull -s subtree boiler master 
+# this brought in all the commits from the entire subtree history
+
 
 ```
 
