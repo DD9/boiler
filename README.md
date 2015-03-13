@@ -83,6 +83,7 @@ git commit -m "Merge boiler as subtree"
 
 # Then to update the external subtree repo:
 git pull -s subtree boiler master 
+# TGD this brought in all the commits from the entire subtree history, try squashing or something else next time
 
 ```
 
