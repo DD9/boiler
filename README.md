@@ -10,7 +10,7 @@ Draft Instructions
 
 --
 
-##As a solo repo
+##Fork it (As a solo repo)
 
 Create a WordPress install (probably local)
 
@@ -18,6 +18,19 @@ Create a theme folder (i.e /wp-content/themes/themename/), navigate to that fold
 
 ```
 git clone git@github.com:dd9/boiler.git .
+
+git clone https://github.com/dd9/boiler.git .
+
+#or
+
+git remote add upstream https://github.com/dd9/boiler.git
+
+#or
+
+git remote add upstream git@github.com:dd9/boiler.git
+
+git fetch upstream
+
 ```
 
 --
