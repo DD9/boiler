@@ -19,15 +19,19 @@ Create a theme folder (i.e /wp-content/themes/themename/), navigate to that fold
 ```
 git clone git@github.com:dd9/boiler.git .
 
+#or
+
 git clone https://github.com/dd9/boiler.git .
 
-#or
+#then
 
 git remote add upstream https://github.com/dd9/boiler.git
 
 #or
 
 git remote add upstream git@github.com:dd9/boiler.git
+
+#then
 
 git fetch upstream
 
