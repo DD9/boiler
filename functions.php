@@ -15,14 +15,7 @@ require_once( 'library/navwalker.php' ); // needed for bootstrap navigation
 
 /************* INSERT THEME FUNCTIONS HERE ********************/
 
-// Disable the Admin Bar. 
-add_filter( 'show_admin_bar', '__return_false' );
 
-//Remove links menu on older installs
-add_action( 'admin_menu', 'my_remove_menu_pages' );
-function my_remove_menu_pages() {
-  remove_menu_page('link-manager.php');  
-}
 
 
 //http://www.advancedcustomfields.com/resources/features/options-page/
@@ -74,6 +67,9 @@ require_once( 'library/bones.php' ); // if you remove this, bones will break
 
 
 
+
+//Optional for Boiler
+require_once( 'library/admin.php' ); // dashboard customizations
 
 
 // DISABLED in Boiler
