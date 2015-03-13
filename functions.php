@@ -18,6 +18,13 @@ require_once( 'library/navwalker.php' ); // needed for bootstrap navigation
 // Disable the Admin Bar. 
 add_filter( 'show_admin_bar', '__return_false' );
 
+//Remove links menu on older installs
+add_action( 'admin_menu', 'my_remove_menu_pages' );
+function my_remove_menu_pages() {
+  remove_menu_page('link-manager.php');  
+}
+
+
 //http://www.advancedcustomfields.com/resources/features/options-page/
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
