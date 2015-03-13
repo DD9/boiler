@@ -69,6 +69,7 @@ git subtree push --prefix=wp-content/themes/[THEMENAME] boiler master
 ##Using Subtrees (unidirectional workflow)
 
 https://help.github.com/articles/about-git-subtree-merges/
+
 http://williamdodson.co/articles/git-subtree/
 
 ```
@@ -81,7 +82,7 @@ git read-tree --prefix=wp-content/themes/[THEMENAME] -u boiler/master
 git commit -m "Merge boiler as subtree"
 
 # Then to update the external subtree repo:
-$ git pull -s subtree boiler master 
+git pull -s subtree boiler master 
 
 ```
 
