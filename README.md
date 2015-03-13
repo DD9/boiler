@@ -34,7 +34,7 @@ git submodule add https://github.com/DD9/boiler wp-content/themes/themename
 
 --
 
-##Using Subtrees (Reccomended)
+##Using Subtrees (bidirectional workflow)
 
 https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844
 
@@ -52,7 +52,10 @@ To pull down upstream changes
 
 ```
 git subtree pull --prefix=wp-content/themes/[THEMENAME] --squash boiler master
+
 ```
+
+*(TGD note: squashing not working, this seems to be pullingin commit history, which makes sense if we want to push, but not necissarly otherwise)*
 
 To push changes back to boiler theme from within a different superproject root:
 
@@ -60,6 +63,30 @@ To push changes back to boiler theme from within a different superproject root:
 git subtree push --prefix=wp-content/themes/[THEMENAME] boiler master
 ```
 *(Pushes to master branch, will work for DD9 team authorized to deploy here)*
+
+---
+
+##Using Subtrees (unidirectional workflow)
+
+https://help.github.com/articles/about-git-subtree-merges/
+http://williamdodson.co/articles/git-subtree/
+
+```
+git remote add -f boiler git@github.com:dd9/boiler.git
+
+git merge --squash -s ours --no-commit boiler/master
+
+git read-tree --prefix=wp-content/themes/[THEMENAME] -u boiler/master
+
+git commit -m "Merge boiler as subtree"
+
+# Then to update the external subtree repo:
+$ git pull -s subtree boiler master 
+
+```
+
+
+
 
 ---
 
