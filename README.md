@@ -85,6 +85,9 @@ git commit -m "Merge boiler as subtree"
 git pull -s subtree boiler master 
 # TGD this brought in all the commits from the entire subtree history, try squashing or something else next time
 
+git pull -s subtree --squash boiler master
+# no commit history from subtree, appears as though code changes were made directly to code in super project repo
+
 ```
 
 
