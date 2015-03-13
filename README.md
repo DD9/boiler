@@ -34,7 +34,7 @@ git submodule add https://github.com/DD9/boiler wp-content/themes/themename
 
 --
 
-##Using Subtrees
+##Using Subtrees (Reccomended)
 
 https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844
 
@@ -43,19 +43,21 @@ From superproject root:
 ```
 git remote add boiler git@github.com:dd9/boiler.git
 
-git subtree add --prefix=wp-content/themes/themename boiler master
+git subtree add --prefix=wp-content/themes/[THEMENAME] boiler master
 ```
+
+*(This will create the theme directory for you) *
 
 To pull down upstream changes
 
 ```
-git subtree pull --prefix=wp-content/themes/themename --squash boiler master
+git subtree pull --prefix=wp-content/themes/[THEMENAME] --squash boiler master
 ```
 
 To push changes back to boiler theme from within a different superproject root:
 
 ```
-git subtree push --prefix=wp-content/themes/themename boiler master
+git subtree push --prefix=wp-content/themes/[THEMENAME] boiler master
 ```
 *(Pushes to master branch, will work for DD9 team authorized to deploy here)*
 
