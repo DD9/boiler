@@ -46,7 +46,7 @@ git remote add boiler git@github.com:dd9/boiler.git
 git subtree add --prefix=wp-content/themes/[THEMENAME] boiler master
 ```
 
-*(This will create the theme directory for you) *
+*(This will create the theme directory for you)*
 
 To pull down upstream changes
 
