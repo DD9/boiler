@@ -44,6 +44,29 @@
               Launch demo modal
             </button>
           
+            <div class="page-header">
+              <h1>Colors</h1>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 color-demo">
+                <h3>Custom Colors</h3>
+                <?php #adjust count as needed here ?>
+                <?php for ($x=1; $x<=6; $x++) { ?>
+                  <div class="color-block custom-<?= $x ?>"><span></span></div>
+                <?php } ?>
+              </div>
+              <div class="col-lg-8 color-demo">
+                <h3>Bootstrap Colors</h3>
+                <?php for ($x=1; $x<=6; $x++) { ?>
+                  <div class="color-block grays-<?= $x ?>"><span></span></div>
+                <?php } ?>
+                <div>
+                  <?php for ($x=1; $x<=6; $x++) { ?>
+                    <div class="color-block bootstrap-<?= $x ?>"><span></span></div>
+                  <?php } ?>
+                </div>
+              </div>
+            </div>
           
             
             <div class="page-header">

@@ -1,0 +1,51 @@
+/******************************************************************
+Site Name: DD9 Boiler 
+Author: DD9
+Stylesheet: Utilities
+
+
+******************************************************************/
+
+
+.color-demo{
+
+  .color-block{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    float: left;
+    margin: 0 10px 10px 0;
+    color: white;
+    position: relative;
+
+  }
+
+  .generate-color-divs(@boiler-palette, custom);
+  .generate-color-divs(@bootstrap-grays, grays);
+  .generate-color-divs(@bootstrap-palette, bootstrap);
+
+}
+
+.generate-color-divs(@colors, @nameprefix){
+
+  .-(@i: length(@colors)) when (@i > 0) {
+    @name: e(extract(@colors, @i));
+    .color-block.@{nameprefix}-@{i} {
+      @back-color-var: @@name;
+      background-color: @back-color-var;
+      &:before{
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        content:"@{back-color-var}";
+      }
+      &:after {
+        color: white;
+        display: block;
+        content:"@{name}";
+      }
+    }
+    .-((@i - 1));
+  } .-;
+}
+
