@@ -5,10 +5,15 @@ Author: DD9
 Stylesheet: Footer
 
 ******************************************************************/
+@footer-background: @gray-dark;
+@sub-floor-background: darken(@gray-dark, 10%);
 
 #footer {
+
+
+
   border-top: 5px solid @brand-primary;
-  background: @gray-dark;
+  background: @footer-background;
   padding-top: 30px;
   margin-top: 60px;
   clear: both;
@@ -17,6 +22,18 @@ Stylesheet: Footer
     color: #fff;
     text-transform: uppercase;
   }
+
+  //Match the background color
+  .site-credit{
+    color: @sub-floor-background;
+    cursor: default;
+    &:hover{
+      color: @sub-floor-background !important;
+      text-decoration: none;
+    }
+  }
+
+
   a {color: #aaa;}
   li {
     padding: 7px 0;
@@ -36,9 +53,11 @@ Stylesheet: Footer
 
 #sub-floor {
   color: #aaa;
-  background: #292929;
+  background: @sub-floor-background;
   padding: 10px 0;
 }
+
+
 
 .copyright {
   text-align: center;

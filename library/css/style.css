@@ -6201,6 +6201,14 @@ Stylesheet: Footer
   color: #fff;
   text-transform: uppercase;
 }
+#footer .site-credit {
+  color: #1a1a1a;
+  cursor: default;
+}
+#footer .site-credit:hover {
+  color: #1a1a1a !important;
+  text-decoration: none;
+}
 #footer a {
   color: #aaa;
 }
@@ -6219,7 +6227,7 @@ Stylesheet: Footer
 }
 #sub-floor {
   color: #aaa;
-  background: #292929;
+  background: #1a1a1a;
   padding: 10px 0;
 }
 .copyright {

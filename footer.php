@@ -37,7 +37,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 copyright">
-          &copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>
+          &copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>  <a class="site-credit" title="Website Design and Development by DD9" target="_blank" href="http://dd9.com">Website by DD9</a>
         </div>
         <div class="col-md-4 col-md-offset-4 attribution">
           Boiler theme by <a target="_blank" href="http://dd9.com">DD9</a> - <a href="/assets">Assets</a> - <a href="/wp-admin">Admin Login</a>
