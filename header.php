@@ -29,7 +29,7 @@
 <?php // end of wordpress head ?>
 
 <?php //Icluding external font-awesome for the time being ?>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 
 <?php // drop Google Analytics Here ?>
@@ -41,7 +41,7 @@
 
 <?php edit_post_link('Edit'); ?>  
 
-<header class="header">
+<header id="header">
 
   <nav role="navigation">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -49,12 +49,12 @@
         <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <i class="fa fa-bars"></i>
           </button>
 
-          <a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage"><?php bloginfo('name'); ?></a>
+          <a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage">
+            <img src="<?= get_bloginfo('template_directory'); ?>/library/images/DD9_logo_v3.png" id="logo" alt="<?php bloginfo( 'name' ) ?> Logo" />
+          </a>
 
         </div><!-- /navbar-header -->
 

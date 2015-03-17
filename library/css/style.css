@@ -6372,6 +6372,13 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
+#header #logo {
+  height: 40px;
+}
+#header .navbar-brand {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .nav {
   /* end .menu li */
   /* highlight current page */
