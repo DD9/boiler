@@ -6574,6 +6574,18 @@ Stylesheet: Utilities
 
 
 ******************************************************************/
+.default-border-top {
+  border-top: solid 1px #555555;
+}
+.default-border-bottom {
+  border-bottom: solid 1px #555555;
+}
+.default-border-left {
+  border-left: solid 1px #555555;
+}
+.default-border-right {
+  border-right: solid 1px #555555;
+}
 .color-demo .color-block {
   width: 100px;
   height: 100px;
