@@ -36,20 +36,6 @@ git remote add upstream git@github.com:dd9/boiler.git
 git fetch upstream
 
 ```
-Boiler now uses submodules for some of the Bootstrap assets.  So once you clone the theme to your local environement, you will probably be missing all the /library/less/bootstrap/ files.  To fix this, the need to run the following from the boiler root:
-
-```
-
-git submodule init
-
-git submodule update
-
-```
-
-These commands will pull down the submodule assets into your local repo, allowing you to actually use them to work with the theme.
-
-
-
 
 
 --
@@ -62,7 +48,21 @@ From superproject root:
 
 ```
 git submodule add https://github.com/DD9/boiler wp-content/themes/themename
+
 ```
+
+
+You may need to run this from the superproject root, depending on if you pulled down the superproject repo with submodule already created.
+
+```
+
+git submodule init
+
+git submodule update
+
+```
+
+
 
 --
 
