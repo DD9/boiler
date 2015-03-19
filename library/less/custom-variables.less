@@ -25,6 +25,9 @@
 
 
 //Begin copy-paste
+//
+// Variables
+// --------------------------------------------------
 
 
 //== Colors
@@ -87,8 +90,6 @@
 @line-height-base:        1.428571429; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
-
-
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
@@ -233,6 +234,9 @@
 //** Small `.form-control` height
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
+//** `.form-group` margin
+@form-group-margin-bottom:       15px;
+
 @legend-color:                   @gray-dark;
 @legend-border-color:            #e5e5e5;
 
@@ -292,7 +296,8 @@
 @zindex-popover:           1060;
 @zindex-tooltip:           1070;
 @zindex-navbar-fixed:      1030;
-@zindex-modal:             1040;
+@zindex-modal-background:  1040;
+@zindex-modal:             1050;
 
 
 //== Media queries breakpoints
