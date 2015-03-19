@@ -36,10 +36,21 @@ git remote add upstream git@github.com:dd9/boiler.git
 git fetch upstream
 
 ```
+Boiler now uses submodules.  So once you clone the theme, you will probably need to run the following:
+
+```
+
+git submodule init
+
+git submodule update
+
+```
+
+
 
 --
 
-##Using Submodules
+##Using Boiler as a Submodule
 
 http://git-scm.com/book/en/v2/Git-Tools-Submodules
 
