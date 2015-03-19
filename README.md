@@ -62,6 +62,7 @@ git submodule update
 
 ```
 
+If you want to check for new work in a submodule, you can go into the directory and run git fetch and git merge the upstream branch to update the local code.  If you run git submodule update --remote, Git will go into your submodules and fetch and update for you.
 
 
 --
