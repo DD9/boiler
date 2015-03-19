@@ -72,6 +72,8 @@ To push from the submodule to the boiler repo, navigate to the theme repo, check
 
 ##Using Subtrees (bidirectional workflow)
 
+http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/
+
 https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844
 
 From superproject root: 
@@ -103,6 +105,8 @@ git subtree push --prefix=wp-content/themes/[THEMENAME] boiler master
 ---
 
 ##Using Subtrees (unidirectional workflow)
+
+http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/
 
 https://help.github.com/articles/about-git-subtree-merges/
 
