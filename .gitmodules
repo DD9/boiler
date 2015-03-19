@@ -1,0 +1,3 @@
+[submodule "library/less/bootstrap"]
+	path = library/less/bootstrap
+	url = https://github.com/DD9/bootstrap-less
