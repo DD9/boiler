@@ -6601,14 +6601,28 @@ Stylesheet: Utilities
   color: white;
   position: relative;
 }
+.color-demo .color-block.custom-4 {
+  background-color: #2f2f2f;
+}
+.color-demo .color-block.custom-4:before {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  content: "#2f2f2f";
+}
+.color-demo .color-block.custom-4:after {
+  color: white;
+  display: block;
+  content: "boiler-gray";
+}
 .color-demo .color-block.custom-3 {
-  background-color: #ffaa00;
+  background-color: #cc6600;
 }
 .color-demo .color-block.custom-3:before {
   color: white;
   font-weight: bold;
   font-size: 16px;
-  content: "#ffaa00";
+  content: "#cc6600";
 }
 .color-demo .color-block.custom-3:after {
   color: white;
@@ -6616,13 +6630,13 @@ Stylesheet: Utilities
   content: "boiler-orange";
 }
 .color-demo .color-block.custom-2 {
-  background-color: #cc6600;
+  background-color: #ffaa00;
 }
 .color-demo .color-block.custom-2:before {
   color: white;
   font-weight: bold;
   font-size: 16px;
-  content: "#cc6600";
+  content: "#ffaa00";
 }
 .color-demo .color-block.custom-2:after {
   color: white;
