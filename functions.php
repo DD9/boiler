@@ -1,6 +1,6 @@
 <?php
 /*
-Author: Eddie Machado
+Author: Eddie Machado, DD9 and Others
 URL: htp://themble.com/bones/
 
 This is where you can drop your custom functions or
@@ -72,14 +72,23 @@ require_once( 'library/bones.php' ); // if you remove this, bones will break
 require_once( 'library/admin.php' ); // dashboard customizations
 
 
-// DISABLED in Boiler
+/************* CUSTOM POST TYPES *************/
 /* 
-2. library/custom-post-type.php
-	- an example custom post type
-	- example custom taxonomy (like categories)
-	- example custom taxonomy (like tags)
+Hardcode custom post types here if you want to keep them out of the dashboard
+This is a good idea in many cases. Otherwise use:  https://wordpress.org/plugins/custom-post-type-ui/
 */
-//require_once( 'library/custom-post-type.php' ); // you can disable this if you like
+
+//WP Custom Post Type Class v1.3
+//https://github.com/jjgrainger/wp-custom-post-type-class
+
+//require_once( 'library/CPT.php' ); 
+//require_once( 'library/CPT-flush.php' ); 
+
+//$books = new CPT('book');
+
+
+
+
 
 
 /************* THUMBNAIL SIZE OPTIONS *************/
