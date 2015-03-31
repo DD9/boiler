@@ -90,7 +90,7 @@ git subtree add --prefix=wp-content/themes/[THEMENAME] boiler master --squash
 To pull down upstream changes
 
 ```
-## later updates
+## Specd for later updates, but I didn't seem to need this.  Also try adding --squash to this if you have to run it.
 ## git fetch boiler master 
 
 git subtree pull --prefix=wp-content/themes/[THEMENAME] boiler master --squash
