@@ -85,7 +85,7 @@ git subtree add --prefix=wp-content/themes/[THEMENAME] boiler master --squash
 
 ```
 
-*(This will create the theme directory for you.  TGD note: consider squashing this step next time)*
+*(This will create the theme directory for you.)*
 
 To pull down upstream changes
 
@@ -97,13 +97,13 @@ git subtree pull --prefix=wp-content/themes/[THEMENAME] boiler master --squash
 
 ```
 
-*(TGD note: squashing not working, this seems to be pulling in commit history, which makes sense if we want to push, but not necissarly otherwise)*
 
 To push changes back to boiler theme from within a different superproject root:
 
 ```
 git subtree push --prefix=wp-content/themes/[THEMENAME] boiler master
 ```
+
 *(Pushes to master branch, will work for DD9 team authorized to deploy here)*
 
 ---
