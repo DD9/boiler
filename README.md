@@ -79,9 +79,10 @@ https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844
 From superproject root: 
 
 ```
-git remote add boiler git@github.com:dd9/boiler.git
+git remote add -f boiler git@github.com:dd9/boiler.git
 
-git subtree add --prefix=wp-content/themes/[THEMENAME] boiler master
+git subtree add --prefix=wp-content/themes/[THEMENAME] boiler master --squash
+
 ```
 
 *(This will create the theme directory for you.  TGD note: consider squashing this step next time)*
@@ -89,11 +90,14 @@ git subtree add --prefix=wp-content/themes/[THEMENAME] boiler master
 To pull down upstream changes
 
 ```
-git subtree pull --prefix=wp-content/themes/[THEMENAME] --squash boiler master
+## later updates
+## git fetch boiler master 
+
+git subtree pull --prefix=wp-content/themes/[THEMENAME] boiler master --squash
 
 ```
 
-*(TGD note: squashing not working, this seems to be pullingin commit history, which makes sense if we want to push, but not necissarly otherwise)*
+*(TGD note: squashing not working, this seems to be pulling in commit history, which makes sense if we want to push, but not necissarly otherwise)*
 
 To push changes back to boiler theme from within a different superproject root:
 
