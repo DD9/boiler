@@ -340,7 +340,7 @@ function bones_filter_ptags_on_images($content){
 }
 
 // This removes the annoying […] to a Read More link
-function bones_excerpt_more($more) {
+function bones_excerpt_more() {
 	global $post;
 	// edit here if you like
 return '... <a class="readmore" href="'. get_permalink($post->ID) . '" title="'. __( 'Read', 'bonestheme' ) . get_the_title($post->ID).'">'. __( 'Read More', 'bonestheme' ) .'</a>';
