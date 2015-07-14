@@ -6428,54 +6428,21 @@ Stylesheet: Footer
 
 ******************************************************************/
 #footer {
-  border-top: 5px solid #b40027;
-  background: #333333;
-  padding-top: 30px;
-  margin-top: 60px;
+  background: #eeeeee;
+  padding: 24px 0;
   clear: both;
-  color: #aaa;
-}
-#footer h4 {
-  color: #fff;
-  text-transform: uppercase;
 }
 #footer .site-credit {
-  color: #1a1a1a;
+  opacity: 0;
+  filter: alpha(opacity=0);
   cursor: default;
 }
-#footer .site-credit:hover {
-  color: #1a1a1a !important;
-  text-decoration: none;
-}
-#footer a {
-  color: #aaa;
-}
-#footer li {
-  padding: 7px 0;
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
-  margin: 0px 0px;
-}
-#footer .widgettitle {
-  margin: 0;
-  padding: 0 0 15px 0;
-  border-bottom: none;
-}
-#footer-wrapper {
-  margin-bottom: 30px;
-}
 #sub-floor {
-  color: #aaa;
-  background: #1a1a1a;
   padding: 10px 0;
 }
 .footer-contact {
   padding-left: 0;
   list-style: none;
-}
-.footer-contact .fa {
-  color: #b40027;
-  font-size: 14px;
-  margin-right: 3px;
 }
 .social-icons {
   padding-left: 0;
@@ -6495,45 +6462,6 @@ Stylesheet: Footer
   width: 38px;
   height: 34px;
   line-height: 34px;
-}
-.social-icons .facebook a {
-  background-color: #27678F;
-}
-.social-icons .twitter a {
-  background-color: #3898BC;
-}
-.social-icons .youtube a {
-  background-color: #BE0000;
-}
-.social-icons .linkedin a {
-  background-color: #018185;
-}
-.social-icons .googleplus a {
-  background-color: #D84D00;
-}
-.copyright {
-  text-align: center;
-}
-@media (min-width: 992px) {
-  .copyright {
-    text-align: left;
-  }
-}
-.attribution {
-  text-align: center;
-}
-@media (min-width: 992px) {
-  .attribution {
-    text-align: right;
-  }
-}
-.widgetFooter {
-  padding-bottom: 25px;
-}
-@media (min-width: 992px) {
-  .widgetFooter {
-    padding-bottom: 0px;
-  }
 }
 /******************************************************************
 Site Name: DD9 Boiler 

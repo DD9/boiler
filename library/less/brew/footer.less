@@ -4,62 +4,26 @@ Author: DD9
 Stylesheet: Footer
 
 ******************************************************************/
-@footer-background: @gray-dark;
-@sub-floor-background: darken(@gray-dark, 10%);
+
 
 #footer {
-  border-top: 5px solid @brand-primary;
-  background: @footer-background;
-  padding-top: 30px;
-  margin-top: 60px;
+  background: @gray-lighter;
+  padding: @line-height 0;
   clear: both;
-  color: #aaa;
-  h4 {
-    color: #fff;
-    text-transform: uppercase;
-  }
 
-  //Match the background color
+  //Hide site credit
   .site-credit{
-    color: @sub-floor-background;
+    .opacity(0);
     cursor: default;
-    &:hover{
-      color: @sub-floor-background !important;
-      text-decoration: none;
-    }
   }
-  
-  a {color: #aaa;}
-  
-  li {
-    padding: 7px 0;
-    border-bottom: 1px dotted rgba(255,255,255,.2);
-    margin: 0px 0px;
-  }
-  .widgettitle {
-    margin: 0;
-    padding: 0 0 15px 0;
-    border-bottom: none;
-  }
-}
-
-#footer-wrapper {
-  margin-bottom: 30px;
 }
 
 #sub-floor {
-  color: #aaa;
-  background: @sub-floor-background;
   padding: 10px 0;
 }
 
 .footer-contact {
   .list-unstyled;
-  .fa {
-    color: @brand-primary;
-    font-size: 14px;
-    margin-right: 3px;
-  }
 }
 
 .social-icons {
@@ -80,30 +44,9 @@ Stylesheet: Footer
     line-height: 34px;
   }
 
-  .facebook a { background-color: #27678F;}
-  .twitter a { background-color: #3898BC;}
-  .youtube a { background-color: #BE0000;}
-  .linkedin a { background-color: #018185;}
-  .googleplus a { background-color: #D84D00;}
-}
-
-.copyright {
-  text-align: center;
-  @media (min-width: @screen-md) {
-    text-align: left;
-  }
-}
-
-.attribution {
-  text-align: center;
-  @media (min-width: @screen-md) {
-    text-align: right;
-  }
-}
-
-.widgetFooter {
-  padding-bottom: 25px;
-  @media (min-width: @screen-md) {
-    padding-bottom: 0px;
-  }
+  .facebook a {}
+  .twitter a {}
+  .youtube a {}
+  .linkedin a {}
+  .googleplus a {}
 }

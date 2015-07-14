@@ -107,8 +107,8 @@
         },
         {
             "key": "field_556792939d3ac",
-            "label": "Google+ URL",
-            "name": "google+_url",
+            "label": "Googleplus URL",
+            "name": "googleplus_url",
             "prefix": "",
             "type": "text",
             "instructions": "",
