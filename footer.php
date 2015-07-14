@@ -1,3 +1,14 @@
+<?php // Global Options
+$phone = get_field('phone', 'option');
+$email = get_field('email', 'option');
+$facebook = get_field('facebook_url', 'option');
+$twitter = get_field('twitter_url', 'option');
+$youtube = get_field('youtube_url', 'option');
+$linkedin = get_field('linkedin_url', 'option');
+$googleplus = get_field('googleplus_url', 'option');
+?>
+
+
 <footer id="footer" class="clearfix">
   <div id="footer-widgets">
 
@@ -9,6 +20,43 @@
         <div class="col-sm-6 col-md-3">
           <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-1') ) : ?>
           <?php endif; ?>
+          
+          
+          <?php // ACF global options: Contact Info ?>
+          <ul class="footer-contact">
+         		<?php if ($phone) { ?>
+              <li> <i class="fa fa-phone"></i> <?= $phone ?></li>
+            <?php } ?>
+          	
+						<?php if ($email) { ?>
+              <li><a href="mailto:<?= $email ?>" target="_blank"><i class="fa fa-envelope"></i> <?= $email ?></a></li>
+            <?php } ?>
+          </ul>
+          
+          <?php // ACF global options: Social Icons ?>
+          <ul class="social-icons clearfix">
+            <?php if ($facebook) { ?>
+              <li class="facebook"> <a href="<?= $facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <?php } ?>
+           
+           	<?php if ($twitter) { ?>
+              <li class="twitter"> <a href="<?= $twitter ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <?php } ?>
+            
+            <?php if ($youtube) { ?>
+              <li class="youtube"> <a href="<?= $youtube ?>" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <?php } ?>
+            
+            <?php if ($linkedin) { ?>
+              <li class="linkedin"> <a href="<?= $linkedin ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <?php } ?>
+            
+            <?php if ($googleplus) { ?>
+              <li class="googleplus"><a href="<?= $googleplus ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+            <?php } ?>
+          </ul>
+          
+          
         </div> <!-- end widget1 -->
 
         <div class="col-sm-6 col-md-3">
