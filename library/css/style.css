@@ -6487,10 +6487,6 @@ These are the styles for posts, pages, archive, & blog index
 (#content usually includes sidebar.
 #main is all post/entry/page content)
 ********************************/
-#content {
-  padding-top: 40px;
-  min-height: 600px;
-}
 /*******************************
 02. ARTICLE WRAPPER
 (background, borders etc for individual posts/pages)
@@ -6503,22 +6499,11 @@ These are the styles for posts, pages, archive, & blog index
 /*******************************
 03. ENTRY HEADER
 ********************************/
-.archive-title {
-  margin-top: 0;
-}
 .byline {
   color: #777777;
   margin: 0;
   font-size: 14px;
 }
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
 .sticky-ind {
   display: none;
 }
@@ -6589,10 +6574,10 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-#header #logo {
+#site-header #logo {
   height: 40px;
 }
-#header .navbar-brand {
+#site-header .navbar-brand {
   padding-top: 5px;
   padding-bottom: 5px;
 }

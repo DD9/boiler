@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
   <div class="container">
-    <div id="content" class="clearfix row">
+    <div class="row">
     
-      <div id="main" class="col-md-8 clearfix" role="main">
+      <div class="col-md-8">
 
-      <?php get_template_part( 'breadcrumb' ); ?>
+      	<?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         

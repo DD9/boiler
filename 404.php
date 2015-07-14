@@ -1,32 +1,26 @@
 <?php get_header(); ?>
 
-      <div class="container">
+<div class="container">
+  <div class="row">
 
-        <div id="content">
+    <div class="col-md-12">
 
-          <div id="main" class="col-md-8 col-md-offset-2 clearfix" role="main">
+      <article class="hentry clearfix">
 
-            <article id="post-not-found" class="hentry clearfix">
+        <header class="article-header">
+          <h1 class="entry-title">404: Page not found.</h1>
+        </header>
 
-              <header class="article-header text-center">
+        <section class="entry-content">
+          <p><?php get_search_form(); ?></p>
+        </section>
 
-                <h1>404. Whelp...This is embarrassing...</h1>
-                                
-              </header> <?php // end article header ?>
+      </article> 
 
-              <section class="entry-content">
+    </div><!-- /col -->
 
-                <p><?php get_search_form(); ?></p>
-
-              </section> <?php // end article section ?>
-
-            </article> <?php // end article ?>
-
-          </div> <?php // end #main ?>
-
-        </div> <?php // end #content ?>
-
-      </div> <?php // end ./container ?>
+  </div><!-- /row -->
+</div><!-- /container -->
 
 
 <?php get_footer(); ?>
