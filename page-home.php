@@ -23,21 +23,21 @@ Template Name: Home Page Template
   <div class="row text-center">
     
     <!--Section 1-->
-    <div class="col-sm-4 about">
+    <div class="col-sm-4">
       <i class="fa fa-fire fa-4x light-gray"></i>
       <h3>Boiler?</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lectus est, sagittis vel massa id, ultricies malesuada dolor. Suspendisse potenti. Pellentesque molestie mauris vel nunc gravida, in ultricies tortor ultricies.</p>
     </div>
     
     <!--Section 2-->
-    <div class="col-sm-4 about">
+    <div class="col-sm-4">
       <i class="fa fa-fire fa-4x light-gray"></i>
       <h3>Boiler.</h3>
       <p> Pellentesque velit nunc, iaculis quis augue nec, pulvinar mattis sem. Sed iaculis tristique mi, ut iaculis nulla rutrum a. Nunc molestie ante eu maximus commodo. Integer cursus pretium auctor.</p>
     </div>
     
     <!--Section 3-->
-    <div class="col-sm-4 about">
+    <div class="col-sm-4">
       <i class="fa fa-fire fa-4x light-gray"></i>
       <h3>Boiler!!!</h3>
       <p>Vestibulum sit amet diam et dolor egestas efficitur. Sed justo nunc, rhoncus sagittis ullamcorper in, laoreet at ex.</p>

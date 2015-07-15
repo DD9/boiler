@@ -6026,7 +6026,6 @@ Site Name: DD9 Boiler
 Author: DD9
 
 Stylesheet: Typography Stylesheet
-
 ******************************************************************/
 a,
 a:visited {
@@ -6126,7 +6125,7 @@ fieldset[disabled] .post-edit-link.active {
   color: #f0ad4e;
   background-color: #ffffff;
 }
-a.full_width {
+a.full-width {
   bottom: 0;
   display: block;
   left: 0;
@@ -6145,7 +6144,6 @@ Stylesheet: Comments
 /* h3 comment title */
 #comments {
   margin-bottom: 20px;
-  /* number of comments span */
 }
 #comments .comment-container {
   padding: 20px 20px;
@@ -6159,33 +6157,26 @@ Stylesheet: Comments
 .comment-nav {
   padding: 10px 20px;
 }
-.comment-nav ul li {
-  list-style-type: none;
+.comment-nav ul {
+  padding-left: 0;
+  list-style: none;
 }
 .commentlist {
   padding-left: 0;
   /* general comment classes */
   /* vcard */
-  /* end .commentlist .vcard */
-  /* comment meta */
   /* comment content */
   /* end .commentlist .comment_content */
   /* comment reply link */
-  /* end .commentlist .comment-reply-link */
 }
 .commentlist ol {
   margin: 0;
-}
-.commentlist li {
-  /* end .commentlist li ul.children */
 }
 .commentlist li:last-child {
   margin-bottom: 0;
 }
 .commentlist li ul.children {
   margin: 0;
-  /* variations */
-  /* change number for different depth */
 }
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
@@ -6218,7 +6209,7 @@ Stylesheet: Comments
   border-left: 1px solid #eee;
 }
 .commentlist .bypostauthor {
-  background: #ff93aa;
+  background: #fceedb;
 }
 .commentlist .comment-author {
   width: 10%;
@@ -6256,15 +6247,131 @@ Stylesheet: Comments
   line-height: 1.5em;
 }
 .commentlist .comment-reply-link {
-  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
   float: right;
-  background: #4598bb;
-  padding: 3px 5px;
-  color: #fff;
   opacity: 0.65;
   margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 0.9em;
+}
+.commentlist .comment-reply-link:focus,
+.commentlist .comment-reply-link:active:focus,
+.commentlist .comment-reply-link.active:focus,
+.commentlist .comment-reply-link.focus,
+.commentlist .comment-reply-link:active.focus,
+.commentlist .comment-reply-link.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.commentlist .comment-reply-link:hover,
+.commentlist .comment-reply-link:focus,
+.commentlist .comment-reply-link.focus {
+  color: #333333;
+  text-decoration: none;
+}
+.commentlist .comment-reply-link:active,
+.commentlist .comment-reply-link.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.commentlist .comment-reply-link.disabled,
+.commentlist .comment-reply-link[disabled],
+fieldset[disabled] .commentlist .comment-reply-link {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+a.commentlist .comment-reply-link.disabled,
+fieldset[disabled] a.commentlist .comment-reply-link {
+  pointer-events: none;
+}
+.commentlist .comment-reply-link:focus,
+.commentlist .comment-reply-link.focus {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #1b6d85;
+}
+.commentlist .comment-reply-link:hover {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.commentlist .comment-reply-link:active,
+.commentlist .comment-reply-link.active,
+.open > .dropdown-toggle.commentlist .comment-reply-link {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.commentlist .comment-reply-link:active:hover,
+.commentlist .comment-reply-link.active:hover,
+.open > .dropdown-toggle.commentlist .comment-reply-link:hover,
+.commentlist .comment-reply-link:active:focus,
+.commentlist .comment-reply-link.active:focus,
+.open > .dropdown-toggle.commentlist .comment-reply-link:focus,
+.commentlist .comment-reply-link:active.focus,
+.commentlist .comment-reply-link.active.focus,
+.open > .dropdown-toggle.commentlist .comment-reply-link.focus {
+  color: #ffffff;
+  background-color: #269abc;
+  border-color: #1b6d85;
+}
+.commentlist .comment-reply-link:active,
+.commentlist .comment-reply-link.active,
+.open > .dropdown-toggle.commentlist .comment-reply-link {
+  background-image: none;
+}
+.commentlist .comment-reply-link.disabled,
+.commentlist .comment-reply-link[disabled],
+fieldset[disabled] .commentlist .comment-reply-link,
+.commentlist .comment-reply-link.disabled:hover,
+.commentlist .comment-reply-link[disabled]:hover,
+fieldset[disabled] .commentlist .comment-reply-link:hover,
+.commentlist .comment-reply-link.disabled:focus,
+.commentlist .comment-reply-link[disabled]:focus,
+fieldset[disabled] .commentlist .comment-reply-link:focus,
+.commentlist .comment-reply-link.disabled.focus,
+.commentlist .comment-reply-link[disabled].focus,
+fieldset[disabled] .commentlist .comment-reply-link.focus,
+.commentlist .comment-reply-link.disabled:active,
+.commentlist .comment-reply-link[disabled]:active,
+fieldset[disabled] .commentlist .comment-reply-link:active,
+.commentlist .comment-reply-link.disabled.active,
+.commentlist .comment-reply-link[disabled].active,
+fieldset[disabled] .commentlist .comment-reply-link.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.commentlist .comment-reply-link .badge {
+  color: #5bc0de;
+  background-color: #ffffff;
 }
 .commentlist .comment-reply-link:hover,
 .commentlist .comment-reply-link:focus {
@@ -6286,23 +6393,21 @@ Stylesheet: Comments
 .havecomments > h3 {
   padding-bottom: 20px;
 }
-/********************************************/
 /******************************************************************
-Site Name: BREW
-Author: Dan Brown
+Site Name: DD9 Boiler 
+Author: DD9
 
 Stylesheet: Tables
-
 ******************************************************************/
-#main table {
+table {
   margin: 20px 0;
   width: 100%;
   border: 1px solid #dddddd;
   border-collapse: separate;
   border-left: 0;
 }
-#main table th,
-#main table td {
+table th,
+table td {
   padding: 8px;
   border-top: 1px solid #dddddd;
   border-left: 1px solid #dddddd;
@@ -6310,9 +6415,9 @@ Stylesheet: Tables
   text-align: left;
   line-height: 18px;
 }
-#main table thead:first-child tr:first-child th,
-#main table tbody:first-child tr:first-child th,
-#main table tbody:first-child tr:first-child td {
+table thead:first-child tr:first-child th,
+table tbody:first-child tr:first-child th,
+table tbody:first-child tr:first-child td {
   border-top: 0;
 }
 /******************************************************************
@@ -6405,7 +6510,7 @@ Stylesheet: Sidebars
 
 ******************************************************************/
 #sidebar .widget {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 .widgettitle {
   margin-bottom: 10px;
@@ -6419,7 +6524,6 @@ Stylesheet: Sidebars
 .widget ul li {
   padding: 5px 0;
   list-style: none;
-  /* deep nesting */
 }
 /******************************************************************
 Site Name: DD9 Boiler 
@@ -6429,8 +6533,8 @@ Stylesheet: Footer
 ******************************************************************/
 #footer {
   background: #eeeeee;
-  padding: 24px 0;
   clear: both;
+  padding: 24px 0;
 }
 #footer .site-credit {
   opacity: 0;
@@ -6470,35 +6574,12 @@ Author: DD9
 Stylesheet: Content Styles
 
 These are the styles for posts, pages, archive, & blog index
-
-
------------- MAP ------------
-
-01. #CONTENT & #MAIN WRAPPERS 
-02. ARTICLE WRAPPER
-03. ENTRY/PAGE HEADER
-04. FEATURED IMAGE
-05. ENTRY/PAGE CONTENT
-06. ENTRY/PAGE FOOTER
-
 ******************************************************************/
-/*******************************
-01. #CONTENT & #MAIN WRAPPERS
-(#content usually includes sidebar.
-#main is all post/entry/page content)
-********************************/
-/*******************************
-02. ARTICLE WRAPPER
-(background, borders etc for individual posts/pages)
-********************************/
 .hentry,
 #comments,
 .respond-form {
   margin: 0 0 20px 0;
 }
-/*******************************
-03. ENTRY HEADER
-********************************/
 .byline {
   color: #777777;
   margin: 0;
@@ -6510,9 +6591,6 @@ These are the styles for posts, pages, archive, & blog index
 .sticky .sticky-ind {
   display: inline !important;
 }
-/*******************************
-04. FEATURED IMAGE
-********************************/
 .featured-content {
   margin-bottom: 20px;
 }
@@ -6527,9 +6605,6 @@ These are the styles for posts, pages, archive, & blog index
   width: 100%;
   height: auto;
 }
-/*******************************
-06. ENTRY FOOTER
-********************************/
 .article-footer {
   padding: 10px 0;
   border-top: 1px solid #eeeeee;
@@ -6761,12 +6836,20 @@ Author: DD9
 
 Stylesheet: Home Page
 ******************************************************************/
+.homebanner {
+  margin-bottom: 60px;
+  padding-top: 30px;
+  text-align: center;
+  height: 350px;
+  background: url('../images/redbg_office_external.jpg') #b40027;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+}
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Utilities
-
-
 ******************************************************************/
 .default-border-top {
   border-top: solid 1px #555555;
@@ -6984,92 +7067,6 @@ Stylesheet: Utilities
   color: white;
   display: block;
   content: "brand-primary";
-}
-/******************************************************************
-Site Name: DD9 Boiler 
-Author: DD9
-
-This is just for the sample Boiler site.  Feel free to delete
-
-******************************************************************/
-.featured {
-  margin-bottom: 40px;
-}
-@media (min-width: 992px) {
-  .featured {
-    margin-bottom: 0;
-  }
-}
-.homebanner {
-  margin-bottom: 60px;
-  padding-top: 30px;
-  text-align: center;
-  height: 350px;
-  background: url('../images/redbg_office_external.jpg') #b40027;
-  background-size: cover;
-  background-position: center center;
-  color: #fff;
-}
-@media (min-width: 480px) {
-  .homebanner {
-    padding-top: 70px;
-  }
-}
-.homebanner p {
-  font-size: 18px;
-}
-.homebanner h1 {
-  font-size: 50px;
-  color: #fff;
-  margin-bottom: 10px;
-}
-.homebanner .btn-default {
-  background: none;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.homebanner .btn-primary {
-  background: none;
-  border: 2px solid #fff;
-  margin-left: 20px;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.homebanner .btn-default:hover {
-  background: white;
-  color: #000;
-}
-.homebanner .btn-primary:hover {
-  background: white;
-  color: #000;
-}
-.about {
-  margin-bottom: 30px;
-}
-@media (min-width: 768px) {
-  .about {
-    margin-bottom: 0px;
-  }
-}
-.about a {
-  text-decoration: none;
-}
-.about i {
-  color: #929292;
-}
-.about p {
-  color: #929292;
-}
-.about h3 {
-  color: #b40027;
-}
-.about:hover i {
-  color: #626c72;
-  transition: all 0.35s ease;
 }
 img {
   max-width: 100%;

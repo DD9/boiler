@@ -5,47 +5,12 @@ Author: DD9
 Stylesheet: Content Styles
 
 These are the styles for posts, pages, archive, & blog index
-
-
------------- MAP ------------
-
-01. #CONTENT & #MAIN WRAPPERS 
-02. ARTICLE WRAPPER
-03. ENTRY/PAGE HEADER
-04. FEATURED IMAGE
-05. ENTRY/PAGE CONTENT
-06. ENTRY/PAGE FOOTER
-
 ******************************************************************/
 
 
-/*******************************
-01. #CONTENT & #MAIN WRAPPERS
-(#content usually includes sidebar.
-#main is all post/entry/page content)
-********************************/
-
-
-
-/*******************************
-02. ARTICLE WRAPPER
-(background, borders etc for individual posts/pages)
-********************************/
 
 .hentry, #comments, .respond-form {
   margin: 0 0 20px 0;
-}
-
-
-
-/*******************************
-03. ENTRY HEADER
-********************************/
-
-
-
-// all titles
-.entry-title {
 }
 
 .byline {
@@ -55,19 +20,16 @@ These are the styles for posts, pages, archive, & blog index
   time {}
 }
 
-
-///want to style individual post classes? Booya!
-
+// Sticky Indicator
+// -------------------------
 .sticky-ind {
   display: none;
 }
 .sticky .sticky-ind {display:inline !important;}
 
 
-/*******************************
-04. FEATURED IMAGE
-********************************/
-
+// Featured Image
+// -------------------------
 .featured-content {
   margin-bottom: 20px;
 }
@@ -87,12 +49,8 @@ These are the styles for posts, pages, archive, & blog index
   }
 }
 
-
-/*******************************
-06. ENTRY FOOTER
-********************************/
-
-// loop footer + single footer
+// Entry Footer
+// -------------------------
 .article-footer  {
   padding: 10px 0;
   border-top: 1px solid @gray-lighter;
@@ -121,6 +79,3 @@ These are the styles for posts, pages, archive, & blog index
   	}
   }
 }
-
-// just single footer
-.single-footer {}

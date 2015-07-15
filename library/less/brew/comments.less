@@ -13,18 +13,10 @@ Stylesheet: Comments
 #comments {
   margin-bottom: 20px;
 
-  > h3 {
-  }
-
   .comment-container {
     padding: 20px 20px;
     border-bottom: 1px solid #eee;
   }
-
-
-  /* number of comments span */
-  span {}
-
 }
 
 .comment-content {
@@ -34,15 +26,10 @@ Stylesheet: Comments
 }
 
 .comment-nav {
-
   padding: 10px 20px;
 
   ul {
-
-    li {
-      list-style-type: none;
-    }
-
+    .list-unstyled;
   }
 }
 
@@ -55,27 +42,12 @@ Stylesheet: Comments
   }
 
   li {
-
     &:last-child {
       margin-bottom: 0;
     }
-
     ul.children {
       margin: 0;
-
-      li {}
-
-      /* variations */
-      .comment {}
-      .alt {}
-      .odd {}
-      .even {}
-      .depth-1 {}           /* change number for different depth */
-      .byuser {}
-      .bypostauthor {}
-      .comment-author-admin {}
-
-    } /* end .commentlist li ul.children */
+    } 
   }
 
   li[class*=depth-] {
@@ -91,11 +63,6 @@ Stylesheet: Comments
     margin-top: 0;
     padding-bottom: 0;
   }
-
-  li.depth-2 {}
-  li.depth-3 {}
-  li.depth-4 {}
-  li.depth-5 {}
 
   /* general comment classes */
   .alt {}
@@ -120,7 +87,7 @@ Stylesheet: Comments
   }
   .pingback {}
   .bypostauthor {
-    background: lighten(@brand-primary, 43.5%);
+    background: lighten(@brand-warning, 30%);
   }
   .comment-author {
     width: 10%;
@@ -139,28 +106,20 @@ Stylesheet: Comments
 
   /* vcard */
   .vcard {
-
     cite.fn {
       font-weight: 700;
       font-style: normal;
-
-      a.url {}
-
     }
 
     time {
       float: right;
-
       a {
         color: #999;
         text-decoration: none;
-
         &:hover {
           text-decoration: underline;
         }
-
       }
-
     }
 
     img.photo {}
@@ -170,20 +129,6 @@ Stylesheet: Comments
       border: 1px solid #cecece;
       background: #fff;
     }
-
-  } /* end .commentlist .vcard */
-
-
-  /* comment meta */
-  .comment-meta {
-
-    a {}
-
-  }
-
-  .commentmetadata {
-
-    a {}
 
   }
 
@@ -200,22 +145,19 @@ Stylesheet: Comments
 
   /* comment reply link */
   .comment-reply-link {
-    text-decoration: none;
+    .btn;
+    .btn-sm;
+    .btn-info;
     float: right;
-    background: #4598bb;
-    padding: 3px 5px;
-    color: #fff;
     opacity: 0.65;
     margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 0.9em;
 
     &:hover,
     &:focus {
       opacity: 1;
     }
 
-  } /* end .commentlist .comment-reply-link */
+  } 
 
 } /* end .commentlist */
 
@@ -248,14 +190,3 @@ Stylesheet: Comments
   > h3 {
   }
 }
-
-
-/********************************************/
-
-
-
-
-
-
-
-

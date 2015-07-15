@@ -8,37 +8,22 @@ Stylesheet: Sidebars
 
 #sidebar {
   .widget {
-    margin-bottom: 30px;
+    margin-bottom: @line-height;
   }
 }
 
-	.widgettitle {
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid @gray-lighter;
-      }
+.widgettitle {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid @gray-lighter;
+}
 
-	.widget {
-
-		ul {
-      padding: 0;
-      margin: 0;
-
-			li {
-        padding: 5px 0;
-        list-style: none;
-
-				&:first-child {}
-
-				&:last-child {}
-
-				a {}
-
-				/* deep nesting */
-				ul {}
-
-			}
-
+.widget {
+	ul {
+    padding: 0;
+    margin: 0;
+		li {
+      list-style: none;
 		}
-
 	}
+}
