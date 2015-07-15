@@ -6027,6 +6027,18 @@ Author: DD9
 
 Stylesheet: Typography Stylesheet
 ******************************************************************/
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  margin: 0 0 24px;
+}
 a,
 a:visited {
   -webkit-transition: all 0.2s ease;
@@ -6143,11 +6155,11 @@ Stylesheet: Comments
 ******************************************************************/
 /* h3 comment title */
 #comments {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 #comments .comment-container {
   padding: 20px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
 }
 .comment-content {
   width: 88%;
@@ -6387,12 +6399,6 @@ fieldset[disabled] .commentlist .comment-reply-link.active {
 #pings {
   padding: 20px;
 }
-#pings h3 {
-  margin-bottom: 20px;
-}
-.havecomments > h3 {
-  padding-bottom: 20px;
-}
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
@@ -6427,77 +6433,9 @@ Author: DD9
 Stylesheet: Form Styles
 
 ******************************************************************/
-.respond-form {
-  margin: 1.5em 10px;
-  padding-bottom: 2.2em;
-}
-.respond-form ul {
-  padding-left: 0;
-  padding-bottom: 20px;
-}
-.respond-form form {
-  margin: 0.75em 0;
-}
-.respond-form form li {
-  list-style-type: none;
-  clear: both;
-  margin-bottom: 0.7335em;
-  border: none;
-}
-.respond-form form li label,
-.respond-form form li small {
-  display: none;
-}
-.respond-form form input[type=text],
-.respond-form form input[type=email],
-.respond-form form input[type=url],
-.respond-form form textarea {
-  padding: 3px 6px;
-  background: #efefef;
-  border: 2px solid #cecece;
-  line-height: 1.5em;
-  /* form validation */
-}
-.respond-form form input[type=text]:focus,
-.respond-form form input[type=email]:focus,
-.respond-form form input[type=url]:focus,
-.respond-form form textarea:focus {
-  background: #fff;
-}
-.respond-form form input[type=text]:invalid,
-.respond-form form input[type=email]:invalid,
-.respond-form form input[type=url]:invalid,
-.respond-form form textarea:invalid {
-  outline: none;
-  border-color: #fbc2c4;
-  background-color: #f6e7eb;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  box-shadow: none;
-}
-.respond-form form input[type=text],
-.respond-form form input[type=email],
-.respond-form form input[type=url] {
-  max-width: 400px;
-  min-width: 250px;
-}
-.respond-form form textarea {
-  resize: none;
-  width: 97.3%;
-  height: 150px;
-}
-/* comment submit button */
 /* comment form title */
-#comment-form-title {
-  margin: 0 0 1.1em;
-}
 /* cancel comment reply link */
 /* logged in comments */
-/* allowed tags */
-#allowed_tags {
-  margin: 1.5em 10px 0.7335em 0;
-}
 /* no comments */
 .nocomments {
   margin: 0 20px 1.1em;
@@ -6522,7 +6460,6 @@ Stylesheet: Sidebars
   margin: 0;
 }
 .widget ul li {
-  padding: 5px 0;
   list-style: none;
 }
 /******************************************************************
@@ -6727,59 +6664,12 @@ A few random components built for BREW such as breadcrumbs and
 next/previous posts
 
 ******************************************************************/
-/***********************************
-Next/Previous buttons under posts
-***********************************/
-#single-post-nav .pager span {
-  width: 100%;
-  text-align: center;
-  padding: 10px 10px;
-  border-radius: 5px;
-}
-@media (min-width: 992px) {
-  #single-post-nav .pager span {
-    width: auto;
-    padding: 5px 10px;
-  }
-}
-.pager .previous-page {
-  margin-bottom: 20px;
-}
-@media (min-width: 992px) {
-  .pager .previous-page {
-    float: left;
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 992px) {
-  .pager .next-page {
-    float: right;
-  }
-}
-.pager a,
-.previous-page a,
-.next-page a {
-  color: #999;
-}
-.pager a:hover,
-.previous-page a:hover,
-.next-page a:hover {
-  color: #444;
-  text-decoration: none;
-  cursor: pointer;
-}
-/*********************
-AUTHOR BOX
-*********************/
 #author-info {
   padding: 20px;
 }
-#author-info h4 {
-  margin-top: 0;
-}
 .author-img {
   float: left;
-  margin-right: 20px;
+  margin-right: 24px;
 }
 @media (min-width: 480px) {
   .author-desc {
@@ -6809,27 +6699,6 @@ AUTHOR BOX
 .social-links a:hover {
   color: #333333;
 }
-/*********************
-BREADCRUMBS
-*********************/
-.breadcrumb {
-  padding: 4px 17px;
-  background: #f9f9f9;
-}
-/*********************
-PAGINATION
-*********************/
-.pagination li a:hover,
-.pagination li a:focus {
-  background-color: #b40027;
-  color: #fff;
-}
-.pagination li .active,
-.pagination li span:hover {
-  background-color: #e70032;
-  color: #fff;
-}
-/* end pagination */
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
