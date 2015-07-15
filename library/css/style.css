@@ -6153,6 +6153,10 @@ Author: DD9
 Stylesheet: Comments
 
 ******************************************************************/
+#comments,
+.respond-form {
+  margin: 0 0 24px 0;
+}
 /* h3 comment title */
 #comments {
   margin-bottom: 24px;
@@ -6472,11 +6476,6 @@ Stylesheet: Content Styles
 
 These are the styles for posts, pages, archive, & blog index
 ******************************************************************/
-.hentry,
-#comments,
-.respond-form {
-  margin: 0 0 20px 0;
-}
 .byline {
   color: #777777;
   margin: 0;
@@ -6546,12 +6545,10 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-#site-header #logo {
-  height: 40px;
-}
 #site-header .navbar-brand {
   padding-top: 5px;
   padding-bottom: 5px;
+  width: 95px;
 }
 .nav {
   /* end .menu li */
