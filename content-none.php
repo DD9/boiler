@@ -6,6 +6,6 @@
     <p><?php _e( 'Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
   </section>
   <footer class="article-footer">
-      <p><?php _e( 'This is the error message in the archive.php template.', 'bonestheme' ); ?></p>
+      <p><?php _e( 'This is an error message.', 'bonestheme' ); ?></p>
   </footer>
 </article>

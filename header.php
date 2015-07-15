@@ -66,4 +66,4 @@
     </div><!-- /navbar --> 
   </nav>
 
-</header> <?php // end header ?>
+</header> <?php // end site-header ?>

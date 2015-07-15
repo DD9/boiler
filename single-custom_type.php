@@ -15,64 +15,30 @@ single-bookmarks.php
 
 <?php get_header(); ?>
 
-      <div class="container">
+<div class="container">  
+  <div class="row">
 
-  			<div id="content" class="clearfix row">
+    <div class="col-md-8">
 
-					<div id="main" class="col-md-8 clearfix" role="main">
+      <?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
 
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );?>
 
-						<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+        <?php get_template_part( 'content'); ?>
 
-							<header class="article-header">
+      <?php endwhile; ?>
 
-								<h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
-								<p class="byline vcard"><?php
-									printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), bones_get_the_author_posts_link(), get_the_term_list( $post->ID, 'custom_cat', ' ', ', ', '' ) );
-								?></p>
+      <?php else : ?>
 
-							</header> <?php // end article header ?>
+        <?php get_template_part( 'content', 'none' ); ?>
 
-							<section class="entry-content clearfix">
+      <?php endif; ?>
 
-								<?php the_content(); ?>
+    </div><!-- /col -->
 
-							</section> <?php // end article section ?>
+    <?php get_sidebar(); ?>
 
-							<footer class="article-footer">
-								<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">' . __( 'Custom Tags:', 'bonestheme' ) . '</span> ', ', ' ) ?></p>
-
-							</footer> <?php // end article footer ?>
-
-							<?php comments_template(); ?>
-
-						</article> <?php // end article ?>
-
-						<?php endwhile; ?>
-
-						<?php else : ?>
-
-								<article id="post-not-found" class="hentry clearfix">
-									<header class="article-header">
-										<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-									</header>
-									<section class="entry-content">
-										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-									</section>
-									<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single-custom_type.php template.', 'bonestheme' ); ?></p>
-									</footer>
-								</article>
-
-						<?php endif; ?>
-
-					</div> <?php // end #main ?>
-
-					<?php get_sidebar(); ?>
-
-  			</div> <?php // end #content ?>
-
-      </div> <?php // end ./container ?>
+ </div> <!-- /row -->
+</div> <!-- /container -->
 
 <?php get_footer(); ?>
