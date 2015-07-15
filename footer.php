@@ -30,7 +30,7 @@ $googleplus = get_field('googleplus_url', 'option');
           </ul>
           
           <?php // ACF global options: Social Icons ?>
-          <ul class="social-icons clearfix">
+          <ul class="social-links">
             <?php if ($facebook) { ?>
               <li class="facebook"> <a href="<?= $facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
             <?php } ?>
