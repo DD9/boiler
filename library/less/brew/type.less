@@ -13,7 +13,7 @@ Stylesheet: Typography Stylesheet
 // Headings
 // -------------------------
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	margin: 0 0 @line-height;
 
 	a {}
@@ -28,6 +28,20 @@ h3, .h3 {}
 h4, .h4 {}
 
 h5, .h5 {}
+
+.add-divider {
+  border-bottom: 1px solid @gray-lighter;
+  clear: both;
+  padding-bottom: 0.65em;
+}
+
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0 0 @line-height;
+}
 
 
 // Link Styles

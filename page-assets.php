@@ -58,8 +58,8 @@
     <h1>Typography</h1>
   </div>
   
-  <div class="row">
-    <div class="col-lg-4">
+	<div class="row">
+    <div class="col-lg-6">
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
       <h3>Heading 3</h3>
@@ -68,7 +68,18 @@
       <h6>Heading 6</h6>
       <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
     </div>
-    
+    <div class="col-lg-6">
+    	<h3 class="add-divider">Heading with divider</h3>
+      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+      <h5 class="add-divider">Heading with divider</h5>
+      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+      
+    </div>
+  </div><!-- /row -->
+  
+  <hr />
+  
+  <div class="row">
     <div class="col-lg-4">
       <h2>Example body text</h2>
       <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
@@ -77,26 +88,34 @@
       <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
       <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
     </div>
-    
     <div class="col-lg-4">
-      <h2>Emphasis classes</h2>
-      <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
-      <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-      <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
-      <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
-      <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-      <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <h2>Emphasis classes</h2>
+        <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+        <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+        <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+        <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
     </div>
-  </div>	
+    <div class="col-lg-4">
+      <h2>Highlight Inline Text</h2>
+      <p>Lorem ipsum dolor sit amet, <span class="bg-success">text with bg-success</span> consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt <span class="bg-info">text with bg-info</span> ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud <span class="bg-warning">text with bg-warning</span> exercitation ullamco 
+        laboris nisi ut aliquip ex ea commodo <span class="bg-danger">text with bg-danger</span> consequat. Duis aute 
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      </p>
+    </div>
+  </div><!-- /row -->
   
   <div class="row">
     <div class="col-lg-12">
       <blockquote>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+        <footer>Some Person from <cite title="Publication Title">Publication Title</cite></footer>
       </blockquote>
-    </div>
-  </div>		
+    </div><!-- /col -->
+  </div>	<!-- /row -->		
 
   <div class="page-header">
     <h1>Buttons</h1>
