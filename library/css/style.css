@@ -6423,6 +6423,12 @@ Stylesheet: Form Styles
 .nocomments {
   margin: 0 20px 1.1em;
 }
+.required-items {
+  color: #777777;
+  font-size: 12px;
+  font-style: oblique;
+  margin-bottom: 10px;
+}
 /******************************************************************
 Site Name: BREW
 Author: Dan Brown

@@ -60,7 +60,7 @@ The comments page for Bones
 <div id="respond" class="respond-form">
 
   <h3 id="comment-form-title"><?php comment_form_title( __( 'Leave a Reply', 'bonestheme' ), __( 'Leave a Reply to %s', 'bonestheme' )); ?></h3>
-
+	  
   <div id="cancel-comment-reply">
     <p class="small"><?php cancel_comment_reply_link(); ?></p>
   </div>
@@ -80,16 +80,16 @@ The comments page for Bones
     <?php else : ?>
   
     	<div class="form-group">
-        <label class="col-sm-2 control-label" for="author"><?php _e( 'Name', 'bonestheme' ); ?> <?php if ($req) _e( '(required)'); ?></label>
+        <label class="col-sm-2 control-label" for="author"><?php _e( 'Name', 'bonestheme' ); ?> <?php if ($req) _e( '*'); ?></label>
         <div class="col-sm-10">
-        	<input type="text" name="author" id="author" class="form-control" value="<?php echo esc_attr($comment_author); ?>" placeholder="<?php _e( 'Your Name*', 'bonestheme' ); ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+        	<input type="text" name="author" id="author" class="form-control" value="<?php echo esc_attr($comment_author); ?>" placeholder="<?php _e( 'Your name*', 'bonestheme' ); ?>" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
         </div><!-- /col -->
       </div><!-- /form-group -->
   
       <div class="form-group">
-        <label class="col-sm-2 control-label" for="email"><?php _e( 'Mail', 'bonestheme' ); ?> <?php if ($req) _e( '(required)'); ?></label>
+        <label class="col-sm-2 control-label" for="email"><?php _e( 'Email', 'bonestheme' ); ?> <?php if ($req) _e( '*'); ?></label>
         <div class="col-sm-10">
-        	<input type="email" name="email" id="email" class="form-control" value="<?php echo esc_attr($comment_author_email); ?>" placeholder="<?php _e( 'Your E-Mail*', 'bonestheme' ); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+        	<input type="email" name="email" id="email" class="form-control" value="<?php echo esc_attr($comment_author_email); ?>" placeholder="<?php _e( 'Your email*', 'bonestheme' ); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
         	<div class="help-block"><?php _e("(will not be published)", 'bonestheme' ); ?></div>
         </div><!-- /col -->
         
@@ -107,14 +107,15 @@ The comments page for Bones
     <div class="form-group">
       <label class="col-sm-2 control-label" for="comment"><?php _e( 'Your Comment', 'bonestheme' ); ?></label>
       <div class="col-sm-10">
-        <textarea name="comment" id="comment" class="form-control" placeholder="<?php _e( 'Your Comment here...', 'bonestheme' ); ?>" tabindex="4"></textarea>
+        <textarea name="comment" id="comment" class="form-control" placeholder="<?php _e( 'Your comment here...', 'bonestheme' ); ?>" tabindex="4"></textarea>
       </div><!-- /col -->
     </div><!-- /form-group -->
   
     <div class="form-group">
     	<div class="col-sm-offset-2 col-sm-10">
+        <p class="required-items">Fields marked with * are required</p>
         <input name="submit" type="submit" id="submit" class="btn btn-primary" tabindex="5" value="<?php _e( 'Submit', 'bonestheme' ); ?>" />
-        <?php comment_id_fields(); ?>
+				<?php comment_id_fields(); ?>
       </div><!-- /col -->
     </div><!-- /form-group -->
   
@@ -135,7 +136,7 @@ The comments page for Bones
   </div> <!-- END #COMMENTS (have comments, comments now closed) -->
 
   <div class="closed">
-    <h3>comments are closed</h3>
+    <h3>Comments are closed</h3>
   </div>
 
   <?php endif; ?>
