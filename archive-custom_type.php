@@ -11,15 +11,15 @@
 
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         
-        <?php get_template_part( 'content', 'excerpt' ); ?>
+        <?php get_template_part( 'partials/content', 'excerpt' ); ?>
 
       <?php endwhile; ?>
 
-        <?php get_template_part( 'pagination' ); ?>
+        <?php get_template_part( 'partials/pagination' ); ?>
 
       <?php else : ?>
 				
-        <?php get_template_part( 'content', 'none' ); ?>
+        <?php get_template_part( 'partials/content', 'none' ); ?>
 
       <?php endif; ?>
 

@@ -23,6 +23,10 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
 
+//Remove Emoji Support
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' ); 
+
 // Include Shortcodes plugin automatically
 // http://wordpress.stackexchange.com/questions/160255/how-to-include-plugin-without-activation
 // Also edited /dd9-shortcodes.php, /scripts.php, and /symple_shortcodes_tinymce.php to correct the path to all the included files

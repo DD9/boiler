@@ -24,13 +24,13 @@ single-bookmarks.php
 
       <?php if (have_posts()) : while (have_posts()) : the_post(); $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );?>
 
-        <?php get_template_part( 'content'); ?>
+        <?php get_template_part( 'partials/content'); ?>
 
       <?php endwhile; ?>
 
       <?php else : ?>
 
-        <?php get_template_part( 'content', 'none' ); ?>
+        <?php get_template_part( 'partials/content', 'none' ); ?>
 
       <?php endif; ?>
 
