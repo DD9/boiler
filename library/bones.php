@@ -127,7 +127,7 @@ function bones_scripts_and_styles() {
 
     // js bootstrap
     // download a custom file @ getbootstrap.com/customize/ if you don't want all js components
-    wp_register_script( 'boiler-bootstrap', get_template_directory_uri() . '/library/js/libs/bootstrap.min.js', array(), '3.3.2', true );
+    wp_register_script( 'boiler-bootstrap', get_template_directory_uri() . '/library/js/libs/bootstrap.min.js', array(), '3.3.5', true );
 
     // modernizr (without media query polyfill)
     wp_register_script( 'boiler-modernizr', get_template_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
