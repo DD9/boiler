@@ -40,7 +40,7 @@ require_once mytheme_inc_path. 'plugins/dd9-shortcodes/dd9-shortcodes.php';
 
 function enqueue_jquery_script() {
   wp_deregister_script('jquery');
-  wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"), false);
+  wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"), false);
   wp_enqueue_script('jquery');
 }
 add_action('wp_enqueue_scripts', 'enqueue_jquery_script');
