@@ -68,6 +68,8 @@ function bones_head_cleanup() {
   //Remove Emoji Support
   remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
   remove_action( 'wp_print_styles', 'print_emoji_styles' ); 
+  //kill comments script, add back later as appropriate
+  //wp_deregister_script( 'comment-reply' );
 
   // EditURI link
 	remove_action( 'wp_head', 'rsd_link' );
@@ -150,6 +152,11 @@ function bones_scripts_and_styles() {
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
 		  wp_enqueue_script( 'comment-reply' );
     }
+
+    //  if ( is_singular() ) {
+    //    wp_enqueue_script( 'comment-reply' );
+    // }
+
 
     //adding scripts file in the footer
     wp_register_script( 'boiler-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '', true );

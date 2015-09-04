@@ -40,12 +40,12 @@ add_action('wp_enqueue_scripts', 'enqueue_jquery_script');
 
 /* library/bones.php (functions specific to BREW)
   - navwalker
-  - Redux framework
   - Read more > Bootstrap button
   - Bootstrap style pagination
   - Bootstrap style breadcrumbs
 */
 require_once( 'library/brew.php' ); // if you remove this, BREW will break
+
 /*
 1. library/bones.php
 	- head cleanup (remove rsd, uri links, junk css, ect)
@@ -74,13 +74,12 @@ Hardcode custom post types here if you want to keep them out of the dashboard
 This is a good idea in many cases. Otherwise use:  https://wordpress.org/plugins/custom-post-type-ui/
 */
 
-//WP Custom Post Type Class v1.3
+//WP Custom Post Type Class 
 //https://github.com/jjgrainger/wp-custom-post-type-class
 
 //require_once( 'library/CPT.php' ); 
 //require_once( 'library/CPT-flush.php' ); 
 
-//$books = new CPT('book');
 
 
 
@@ -204,7 +203,7 @@ function bones_comments( $comment, $args, $depth ) {
 					// create variable
 					$bgauthemail = get_comment_author_email();
 				?>
-				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=64" class="load-gravatar avatar avatar-48 photo" height="64" width="64" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
+				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=64" class="load-gravatar avatar avatar-48 photo" height="64" width="64" src="<?php echo get_template_directory_uri(); ?>/images/favicon.png" />
 				<?php // end custom gravatar call ?>
 			</div>
       <div class="comment-content">
@@ -226,15 +225,4 @@ function bones_comments( $comment, $args, $depth ) {
 <?php
 } // don't remove this bracket!
 
-/*************** PINGS LAYOUT **************/
 
-function list_pings( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment; ?>
-	<li id="comment-<?php comment_ID(); ?>">
-		<span class="pingcontent">
-			<?php printf(__('<cite class="fn">%s</cite> <span class="says"></span>'), get_comment_author_link()) ?>
-			<?php comment_text(); ?>
-		</span>
-	</li>
-<?php } // end list_pings
-?>

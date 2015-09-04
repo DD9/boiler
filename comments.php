@@ -144,16 +144,5 @@ The comments page for Bones
 
 <?php endif; // if you delete this the sky will fall on your head ?>
 
-<?php $comments_by_type = &separate_comments($comments); ?>
-  <?php if ( ! empty( $comments_by_type['pings'] ) ) { ?>
-  <div id="pings">
-    <h3>
-      <?php _e( 'Trackbacks and Pingbacks:', 'bones' ); ?>
-    </h3>
-    <ol class="pinglist">
-      <?php wp_list_comments( 'type=pings&callback=list_pings' ); ?>
-    </ol>
-  </div><!-- /#pings -->
-<?php } // end if ?>
 
 
