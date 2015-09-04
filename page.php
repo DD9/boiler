@@ -13,17 +13,17 @@
         
         <header class="entry-header">
           <h1 class="entry-title entry-title" itemprop="headline"><?php the_title(); ?></h1>
-        </header> <!-- end article header -->
+        </header> 
       
         <section class="entry-content clearfix" itemprop="articleBody">
           <?php the_content(); ?>
-        </section> <!-- end article section -->
+        </section> 
         
         <footer>
           <?php the_tags('<p class="tags"><span class="tags-title">' . __("Tags","bonestheme") . ':</span> ', ', ', '</p>'); ?>
-        </footer> <!-- end article footer -->
+        </footer> 
       
-      </article> <!-- end article -->
+      </article> 
                   
       <?php endwhile; ?>    
       

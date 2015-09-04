@@ -42,7 +42,7 @@
   <nav role="navigation">
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+        <?php //.navbar-toggle is used as the toggle for collapsed navbar content ?>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
             <i class="fa fa-bars"></i>
@@ -51,12 +51,11 @@
           <a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage">
             <img src="<?= get_bloginfo('template_directory'); ?>/images/logo_dd9.svg" onerror="this.src='<?= get_bloginfo('template_directory'); ?>/images/logo_dd9.png'; this.onerror=null;" alt="<?php bloginfo( 'name' ) ?> Logo" />
           </a>
-
-        </div><!-- /navbar-header -->
+        </div>
 
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <?php bones_main_nav(); ?>
-        </div><!-- /navbar-collapse -->
+        </div>
         
       </div><!-- /container -->
     </div><!-- /navbar --> 
