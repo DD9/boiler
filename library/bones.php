@@ -127,19 +127,19 @@ function bones_scripts_and_styles() {
 
     // js bootstrap
     // download a custom file @ getbootstrap.com/customize/ if you don't want all js components
-    wp_register_script( 'boiler-bootstrap', get_template_directory_uri() . '/library/js/libs/bootstrap.min.js', array(), '3.3.5', true );
+    wp_register_script( 'boiler-bootstrap', get_template_directory_uri() . '/js/libs/bootstrap.min.js', array(), '3.3.5', true );
 
     // modernizr (without media query polyfill)
-    wp_register_script( 'boiler-modernizr', get_template_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+    wp_register_script( 'boiler-modernizr', get_template_directory_uri() . '/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
 
     // register main stylesheet
-    wp_register_style( 'boiler-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+    wp_register_style( 'boiler-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'all' );
 
     // ie-only style sheet
-    wp_register_style( 'boiler-ie-only', get_template_directory_uri() . '/library/css/ie.css', array(), '' );
+    wp_register_style( 'boiler-ie-only', get_template_directory_uri() . '/css/ie.css', array(), '' );
 
-    // FitVid (responsive video) FYI: Script is initialized in /library/js/scripts.js by calling the container element
-    wp_register_script( 'fitvids', get_template_directory_uri() . '/library/js/libs/FitVids.js-master/jquery.fitvids.js', array('jquery'), '', TRUE );
+    // FitVid (responsive video) FYI: Script is initialized in /js/scripts.js by calling the container element
+    wp_register_script( 'fitvids', get_template_directory_uri() . '/js/libs/FitVids.js-master/jquery.fitvids.js', array('jquery'), '', TRUE );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -147,7 +147,7 @@ function bones_scripts_and_styles() {
     }
 
     //adding scripts file in the footer
-    wp_register_script( 'boiler-js', get_template_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+    wp_register_script( 'boiler-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '', true );
 
 
     // enqueue styles and scripts

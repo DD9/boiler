@@ -62,7 +62,7 @@ add_action( 'admin_menu', 'disable_default_dashboard_widgets' );
 //Updated to proper 'enqueue' method
 //http://codex.wordpress.org/Plugin_API/Action_Reference/login_enqueue_scripts
 function bones_login_css() {
-	wp_enqueue_style( 'bones_login_css', get_template_directory_uri() . '/library/css/login.css', false );
+	wp_enqueue_style( 'bones_login_css', get_template_directory_uri() . '/css/login.css', false );
 }
 
 // changing the logo link from wordpress.org to your site
