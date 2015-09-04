@@ -64,7 +64,12 @@ function bones_head_cleanup() {
 	// remove_action( 'wp_head', 'feed_links_extra', 3 );
 	// post and comment feeds
 	// remove_action( 'wp_head', 'feed_links', 2 );
-	// EditURI link
+	
+  //Remove Emoji Support
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' ); 
+
+  // EditURI link
 	remove_action( 'wp_head', 'rsd_link' );
 	// windows live writer
 	remove_action( 'wp_head', 'wlwmanifest_link' );
@@ -163,10 +168,10 @@ function bones_scripts_and_styles() {
     and your site will load faster.
     */
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'boiler-js' );
     wp_enqueue_script( 'boiler-bootstrap' );
     wp_enqueue_script( 'fitvids');
     wp_enqueue_script( 'fitvids-xtra');
+    wp_enqueue_script( 'boiler-js' );
 
   }
 }

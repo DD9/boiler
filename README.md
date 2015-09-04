@@ -145,7 +145,7 @@ git pull -s subtree boiler master
 
 #Compile Boiler
 
-Configure LESS compiler to target these files in /library/css
+Configure LESS compiler to target these files in /css
 
 ```
 ie.css
