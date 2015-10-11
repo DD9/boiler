@@ -1,7 +1,6 @@
 <?php
 /*
-Author: Eddie Machado, DD9 and Others
-URL: htp://themble.com/bones/
+Author: DD9, Eddie Machado, and Others
 
 This is where you can drop your custom functions or
 just edit things like thumbnail sizes, header images,
@@ -38,6 +37,8 @@ function enqueue_jquery_script() {
 add_action('wp_enqueue_scripts', 'enqueue_jquery_script');
 
 
+
+
 /* library/bones.php (functions specific to BREW)
   - navwalker
   - Read more > Bootstrap button
@@ -69,6 +70,7 @@ require_once( 'library/admin.php' ); // dashboard customizations
 
 
 /************* CUSTOM POST TYPES *************/
+
 /* 
 Hardcode custom post types here if you want to keep them out of the dashboard
 This is a good idea in many cases. Otherwise use:  https://wordpress.org/plugins/custom-post-type-ui/
@@ -77,10 +79,13 @@ This is a good idea in many cases. Otherwise use:  https://wordpress.org/plugins
 //WP Custom Post Type Class 
 //https://github.com/jjgrainger/wp-custom-post-type-class
 
-//require_once( 'library/CPT.php' ); 
-//require_once( 'library/CPT-flush.php' ); 
+//require_once( 'library/CPT.php' );
 
-
+// Flush rewrite rules for custom post types
+// function boiler_flush_rewrite_rules() {
+//   flush_rewrite_rules();
+// } 
+// add_action( 'after_switch_theme', 'boiler_flush_rewrite_rules' );
 
 
 

@@ -9,6 +9,66 @@ slow the page load.
 
 */
 
+
+
+// MAIN FUNCTIONS WRAPPER -----------------------------
+// Fires on document ready
+// Inside of this function, $() will work as an alias for jQuery()
+// and other libraries also using $ will not be accessible under this shortcut
+// See jQuery noConflict Wrapers
+// http://codex.wordpress.org/Function_Reference/wp_enqueue_script
+jQuery(document).ready(function($) {
+
+
+  // Responsive Scripts Skeleton --------------------------------------------
+  /* getting viewport width */
+  var responsive_viewport = $(window).width();
+
+  /* if is below 481px */
+  if (responsive_viewport < 481) {
+
+  } /* end smallest screen */
+
+  /* if is larger than 481px */
+  if (responsive_viewport > 481) {
+
+  } /* end larger than 481px */
+
+  /* if is above or equal to 768px */
+  if (responsive_viewport >= 768) {
+
+  /* load gravatars */
+  $('.comment img[data-gravatar]').each(function(){
+      $(this).attr('src',$(this).attr('data-gravatar'));
+  });
+
+  }
+
+  /* off the bat large screen actions */
+  if (responsive_viewport > 1030) {
+
+  }
+
+
+
+  // Initialize FitVids --------------------------------------------
+  // Target your .container, .wrapper, .post, etc.
+  $(".container").fitVids();
+
+
+  // add all your scripts here
+
+
+
+
+});
+
+
+
+
+// OUTSIDE DOCUMENT READY SCRIPTS -----------------------------
+// Lost of copypasta stuff here
+
 // IE8 ployfill for GetComputed Style (for Responsive Script below)
 if (!window.getComputedStyle) {
     window.getComputedStyle = function(el, pseudo) {
@@ -27,49 +87,6 @@ if (!window.getComputedStyle) {
     }
 }
 
-// as the page loads, call these scripts
-jQuery(document).ready(function($) {
-
-    /*
-    Responsive jQuery is a tricky thing.
-    There's a bunch of different ways to handle
-    it, so be sure to research and find the one
-    that works for you best.
-    */
-    
-    /* getting viewport width */
-    var responsive_viewport = $(window).width();
-    
-    /* if is below 481px */
-    if (responsive_viewport < 481) {
-    
-    } /* end smallest screen */
-    
-    /* if is larger than 481px */
-    if (responsive_viewport > 481) {
-        
-    } /* end larger than 481px */
-    
-    /* if is above or equal to 768px */
-    if (responsive_viewport >= 768) {
-    
-        /* load gravatars */
-        $('.comment img[data-gravatar]').each(function(){
-            $(this).attr('src',$(this).attr('data-gravatar'));
-        });
-        
-    }
-    
-    /* off the bat large screen actions */
-    if (responsive_viewport > 1030) {
-        
-    }
-    
-	
-	// add all your scripts here
-	
- 
-}); /* end of as page load scripts */
 
 
 /*! A fix for the iOS orientationchange zoom bug.
@@ -108,14 +125,3 @@ jQuery(document).ready(function($) {
 })( this );
 
 
-
-/*
-Initialize FitVids
-*/
-(function($) {
-  $(document).ready(function(){
-    // Target your .container, .wrapper, .post, etc.
-    $(".container").fitVids();
-  });
-  
-})(jQuery);
