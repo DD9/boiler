@@ -7,11 +7,7 @@ It's turned off by default, but you can call it
 via the functions file.
 
 Developed by: Eddie Machado & DD9
-URL: http://themble.com/bones/
 
-Special Thanks for code & inspiration to:
-@jackmcconnell - http://www.voltronik.co.uk/
-Digging into WP - http://digwp.com/2010/10/customize-wordpress-dashboard/
 
 */
 
@@ -21,11 +17,10 @@ Digging into WP - http://digwp.com/2010/10/customize-wordpress-dashboard/
 add_filter( 'show_admin_bar', '__return_false' );
 
 //Remove links menu on older installs
-add_action( 'admin_menu', 'my_remove_menu_pages' );
 function my_remove_menu_pages() {
   remove_menu_page('link-manager.php');  
 }
-
+add_action( 'admin_menu', 'my_remove_menu_pages' );
 
 
 /************* DASHBOARD WIDGETS *****************/
@@ -46,11 +41,15 @@ function disable_default_dashboard_widgets() {
 
 
 }
-
-
-
-// removing the dashboard widgets
 add_action( 'admin_menu', 'disable_default_dashboard_widgets' );
+
+//Disable YOAST nag messages
+//remove_action( 'admin_notices', array( Yoast_Notification_Center::get(), 'display_notifications' ) );
+//remove_action( 'all_admin_notices', array( Yoast_Notification_Center::get(), 'display_notifications' ) );
+
+
+
+
 // adding any custom widgets
 //add_action( 'wp_dashboard_setup', 'bones_custom_dashboard_widgets' );
 

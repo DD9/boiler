@@ -127,60 +127,62 @@ function bones_gallery_style($css) {
 SCRIPTS & ENQUEUEING
 *********************/
 
-// loading modernizr and jquery, and reply script
 function bones_scripts_and_styles() {
+  
   global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
+  
+  //First Handle Jquery
+  wp_deregister_script('jquery');
+  wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"), false);
+  wp_enqueue_script('jquery');
+
+
   if (!is_admin()) {
 
-    // js bootstrap
-    // download a custom file @ getbootstrap.com/customize/ if you don't want all js components
-    wp_register_script( 'boiler-bootstrap', get_template_directory_uri() . '/js/libs/bootstrap.min.js', array(), '3.3.5', true );
-
-    // modernizr (without media query polyfill)
+    // Register Scripts --------------------
+    //wp_register_script( 'boiler-bootstrap', get_template_directory_uri() . '/js/libs/bootstrap.min.js', array(), '3.3.5', true );
     wp_register_script( 'boiler-modernizr', get_template_directory_uri() . '/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
-
-    // register main stylesheet
-    wp_register_style( 'boiler-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'all' );
-
-    // ie-only style sheet
-    wp_register_style( 'boiler-ie-only', get_template_directory_uri() . '/css/ie.css', array(), '' );
-
-    // FitVid (responsive video) FYI: Script is initialized in /js/scripts.js by calling the container element
-    wp_register_script( 'fitvids', get_template_directory_uri() . '/js/libs/FitVids.js-master/jquery.fitvids.js', array('jquery'), '', TRUE );
-
-    // comment reply script for threaded comments
-    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-		  wp_enqueue_script( 'comment-reply' );
-    }
-
-    //  if ( is_singular() ) {
-    //    wp_enqueue_script( 'comment-reply' );
-    // }
-
-
-    //adding scripts file in the footer
+    wp_register_script( 'fitvids', get_template_directory_uri() . '/js/libs/jquery.fitvids.js', array('jquery'), '1.1', TRUE );
     wp_register_script( 'boiler-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '', true );
+    
+
+    // Register Styles --------------------
+    wp_register_style( 'boiler-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'all' );
+    wp_register_style( 'boiler-ie-only', get_template_directory_uri() . '/css/ie.css', array(), '' );
+    wp_register_style( 'boiler-shame', get_template_directory_uri() . '/css/shame.css', array(), '', 'all' );
 
 
-    // enqueue styles and scripts
-    wp_enqueue_script( 'boiler-modernizr' );
+    //Register 3rd Party Hosted Libraries --------------------
+    wp_enqueue_script('bootstrap-cdn', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array( 'jquery' ), '3.3.5', true );
+    wp_register_style('font-awesome-cdn', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0', 'all' );
+
+
+
+    //Enqueue styles  --------------------
+    wp_enqueue_style( 'font-awesome-cdn' );
     wp_enqueue_style( 'boiler-stylesheet' );
     wp_enqueue_style( 'boiler-ie-only' );
-
     $wp_styles->add_data( 'boiler-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+    wp_enqueue_style( 'boiler-shame' );  //Enable as needed
 
-    /*
-    I recommend using a plugin to call jQuery
-    using the google cdn. That way it stays cached
-    and your site will load faster.
-    */
+
+    //Enqueue scripts --------------------
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'boiler-bootstrap' );
+    //wp_enqueue_script( 'boiler-bootstrap' );
+    wp_enqueue_script( 'bootstrap-cdn' );
     wp_enqueue_script( 'fitvids');
-    wp_enqueue_script( 'fitvids-xtra');
+    wp_enqueue_script( 'boiler-modernizr' );
     wp_enqueue_script( 'boiler-js' );
 
+
+    // comment reply script for threaded comments
+    if ( is_singular() AND comments_open() AND (!is_page()) AND (get_option('thread_comments') == 1)) {
+      echo "<h1>TRUE</h1>";
+      wp_enqueue_script( 'comment-reply' );
+    }
+
   }
+
 }
 
 
@@ -375,5 +377,3 @@ function bones_get_the_author_posts_link() {
 	);
 	return $link;
 }
-
-?>

@@ -9,24 +9,19 @@
 
 <title><?php if (is_front_page()) { bloginfo('name'); } else { wp_title(''); } ?></title>
 
-
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+<?php //<meta name="HandheldFriendly" content="True">  ?>
+<?php //<meta name="MobileOptimized" content="320">  ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-<!-- <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon.png"> -->
-<!-- <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon-precomposed.png"> -->    		
-<!-- <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">-->
+<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png"> 
+<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-precomposed.png">    		
+<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
 <!--[if IE]>
-  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
 <![endif]-->
 
-
 <?php wp_head(); ?>
-
-<?php //Including external font-awesome for the time being ?>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 <?php // drop Google Analytics Here ?>
 <?php // end analytics ?>
