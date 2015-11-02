@@ -1,4 +1,4 @@
-<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-featured' );?>
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-featured' );?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
   <header class="entry-excerpt-header">
@@ -10,8 +10,10 @@
     </p>
   </header>
   
+  <?php if ($image) { ?>
   <section class="featured-content featured-img featured-img-bg" style="background: url('<?php echo $image[0]; ?>')">
   </section>
+  <?php } ?>
 
   <section class="entry-excerpt clearfix">
     <?php the_excerpt('<span class="read-more">' . __("Read more on","bonestheme") . ' "'.the_title('', '', false).'" &raquo;</span>'); ?>

@@ -9,9 +9,11 @@
       <span class="sticky-ind pull-right"><i class="fa fa-star"></i></span>
     </p>
   </header>
-
+	
+  <?php if ($image) { ?>
   <section class="featured-content featured-img featured-img-bg" style="background: url('<?php echo $image[0]; ?>')">
   </section>
+  <?php } ?>
 
   <section class="entry-content clearfix">
     <?php the_content(); ?>
@@ -30,7 +32,7 @@
 
 </article>
 
-<?php get_template_part( 'author-info' ); ?>
+<?php get_template_part( 'partials/author-info' ); ?>
 
 <?php if ( is_single() ) {?>
   <div id="single-post-nav">

@@ -14,10 +14,12 @@ Stylesheet: Comments
 /* h3 comment title */
 #comments {
   margin-bottom: @line-height;
+  padding-bottom: @line-height;
+  font-size: 14px;
+  border-bottom: 1px solid @gray-lighter;
 
   .comment-container {
     padding: 20px 20px;
-    border-bottom: 1px solid @gray-lighter;
   }
 }
 
@@ -39,11 +41,16 @@ Stylesheet: Comments
 .commentlist {
   padding-left: 0;
 
+  > li {
+    border-top: 1px solid @gray-lighter;
+  }
+
   ol {
     margin:0;
   }
 
   li {
+    margin-bottom: @line-height;
     &:last-child {
       margin-bottom: 0;
     }
@@ -53,7 +60,6 @@ Stylesheet: Comments
   }
 
   li[class*=depth-] {
-    margin-top: 1.1em;
   }
 
   li.depth-1 {
@@ -69,10 +75,10 @@ Stylesheet: Comments
   /* general comment classes */
   .alt {}
   .odd {
-    background: #fcfcfc;
+    background: #fff;
   }
   .even {
-    background: #f9f9f9;
+    //background: lighten(@gray-lightest, 3%);;
   }
   .parent {}
   .comment {
@@ -85,11 +91,11 @@ Stylesheet: Comments
     }
   }
   .children {
-    article {border-left: 1px solid #eee;}
+    article {border-left: 1px solid @gray-lighter}
   }
   .pingback {}
   .bypostauthor {
-    background: lighten(@brand-warning, 30%);
+    //background: lighten(@brand-warning, 30%);
   }
   .comment-author {
     width: 10%;
@@ -138,9 +144,8 @@ Stylesheet: Comments
   .comment_content {
 
     p {
-      margin: 0.7335em 0 1.5em;
-      font-size: 1em;
-      line-height: 1.5em;
+      margin: 0 0 (@line-height / 2);
+      line-height: 1.4em;
     }
 
   } /* end .commentlist .comment_content */

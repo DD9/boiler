@@ -6,6 +6,16 @@ Stylesheet: Form Styles
 
 ******************************************************************/
 
+.form-control::-webkit-input-placeholder { color: @gray-light; }
+.form-control:-moz-placeholder { color: @gray-light; }
+.form-control::-moz-placeholder { color: @gray-light; }
+.form-control:-ms-input-placeholder { color: @gray-light; }
+
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
 /* comment form title */
 #comment-form-title {
 }
@@ -28,4 +38,15 @@ Stylesheet: Form Styles
   font-size: 12px;
   font-style: oblique;
   margin-bottom: 10px;
+}
+
+
+// RESPONSIVE
+// -------------------------
+
+// Screens smaller than @screen-sm;
+@media (max-width: @screen-sm-min) {
+	.form-horizontal .control-label {
+		display: block;
+	}
 }

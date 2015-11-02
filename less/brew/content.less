@@ -8,11 +8,23 @@ These are the styles for posts, pages, archive, & blog index
 ******************************************************************/
 
 
-.byline {
-  color: @gray-light;
+.byline,
+.entry-meta {
   margin: 0;
-  font-size: 14px;
-  time {}
+  font-size: @font-size-small;
+  a {
+    color: inherit;
+  }
+}
+
+.entry-excerpt-meta {
+  margin: 0 0 5px;
+}
+
+.entry-excerpt {
+  > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Sticky Indicator
@@ -72,5 +84,25 @@ These are the styles for posts, pages, archive, & blog index
   	&:hover {
     	text-decoration: none;
   	}
+  }
+}
+
+// Author Box
+// -------------------------
+.author-img {
+  float: left;
+  margin-right: @line-height;
+}
+
+.author-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  h5 {
+    margin-bottom: (@line-height / 2);
+  }
+   @media (min-width: @screen-xs) {
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1;
   }
 }
