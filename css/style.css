@@ -6019,10 +6019,13 @@ cite {
 @media (max-width: 768px) {
   img.alignright,
   .wp-caption.alignright,
+  .alignright,
   img.alignleft,
   .wp-caption.alignleft,
+  .alignleft,
   img.aligncenter,
-  .wp-caption.aligncenter {
+  .wp-caption.aligncenter,
+  .aligncenter {
     display: block;
     float: none;
     margin: 0 auto 24px;
