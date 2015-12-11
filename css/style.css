@@ -6863,12 +6863,6 @@ and more scalable.
   padding-bottom: 5px;
   width: 95px;
 }
-.nav {
-  /* end .menu li */
-  /* highlight current page */
-  /* end current highlighters */
-}
-/* end .nav */
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
@@ -7050,61 +7044,89 @@ Stylesheet: Utilities
   display: block;
   content: "boiler-red";
 }
-.color-demo .color-block.grays-5 {
+.color-demo .color-block.grays-7 {
+  background-color: #f5f5f5;
+}
+.color-demo .color-block.grays-7:before {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  content: "#f5f5f5";
+}
+.color-demo .color-block.grays-7:after {
+  color: white;
+  display: block;
+  content: "well-bg";
+}
+.color-demo .color-block.grays-6 {
   background-color: #eeeeee;
 }
-.color-demo .color-block.grays-5:before {
+.color-demo .color-block.grays-6:before {
   color: white;
   font-weight: bold;
   font-size: 16px;
   content: "#eeeeee";
 }
-.color-demo .color-block.grays-5:after {
+.color-demo .color-block.grays-6:after {
   color: white;
   display: block;
   content: "gray-lighter";
 }
-.color-demo .color-block.grays-4 {
+.color-demo .color-block.grays-5 {
   background-color: #777777;
 }
-.color-demo .color-block.grays-4:before {
+.color-demo .color-block.grays-5:before {
   color: white;
   font-weight: bold;
   font-size: 16px;
   content: "#777777";
 }
-.color-demo .color-block.grays-4:after {
+.color-demo .color-block.grays-5:after {
   color: white;
   display: block;
   content: "gray-light";
 }
-.color-demo .color-block.grays-3 {
+.color-demo .color-block.grays-4 {
   background-color: #555555;
 }
-.color-demo .color-block.grays-3:before {
+.color-demo .color-block.grays-4:before {
   color: white;
   font-weight: bold;
   font-size: 16px;
   content: "#555555";
 }
-.color-demo .color-block.grays-3:after {
+.color-demo .color-block.grays-4:after {
   color: white;
   display: block;
   content: "gray";
 }
-.color-demo .color-block.grays-2 {
+.color-demo .color-block.grays-3 {
   background-color: #333333;
 }
-.color-demo .color-block.grays-2:before {
+.color-demo .color-block.grays-3:before {
   color: white;
   font-weight: bold;
   font-size: 16px;
   content: "#333333";
 }
-.color-demo .color-block.grays-2:after {
+.color-demo .color-block.grays-3:after {
   color: white;
   display: block;
   content: "gray-dark";
+}
+.color-demo .color-block.grays-2 {
+  background-color: #222222;
+}
+.color-demo .color-block.grays-2:before {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  content: "#222222";
+}
+.color-demo .color-block.grays-2:after {
+  color: white;
+  display: block;
+  content: "gray-darker";
 }
 .color-demo .color-block.grays-1 {
   background-color: #000;

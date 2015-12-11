@@ -42,7 +42,7 @@
     </div>
     <div class="col-lg-8 color-demo">
       <h3>Bootstrap Colors</h3>
-      <?php for ($x=1; $x<=6; $x++) { ?>
+      <?php for ($x=1; $x<=7; $x++) { ?>
         <div class="color-block grays-<?= $x ?>"><span></span></div>
       <?php } ?>
       <div>
