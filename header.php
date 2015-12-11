@@ -35,7 +35,7 @@
 <header id="site-header">
 
   <nav role="navigation">
-    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-default">
       <div class="container">
         <?php //.navbar-toggle is used as the toggle for collapsed navbar content ?>
         <div class="navbar-header">

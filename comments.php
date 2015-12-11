@@ -22,7 +22,7 @@ The comments page for Bones
 
   <div id="comments" class="havecomments">
 
-	<h3><?php comments_number( __( '<span>No</span> Responses', 'bonestheme' ), __( '<span>One</span> Response', 'bonestheme' ), _n( '<span>%</span> Response', '<span>%</span> Responses', get_comments_number(), 'bonestheme' ) );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3><?php comments_number( __( '<span>No</span> Responses', 'bonestheme' ), __( '<span>One</span> Response', 'bonestheme' ), _n( '<span>%</span> Response', '<span>%</span> Responses', get_comments_number(), 'bonestheme' ) );?></h3>
 
 	<ol class="commentlist">
 		<?php wp_list_comments( 'type=comment&callback=bones_comments' ); ?>

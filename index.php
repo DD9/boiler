@@ -2,6 +2,8 @@
 
 <div class="container">
   <div class="row">
+  
+  	<?php get_sidebar(); ?>
 
     <div class="col-md-8">
 
@@ -20,9 +22,6 @@
       <?php endif; ?>
 
     </div><!-- /col -->
-
-    <?php get_sidebar(); ?>
-
 
   </div><!-- /row -->
 </div><!-- /container -->

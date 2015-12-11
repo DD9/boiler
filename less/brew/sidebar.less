@@ -26,4 +26,30 @@ Stylesheet: Sidebars
       list-style: none;
 		}
 	}
+  select {
+    margin-bottom: 10px;
+  }
+}
+
+/* Blog Sidebar - Mobile Devices */
+
+#sidebar-mobile {
+  display: none;
+  .widgettitle {
+    display: none;
+  }
+}
+
+
+// RESPONSIVE
+// -------------------------
+
+// Screens smaller than @screen-md;
+@media (max-width: @screen-md-min) {
+  .sidebar-blog {
+    display: none;
+  }
+  #sidebar-mobile {
+    display: block;
+  }
 }

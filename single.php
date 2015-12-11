@@ -2,7 +2,9 @@
       
 <div class="container">  
   <div class="row">
-
+		
+     <?php get_sidebar(); ?>
+    
     <div class="col-md-8">
 
       <?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
@@ -19,9 +21,7 @@
 
       <?php endif; ?>
 
-    </div><!-- /col -->
-
-    <?php get_sidebar(); ?>
+    </div><!-- /col -->   
 
  </div> <!-- /row -->
 </div> <!-- /container -->

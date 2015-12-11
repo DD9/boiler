@@ -113,9 +113,19 @@ you like. Enjoy!
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
 	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'bonestheme' ),
-		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
+		'id' => 'sidebar_blog',
+		'name' => __( 'Blog Sidebar', 'bonestheme' ),
+		'description' => __( 'Blog Sidebar - does not appear on mobile devices', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	
+	register_sidebar(array(
+		'id' => 'sidebar_blog_mobile',
+		'name' => __( 'Blog Sidebar(mobile)', 'bonestheme' ),
+		'description' => __( 'Blog Sidebar - only appears on mobile devices', 'bonestheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
