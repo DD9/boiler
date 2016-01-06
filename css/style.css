@@ -6863,6 +6863,16 @@ and more scalable.
   padding-bottom: 5px;
   width: 95px;
 }
+.dropdown-menu {
+  line-height: 18px;
+}
+.dropdown-menu > li {
+  margin-bottom: 3px;
+}
+.dropdown-menu > li > a {
+  white-space: normal;
+  line-height: inherit;
+}
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
