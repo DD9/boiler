@@ -11,7 +11,7 @@
   </header>
 	
   <?php if ($image) { ?>
-  <section class="featured-content featured-img featured-img-bg" style="background: url('<?php echo $image[0]; ?>')">
+  <section class="featured-content featured-img featured-img-bg" style="background-image: url('<?php echo $image[0]; ?>')">
   </section>
   <?php } ?>
 

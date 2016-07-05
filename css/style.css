@@ -6893,10 +6893,23 @@ Author: DD9
 
 Stylesheet: Components
 
-A few random components built for BREW such as breadcrumbs and
-next/previous posts
+Components built for BREW such as breadcrumbs and next/previous posts
+as well as Bootstrap components
 
 ******************************************************************/
+.fa {
+  -moz-font-feature-settings: normal;
+  -moz-font-language-override: normal;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: FontAwesome;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
 .social-links {
   float: left;
   padding: 0;
@@ -6917,6 +6930,9 @@ next/previous posts
 }
 .social-links a:hover {
   color: #333333;
+}
+.well > *:last-child {
+  margin-bottom: 0;
 }
 /******************************************************************
 Site Name: DD9 Boiler 
@@ -7187,19 +7203,6 @@ Stylesheet: Utilities
 img {
   max-width: 100%;
   height: auto;
-}
-.fa {
-  -moz-font-feature-settings: normal;
-  -moz-font-language-override: normal;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: FontAwesome;
-  font-size-adjust: none;
-  font-stretch: normal;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  text-rendering: auto;
 }
 /*
 RETINA (2x RESOLUTION DEVICES)

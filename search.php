@@ -3,9 +3,12 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-md-8">
-
-      <h1 class="page-title"> <?php _e("Search Results for","bonestheme"); ?>: <?php echo esc_attr(get_search_query()); ?></h1>
+    <div class="col-md-8 col-md-offset-2">
+      
+      <header class="entry-header text-center">
+      	<h5><?php _e("Search Results for","bonestheme"); ?>: </h5>
+        <h1 class="entry-title"> <?php echo esc_attr(get_search_query()); ?></h1>
+      </header> 
 
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         
@@ -22,8 +25,6 @@
       <?php endif; ?>
 
     </div><!-- /col -->
-
-    <?php get_sidebar(); ?>
 
 	</div><!-- /row -->
 </div><!-- /container -->

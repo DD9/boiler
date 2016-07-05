@@ -3,11 +3,11 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-md-12">
+    <div class="col-md-8 col-md-offset-2">
 
       <article class="hentry clearfix">
 
-        <header class="article-header">
+        <header class="entry-header text-center">
           <h1 class="entry-title">404: Page not found.</h1>
         </header>
 
