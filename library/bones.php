@@ -153,7 +153,7 @@ function bones_scripts_and_styles() {
 
 
     //Register 3rd Party Hosted Libraries --------------------
-    wp_enqueue_script('bootstrap-cdn', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
+    wp_enqueue_script('bootstrap-cdn', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
     wp_register_style('font-awesome-cdn', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0', 'all' );
 
 
