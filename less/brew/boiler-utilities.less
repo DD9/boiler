@@ -4,6 +4,20 @@ Author: DD9
 Stylesheet: Utilities
 ******************************************************************/
 
+// Add an alphatransparency value to any background or border color (via Elyse Holladay)
+// https://groups.google.com/forum/#!msg/bootstrap-users/5_Mx1rDyw6A/Y2qofS6ywGcJ
+// use like this:  
+// #translucent > .background(@red, .5);
+//
+#translucent {
+  .background(@color: @white, @alpha: 1) {
+    background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+  }
+  .border(@color: @white, @alpha: 1) {
+    border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+  }
+}
+
 .default-border-top{
   border-top: solid 1px @default-border-color;
 }
