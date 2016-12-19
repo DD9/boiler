@@ -1,32 +1,42 @@
 <?php get_header(); ?>
 
-<div class="container">
-  <div class="row">
+<div id="page-header-outer" class="row-outer">
+  <div class="container">
+    <div class="row">
 
-    <div class="col-md-8 col-md-offset-2">
-      
-      <header class="entry-header text-center">
-      	<h5><?php _e("Search Results for","bonestheme"); ?>: </h5>
-        <h1 class="entry-title"> <?php echo esc_attr(get_search_query()); ?></h1>
-      </header> 
-
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<header class="entry-header text-center">
+				<h5><?php _e("Search Results for","bonestheme"); ?>: </h5>
+					<h1 class="entry-title"> <?php echo esc_attr(get_search_query()); ?></h1>
+			</header> 
         
-        <?php get_template_part( 'partials/content', 'excerpt' ); ?>
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+</div> <!-- /page-header-outer -->
 
-      <?php endwhile; ?>
+<div id="page-content-outer" class="row-outer">
+	<div class="container">
+		<div class="row">
 
-        <?php get_template_part( 'partials/pagination' ); ?>
+			<div class="col-md-8 col-md-offset-2">
 
-      <?php else : ?>
-				
-        <?php get_template_part( 'partials/content', 'none' ); ?>
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-      <?php endif; ?>
+					<?php get_template_part( 'partials/content', 'excerpt' ); ?>
 
-    </div><!-- /col -->
+				<?php endwhile; ?>
 
-	</div><!-- /row -->
-</div><!-- /container -->
+					<?php get_template_part( 'partials/pagination' ); ?>
+
+				<?php else : ?>
+
+					<?php get_template_part( 'partials/content', 'none' ); ?>
+
+				<?php endif; ?>
+
+			</div><!-- /col -->
+
+		</div><!-- /row -->
+	</div><!-- /container -->
+</div> <!-- /page-content-outer -->
 
 <?php get_footer(); ?>

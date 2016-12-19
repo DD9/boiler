@@ -44,7 +44,7 @@
           </button>
 
           <a class="navbar-brand" href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="homepage">
-            <img src="<?= get_bloginfo('template_directory'); ?>/images/logo_dd9.svg" onerror="this.src='<?= get_bloginfo('template_directory'); ?>/images/logo_dd9.png'; this.onerror=null;" alt="<?php bloginfo( 'name' ) ?> Logo" />
+            <img src="<?= get_bloginfo('template_directory'); ?>/images/logo_dd9.png" alt="<?php bloginfo( 'name' ) ?> Logo" />
           </a>
         </div>
 

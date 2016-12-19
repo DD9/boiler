@@ -1,43 +1,37 @@
-<?php get_header(); ?>
+<?php get_header(); the_post(); ?>
 
-<div class="container">
-  <div class="row">
-  
-    <div class="col-md-8">
+<div id="page-header-outer" class="row-outer">
+  <div class="container">
+    <div class="row">
 
-      <?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
-
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      
-      <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+			<header class="entry-header text-center">
+				<h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
+			</header> 
         
-        <header class="entry-header">
-          <h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
-        </header> 
-      
-        <section class="entry-content clearfix" itemprop="articleBody">
-          <?php the_content(); ?>
-        </section> 
-        
-        <footer>
-          <?php the_tags('<p class="tags"><span class="tags-title">' . __("Tags","bonestheme") . ':</span> ', ', ', '</p>'); ?>
-        </footer> 
-      
-      </article> 
-                  
-      <?php endwhile; ?>    
-      
-      <?php else : ?>
-      
-        <?php get_template_part( 'partials/content', 'none' ); ?>
-      
-      <?php endif; ?>
-  
-    </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+</div> <!-- /page-header-outer -->
 
-    <?php get_sidebar(); ?>
+<div id="page-content-outer" class="row-outer">
+	<div class="container">
+		<div class="row">
 
-  </div> <!-- /row -->
-</div> <!-- /container -->
+			<div class="col-md-8">
+
+				<?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
+
+				<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<section class="entry-content clearfix" itemprop="articleBody">
+						<?php the_content(); ?>
+					</section> 
+				</article> 
+			
+			</div> <!-- /col -->
+
+			<?php get_sidebar(); ?>
+
+		</div> <!-- /row -->
+	</div> <!-- /container -->
+</div> <!-- /page-content-outer -->
 
 <?php get_footer(); ?>

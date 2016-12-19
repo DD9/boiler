@@ -4967,8 +4967,8 @@ button.list-group-item-danger.active:focus {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -5901,16 +5901,10 @@ button.close {
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
 Stylesheet: WP Core Styles
 
-This stylesheet contains various snippets of CSS needed for WP Core
-
+This stylesheet contains CSS needed for WP Core
 ******************************************************************/
-* {
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
-}
 .alignnone {
   margin: 5px 20px 20px 0;
 }
@@ -5931,9 +5925,6 @@ div.aligncenter {
   display: block;
   margin: 5px auto 5px auto;
 }
-cite {
-  font-style: italic;
-}
 .wp-caption {
   max-width: 100%;
   background: #eee;
@@ -5948,7 +5939,6 @@ cite {
   margin: 2px 0 7px;
   text-align: center;
 }
-/* end .wp-caption */
 .wp-caption.alignleft {
   margin-right: 20px;
 }
@@ -5965,7 +5955,7 @@ cite {
 .gallery dl img {
   border: 2px solid #cfcfcf;
 }
-/* end .gallery */
+/* Screen Reader Text */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -5991,8 +5981,7 @@ cite {
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
-Stylesheet: Typography Stylesheet
+Stylesheet: Typography
 ******************************************************************/
 h1,
 .h1,
@@ -6008,6 +5997,18 @@ h6,
 .h6 {
   margin: 0 0 24px;
 }
+@media (max-width: 768px) {
+  h1,
+  .h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  h2,
+  .h2 {
+    font-size: 25px;
+  }
+}
 .add-divider {
   border-bottom: 1px solid #eeeeee;
   clear: both;
@@ -6015,6 +6016,9 @@ h6,
 }
 p {
   margin: 0 0 24px;
+}
+cite {
+  font-style: italic;
 }
 a,
 a:visited {
@@ -6117,9 +6121,7 @@ a.full-width {
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
 Stylesheet: Comments
-
 ******************************************************************/
 #comments,
 .respond-form {
@@ -6362,15 +6364,12 @@ fieldset[disabled] .commentlist .comment-reply-link.focus {
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
 Stylesheet: Tables
 ******************************************************************/
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
 Stylesheet: Form Styles
-
 ******************************************************************/
 .form-control::-webkit-input-placeholder {
   color: #777777;
@@ -6630,30 +6629,15 @@ textareainput[type="color"],
 textarea.uneditable-input {
   height: auto;
 }
-/* comment form title */
-/* cancel comment reply link */
-/* logged in comments */
-/* no comments */
-.nocomments {
-  margin: 0 20px 1.1em;
-}
-.required-items {
-  color: #777777;
-  font-size: 12px;
-  font-style: oblique;
-  margin-bottom: 10px;
-}
 @media (max-width: 768px) {
   .form-horizontal .control-label {
     display: block;
   }
 }
 /******************************************************************
-Site Name: BREW
-Author: Dan Brown
-
+Site Name: Boiler
+Author: DD9
 Stylesheet: Sidebars
-
 ******************************************************************/
 #sidebar .widget {
   margin-bottom: 24px;
@@ -6714,10 +6698,21 @@ Stylesheet: Footer
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
 Stylesheet: Content Styles
 
 These are the styles for posts, pages, archive, & blog index
+******************************************************************/
+#page-header-outer {
+  background-color: #eeeeee;
+}
+#page-header-outer .entry-header > *:last-child {
+  margin-bottom: 0;
+}
+.row-outer {
+  padding: 48px;
+}
+/******************************************************************
+Blog Stuff
 ******************************************************************/
 .byline,
 .entry-meta {
@@ -6805,22 +6800,18 @@ These are the styles for posts, pages, archive, & blog index
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
 Stylesheet: Header & Navigation
-
 ******************************************************************/
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
+/* Main Header and Nav: Bootstrap overrides */
+#site-header .navbar {
+  margin-bottom: 0;
+}
 #site-header .navbar-brand {
   padding-top: 5px;
   padding-bottom: 5px;
   width: 95px;
 }
+/* Dropdown menus */
 .dropdown-menu {
   line-height: 18px;
 }
@@ -6831,10 +6822,18 @@ and more scalable.
   white-space: normal;
   line-height: inherit;
 }
+/* Primary Menu */
+#menu-primary {
+  text-transform: uppercase;
+}
+#menu-primary > .active > a,
+#menu-primary > .active > a:hover,
+#menu-primary > .active > a:focus {
+  color: #337ab7;
+}
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
 Stylesheet: Body
 
 Wordpress automatically adds classes to certain pages.  You can target
@@ -6848,50 +6847,13 @@ body.admin-bar .navbar-fixed-top {
     top: 32px;
   }
 }
-/* for sites that are read right to left (i.e. hebrew) */
-/* home page */
-/* blog template page */
-/* archive page */
-/* date archive page */
-/* replace the number to the corresponding page number */
-/* search page */
-/* search result page */
-/* no results search page */
-/* individual paged search (i.e. body.search-paged-3) */
-/* 404 page */
-/* single post page */
-/* individual post page by id (i.e. body.postid-73) */
-/* individual paged single (i.e. body.single-paged-3) */
-/* attatchment page */
-/* individual attatchment page (i.e. body.attachmentid-763) */
-/* style mime type pages */
-/* author page */
-/* user nicename (i.e. body.author-samueladams) */
-/* paged author archives (i.e. body.author-paged-4) for page 4 */
-/* category page */
-/* individual category page (i.e. body.category-6) */
-/* replace the number to the corresponding page number */
-/* tag page */
-/* individual tag page (i.e. body.tag-news) */
-/* replace the number to the corresponding page number */
-/* custom page template page */
-/* individual page template (i.e. body.page-template-contact-php */
-/* replace the number to the corresponding page number */
-/* parent page template */
-/* child page template */
-/* replace the number to the corresponding page number */
-/* if user is logged in */
-/* paged items like search results or archives */
-/* individual paged (i.e. body.paged-3) */
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
 Stylesheet: Components
 
 Components built for BREW such as breadcrumbs and next/previous posts
 as well as Bootstrap components
-
 ******************************************************************/
 .fa {
   -moz-font-feature-settings: normal;
@@ -6933,7 +6895,6 @@ as well as Bootstrap components
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
 Stylesheet: Home Page
 ******************************************************************/
 .homebanner {
@@ -6951,18 +6912,214 @@ Site Name: DD9 Boiler
 Author: DD9
 Stylesheet: Utilities
 ******************************************************************/
+* {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Random helpful classes */
+.relative {
+  position: relative;
+}
+/* Class to make light text (for use on dark background) */
+.content-light {
+  color: #FFF;
+}
+.content-light h1,
+.content-light .h1,
+.content-light h2,
+.content-light .h2,
+.content-light h3,
+.content-light .h3,
+.content-light h4,
+.content-light .h4,
+.content-light h5,
+.content-light .h5,
+.content-light h6,
+.content-light .h6,
+.content-light h6.subtitle,
+.content-light .h6.subtitle,
+.content-light a,
+.content-light .lead,
+.content-light blockquote footer,
+.content-light blockquote small,
+.content-light blockquote .small,
+.content-light .pullquote-content,
+.content-light .pullquote-cite {
+  color: #fff;
+}
+.content-light .pullquote::before {
+  color: rgba(255, 255, 255, 0.3);
+}
+/* Add margins or padding
+NOT to be overused.
+Use ONLY for overrides, or in singular instances.
+Otherwise, declare margin and padding in a 
+reusable class that can also be styled at
+various breakpoints. 
+*/
+.mtop-0 {
+  margin-top: 0px;
+}
+.mtop-5 {
+  margin-top: 5px;
+}
+.mtop-10 {
+  margin-top: 10px;
+}
+.mtop-20 {
+  margin-top: 20px;
+}
+.mtop-30 {
+  margin-top: 30px;
+}
+.mtop-40 {
+  margin-top: 40px;
+}
+.mtop-50 {
+  margin-top: 50px;
+}
+.mtop-60 {
+  margin-top: 60px;
+}
+.mtop-70 {
+  margin-top: 70px;
+}
+.mtop-80 {
+  margin-top: 80px;
+}
+.mtop-90 {
+  margin-top: 90px;
+}
+.mtop-100 {
+  margin-top: 100px;
+}
+.mbottom-0 {
+  margin-bottom: 0px;
+}
+.mbottom-5 {
+  margin-bottom: 5px;
+}
+.mbottom-10 {
+  margin-bottom: 10px;
+}
+.mbottom-20 {
+  margin-bottom: 20px;
+}
+.mbottom-30 {
+  margin-bottom: 30px;
+}
+.mbottom-40 {
+  margin-bottom: 40px;
+}
+.mbottom-50 {
+  margin-bottom: 50px;
+}
+.mbottom-60 {
+  margin-bottom: 60px;
+}
+.mbottom-70 {
+  margin-bottom: 70px;
+}
+.mbottom-80 {
+  margin-bottom: 80px;
+}
+.mbottom-90 {
+  margin-bottom: 90px;
+}
+.mbottom-100 {
+  margin-bottom: 100px;
+}
+.ptop-0 {
+  padding-top: 0px;
+}
+.ptop-5 {
+  padding-top: 5px;
+}
+.ptop-10 {
+  padding-top: 10px;
+}
+.ptop-20 {
+  padding-top: 20px;
+}
+.ptop-30 {
+  padding-top: 30px;
+}
+.ptop-40 {
+  padding-top: 40px;
+}
+.ptop-50 {
+  padding-top: 50px;
+}
+.ptop-60 {
+  padding-top: 60px;
+}
+.ptop-70 {
+  padding-top: 70px;
+}
+.ptop-80 {
+  padding-top: 80px;
+}
+.ptop-90 {
+  padding-top: 90px;
+}
+.ptop-100 {
+  padding-top: 100px;
+}
+.pbottom-0 {
+  padding-bottom: 0px;
+}
+.pbottom-5 {
+  padding-bottom: 5px;
+}
+.pbottom-10 {
+  padding-bottom: 10px;
+}
+.pbottom-20 {
+  padding-bottom: 20px;
+}
+.pbottom-30 {
+  padding-bottom: 30px;
+}
+.pbottom-40 {
+  padding-bottom: 40px;
+}
+.pbottom-50 {
+  padding-bottom: 50px;
+}
+.pbottom-60 {
+  padding-bottom: 60px;
+}
+.pbottom-70 {
+  padding-bottom: 70px;
+}
+.pbottom-80 {
+  padding-bottom: 80px;
+}
+.pbottom-90 {
+  padding-bottom: 90px;
+}
+.pbottom-100 {
+  padding-bottom: 100px;
+}
+/* Borders */
 .default-border-top {
-  border-top: solid 1px #555555;
+  border-top: solid 1px #777777;
 }
 .default-border-bottom {
-  border-bottom: solid 1px #555555;
+  border-bottom: solid 1px #777777;
 }
 .default-border-left {
-  border-left: solid 1px #555555;
+  border-left: solid 1px #777777;
 }
 .default-border-right {
-  border-right: solid 1px #555555;
+  border-right: solid 1px #777777;
 }
+/* Assets page - outputs available colors */
 .color-demo .color-block {
   width: 100px;
   height: 100px;
@@ -6971,20 +7128,6 @@ Stylesheet: Utilities
   margin: 0 10px 10px 0;
   color: white;
   position: relative;
-}
-.color-demo .color-block.custom-4 {
-  background-color: #2f2f2f;
-}
-.color-demo .color-block.custom-4:before {
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  content: "#2f2f2f";
-}
-.color-demo .color-block.custom-4:after {
-  color: white;
-  display: block;
-  content: "boiler-gray";
 }
 .color-demo .color-block.custom-3 {
   background-color: #cc6600;
@@ -7029,13 +7172,13 @@ Stylesheet: Utilities
   content: "boiler-red";
 }
 .color-demo .color-block.grays-7 {
-  background-color: #f5f5f5;
+  background-color: #eeeeee;
 }
 .color-demo .color-block.grays-7:before {
   color: white;
   font-weight: bold;
   font-size: 16px;
-  content: "#f5f5f5";
+  content: "#eeeeee";
 }
 .color-demo .color-block.grays-7:after {
   color: white;
@@ -7196,10 +7339,11 @@ Stylesheet: Utilities
   display: block;
   content: "brand-primary";
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
+/******************************************************************
+Site Name: DD9 Boiler 
+Author: DD9
+Stylesheet: Custom Styles and Classes
+******************************************************************/
 /*
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with

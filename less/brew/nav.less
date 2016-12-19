@@ -1,22 +1,14 @@
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
 Stylesheet: Header & Navigation
-
 ******************************************************************/
 
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
-
-
-// HEADER
+/* Main Header and Nav: Bootstrap overrides */
 #site-header {
+	.navbar {
+		margin-bottom: 0;
+	}
 	.navbar-brand{
 		padding-top: 5px;
 		padding-bottom: 5px;
@@ -24,7 +16,7 @@ and more scalable.
 	}
 }
 
-// Dropdown menus
+/* Dropdown menus */
 // Fix non-wrapping menu items
 .dropdown-menu {
 	line-height: 18px;
@@ -37,3 +29,13 @@ and more scalable.
 	}
 }
 
+/* Primary Menu */
+#menu-primary {
+	text-transform: uppercase;
+
+	> .active > a, 
+	> .active > a:hover, 
+	> .active > a:focus {
+	  color: @link-color;
+	}
+}

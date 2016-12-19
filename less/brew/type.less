@@ -1,8 +1,7 @@
 /******************************************************************
 Site Name: DD9 Boiler 
 Author: DD9
-
-Stylesheet: Typography Stylesheet
+Stylesheet: Typography
 ******************************************************************/
 
 // Font Declarations
@@ -12,16 +11,23 @@ Stylesheet: Typography Stylesheet
 
 // Headings
 // -------------------------
-
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	margin: 0 0 @line-height;
 
 	a {}
 }
 
-h1, .h1 {}
+h1, .h1 {
+	@media (max-width: @screen-sm-min) {
+    font-size: 30px;
+  }
+}
 
-h2, .h2 {}
+h2, .h2 {
+	@media (max-width: @screen-sm-min) {
+    font-size: 25px;
+  }
+}
 
 h3, .h3 {}
 
@@ -35,18 +41,18 @@ h5, .h5 {}
   padding-bottom: 0.65em;
 }
 
-
 // Body text
 // -------------------------
-
 p {
   margin: 0 0 @line-height;
 }
 
+cite {
+  font-style: italic;
+}
 
 // Link Styles
 // -------------------------
-
 a, a:visited {
 
 	.transition(all .2s ease);
@@ -88,6 +94,3 @@ a.full-width {
   top: 0;
   z-index: 10;
 }
-
-// Blockquotes
-// -------------------------
