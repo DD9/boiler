@@ -5899,7 +5899,6 @@ button.close {
   }
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: WP Core Styles
 
@@ -5979,7 +5978,6 @@ div.aligncenter {
   }
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Typography
 ******************************************************************/
@@ -6119,7 +6117,6 @@ a.full-width {
   z-index: 10;
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Comments
 ******************************************************************/
@@ -6127,7 +6124,6 @@ Stylesheet: Comments
 .respond-form {
   margin: 0 0 24px 0;
 }
-/* h3 comment title */
 #comments {
   margin-bottom: 24px;
   padding-bottom: 24px;
@@ -6137,24 +6133,39 @@ Stylesheet: Comments
 #comments .comment-container {
   padding: 20px 20px;
 }
+/* author vcard */
+.vcard img.avatar {
+  padding: 2px;
+  border: 1px solid #cecece;
+  background: #fff;
+}
+/* comment content */
 .comment-content {
   width: 88%;
   margin-left: 2%;
   float: left;
 }
-.comment-nav {
-  padding: 10px 20px;
+.comment-content p {
+  margin: 0 0 12px;
+  line-height: 1.4em;
 }
-.comment-nav ul {
-  padding-left: 0;
-  list-style: none;
+.comment-content cite.fn,
+.comment-content cite.fn a {
+  color: #777777;
+  font-style: normal;
+}
+.comment-content time a {
+  color: #777777;
+  text-decoration: none;
+}
+.comment-content time a:hover {
+  text-decoration: underline;
 }
 .commentlist {
   padding-left: 0;
+  list-style: none;
+  margin: 0;
   /* general comment classes */
-  /* vcard */
-  /* comment content */
-  /* end .commentlist .comment_content */
   /* comment reply link */
 }
 .commentlist > li {
@@ -6163,14 +6174,9 @@ Stylesheet: Comments
 .commentlist ol {
   margin: 0;
 }
-.commentlist li {
-  margin-bottom: 24px;
-}
-.commentlist li:last-child {
-  margin-bottom: 0;
-}
 .commentlist li ul.children {
-  margin: 0;
+  margin: 0 0 0 84px;
+  padding: 0;
 }
 .commentlist li.depth-1 {
   margin-left: 0;
@@ -6180,21 +6186,10 @@ Stylesheet: Comments
   margin-top: 0;
   padding-bottom: 0;
 }
-.commentlist .odd {
-  background: #fff;
-}
 .commentlist .comment {
   position: relative;
   clear: both;
   overflow: hidden;
-  list-style-type: none;
-}
-.commentlist .comment img,
-.commentlist .comment iframe {
-  max-width: 100%;
-}
-.commentlist .children article {
-  border-left: 1px solid #eeeeee;
 }
 .commentlist .comment-author {
   width: 10%;
@@ -6205,30 +6200,7 @@ Stylesheet: Comments
   height: auto;
 }
 .commentlist .alert {
-  margin: 10px 0 0 0;
-}
-.commentlist .vcard cite.fn {
-  font-weight: 700;
-  font-style: normal;
-}
-.commentlist .vcard time {
-  float: right;
-}
-.commentlist .vcard time a {
-  color: #999;
-  text-decoration: none;
-}
-.commentlist .vcard time a:hover {
-  text-decoration: underline;
-}
-.commentlist .vcard img.avatar {
-  padding: 2px;
-  border: 1px solid #cecece;
-  background: #fff;
-}
-.commentlist .comment_content p {
-  margin: 0 0 12px;
-  line-height: 1.4em;
+  margin: 10px 0;
 }
 .commentlist .comment-reply-link {
   display: inline-block;
@@ -6249,16 +6221,14 @@ Stylesheet: Comments
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding: 5px 10px;
+  padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
   color: #fff;
   background-color: #5bc0de;
   border-color: #46b8da;
-  float: right;
   opacity: 0.65;
-  margin-bottom: 10px;
 }
 .commentlist .comment-reply-link:focus,
 .commentlist .comment-reply-link:active:focus,
@@ -6352,6 +6322,13 @@ fieldset[disabled] .commentlist .comment-reply-link.focus {
   opacity: 1;
 }
 /* end .commentlist */
+.comment-nav {
+  padding: 10px 20px;
+}
+.comment-nav ul {
+  padding-left: 0;
+  list-style: none;
+}
 .comment-prev {
   float: left;
 }
@@ -6362,14 +6339,12 @@ fieldset[disabled] .commentlist .comment-reply-link.focus {
   padding: 20px;
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Tables
 ******************************************************************/
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
-Stylesheet: Form Styles
+Stylesheet: Forms
 ******************************************************************/
 .form-control::-webkit-input-placeholder {
   color: #777777;
@@ -6635,7 +6610,6 @@ textarea.uneditable-input {
   }
 }
 /******************************************************************
-Site Name: Boiler
 Author: DD9
 Stylesheet: Sidebars
 ******************************************************************/
@@ -6673,10 +6647,8 @@ Stylesheet: Sidebars
   }
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Footer
-
 ******************************************************************/
 #footer {
   background: #eeeeee;
@@ -6696,7 +6668,6 @@ Stylesheet: Footer
   list-style: none;
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Content Styles
 
@@ -6716,6 +6687,7 @@ Blog Stuff
 ******************************************************************/
 .byline,
 .entry-meta {
+  color: #777777;
   margin: 0;
   font-size: 12px;
 }
@@ -6798,7 +6770,6 @@ Blog Stuff
   }
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Header & Navigation
 ******************************************************************/
@@ -6832,7 +6803,6 @@ Stylesheet: Header & Navigation
   color: #337ab7;
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Body
 
@@ -6848,13 +6818,14 @@ body.admin-bar .navbar-fixed-top {
   }
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Components
 
 Components built for BREW such as breadcrumbs and next/previous posts
 as well as Bootstrap components
 ******************************************************************/
+/* Font Awesome 
+================================================== */
 .fa {
   -moz-font-feature-settings: normal;
   -moz-font-language-override: normal;
@@ -6868,6 +6839,9 @@ as well as Bootstrap components
   line-height: 1;
   text-rendering: auto;
 }
+/* Social Links: 
+Basic styling used in footer and the #author-info box
+================================================== */
 .social-links {
   float: left;
   padding: 0;
@@ -6889,11 +6863,13 @@ as well as Bootstrap components
 .social-links a:hover {
   color: #333333;
 }
-.well > *:last-child {
+/* Wells, Alerts
+================================================== */
+.well > *:last-child,
+.alert > *:last-child {
   margin-bottom: 0;
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Home Page
 ******************************************************************/
@@ -6908,7 +6884,6 @@ Stylesheet: Home Page
   color: #fff;
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Utilities
 ******************************************************************/

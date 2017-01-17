@@ -1,5 +1,4 @@
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Comments
 ******************************************************************/
@@ -9,7 +8,6 @@ Stylesheet: Comments
   margin: 0 0 @line-height 0;
 }
 
-/* h3 comment title */
 #comments {
   margin-bottom: @line-height;
   padding-bottom: @line-height;
@@ -21,23 +19,42 @@ Stylesheet: Comments
   }
 }
 
+/* author vcard */
+.vcard {
+  img.avatar {
+    padding: 2px;
+    border: 1px solid #cecece;
+    background: #fff;
+  }
+}
+
+/* comment content */
 .comment-content {
   width: 88%;
   margin-left: 2%;
   float: left;
-}
-
-.comment-nav {
-  padding: 10px 20px;
-
-  ul {
-    .list-unstyled;
+  p {
+    margin: 0 0 (@line-height / 2);
+    line-height: 1.4em;
+  }
+  cite.fn, cite.fn a {
+    color: @gray-light;
+    font-style: normal;
+  }
+  time {
+    a {
+      color: @gray-light;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
-
 .commentlist {
-  padding-left: 0;
+  .list-unstyled;
+  margin:0;
 
   > li {
     border-top: 1px solid @gray-lighter;
@@ -48,18 +65,11 @@ Stylesheet: Comments
   }
 
   li {
-    margin-bottom: @line-height;
-    &:last-child {
-      margin-bottom: 0;
-    }
     ul.children {
-      margin: 0;
+      margin: 0 0 0 84px;
+      padding: 0
     } 
   }
-
-  li[class*=depth-] {
-  }
-
   li.depth-1 {
     margin-left: 0;
     margin-top: 0;
@@ -71,26 +81,12 @@ Stylesheet: Comments
   }
 
   /* general comment classes */
-  .alt {}
-  .odd {
-    background: #fff;
-  }
-  .even {
-    //background: lighten(@gray-lightest, 3%);;
-  }
-  .parent {}
   .comment {
     position: relative;
     clear: both;
     overflow: hidden;
-    list-style-type: none;
-    img, iframe {
-      max-width: 100%;
-    }
   }
-  .children {
-    article {border-left: 1px solid @gray-lighter}
-  }
+ 
   .pingback {}
   .bypostauthor {
     //background: lighten(@brand-warning, 30%);
@@ -103,73 +99,35 @@ Stylesheet: Comments
       height: auto;
     }
   }
-  .comment-author-admin {}
-  .thread-alt {}
-  .thread-odd {}
-  .thread-even {}
-  .alert {margin: 10px 0 0 0;}
-
-
-  /* vcard */
-  .vcard {
-    cite.fn {
-      font-weight: 700;
-      font-style: normal;
-    }
-
-    time {
-      float: right;
-      a {
-        color: #999;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    img.photo {}
-
-    img.avatar {
-      padding: 2px;
-      border: 1px solid #cecece;
-      background: #fff;
-    }
-
+  .alert {
+    margin: 10px 0;
   }
-
-  /* comment content */
-  .comment_content {
-
-    p {
-      margin: 0 0 (@line-height / 2);
-      line-height: 1.4em;
-    }
-
-  } /* end .commentlist .comment_content */
 
   /* comment reply link */
   .comment-reply-link {
     .btn;
-    .btn-sm;
+    .btn-xs;
     .btn-info;
-    float: right;
     opacity: 0.65;
-    margin-bottom: 10px;
 
     &:hover,
     &:focus {
       opacity: 1;
     }
-
   } 
 
 } /* end .commentlist */
 
+
+.comment-nav {
+  padding: 10px 20px;
+  ul {
+    .list-unstyled;
+  }
+}
 .comment-prev {
   float: left;
 }
-
 .comment-next {
   float: right;
 }

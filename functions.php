@@ -212,7 +212,7 @@ function bones_comments( $comment, $args, $depth ) {
 				<?php // end custom gravatar call ?>
 			</div>
       <div class="comment-content">
-        <?php printf(__( '<cite class="fn">%s</cite>', 'bonestheme' ), get_comment_author_link()) ?>
+        <?php printf(__( '<cite class="fn">%s |</cite>', 'bonestheme' ), get_comment_author_link()) ?>
         <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'bonestheme' )); ?> </a></time>
         <?php edit_comment_link(__( '(Edit)', 'bonestheme' ),'  ','') ?>
   			<?php if ($comment->comment_approved == '0') : ?>
