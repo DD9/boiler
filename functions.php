@@ -12,7 +12,26 @@ sidebars, comments, ect.
 require_once( 'library/navwalker.php' ); // needed for bootstrap navigation
 require_once( 'library/utilities.php' ); // misc generic helpers
 
+
+/************* SETUP DEFAULT PAGES ON ACTIVATION ***************/
+
+// NOTE
+// Disable this section after preliminary theme activation until we move it into a dedicated function
+require_once( 'library/site_init.php' ); 
+
+$pages = array(
+  array('page_title' => 'Assets'),
+  array('page_title' => 'Home'),
+  array('page_title' => 'About'),
+  array('page_title' => 'News'),
+  array('page_title' => 'Contact'),
+  );
+
+add_pages($pages);
+
 /************* INSERT THEME FUNCTIONS HERE ********************/
+
+
 
 
 
