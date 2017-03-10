@@ -6,6 +6,7 @@ $twitter = get_field('twitter_url', 'option');
 $youtube = get_field('youtube_url', 'option');
 $linkedin = get_field('linkedin_url', 'option');
 $googleplus = get_field('googleplus_url', 'option');
+$instagram = get_field('instagram_url', 'option');
 ?>
 
 
@@ -50,6 +51,10 @@ $googleplus = get_field('googleplus_url', 'option');
             <?php if ($googleplus) { ?>
               <li class="googleplus"><a href="<?= $googleplus ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
             <?php } ?>
+
+            <?php if ($instagram) { ?>
+              <li class="instagram"><a href="<?= $instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <?php } ?>
           </ul>
         </div> <!-- /col -->
 
@@ -76,7 +81,7 @@ $googleplus = get_field('googleplus_url', 'option');
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          Boiler theme by <a target="_blank" href="http://dd9.com">DD9</a> - <a href="/assets">Assets</a> - <a href="/wp-admin">Admin Login</a> -  &copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>  <a class="site-credit" title="Website Design and Development by DD9.com" target="_blank" href="http://dd9.com">Website by DD9</a>
+          Boiler theme by <a target="_blank" href="https://dd9.com">DD9</a> - <a href="/assets">Assets</a> - <a href="/wp-admin">Admin Login</a> -  &copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>  <a class="site-credit" title="Website Design and Development by DD9.com" target="_blank" href="http://dd9.com">Website by DD9</a>
         </div> <!-- /col -->
       </div> <!-- /row -->
     </div> <!-- /container -->
