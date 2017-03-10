@@ -19,13 +19,40 @@
             "endpoint": 0
         },
         {
+            "key": "field_58c317a8724d6",
+            "label": "Show global alert",
+            "name": "show_global_alert",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_58c3150026c4f",
             "label": "Global Alert",
             "name": "global_alert",
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58c317a8724d6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -327,5 +354,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1489180085
+    "modified": 1489180706
 }
