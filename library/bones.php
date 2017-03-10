@@ -140,37 +140,42 @@ function bones_scripts_and_styles() {
   if (!is_admin()) {
 
     // Register Scripts --------------------
-    //wp_register_script( 'boiler-bootstrap', get_template_directory_uri() . '/js/libs/bootstrap.min.js', array(), '3.3.6', true );
-    wp_register_script( 'boiler-modernizr', get_template_directory_uri() . '/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
-    wp_register_script( 'fitvids', get_template_directory_uri() . '/js/libs/jquery.fitvids.js', array('jquery'), '1.1', TRUE );
-    wp_register_script( 'boiler-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '', true );
+    wp_register_script( 'boiler-bootstrap', TMPL_URL . '/js/libs/bootstrap.min.js', array(), '3.3.6', true );  //enable below as needed
+    wp_register_script( 'boiler-modernizr', TMPL_URL . '/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
+    wp_register_script( 'fitvids', TMPL_URL . '/js/libs/jquery.fitvids.js', array('jquery'), '1.1', TRUE ); //enable below as needed
+    wp_register_script( 'boiler-js', TMPL_URL . '/js/scripts.js', array( 'jquery' ), '', true );
     
 
     // Register Styles --------------------
-    wp_register_style( 'boiler-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'all' );
-    wp_register_style( 'boiler-ie-only', get_template_directory_uri() . '/css/ie.css', array(), '' );
-    wp_register_style( 'boiler-shame', get_template_directory_uri() . '/css/shame.css', array(), '', 'all' );
-
+    wp_register_style( 'boiler-stylesheet', TMPL_URL . '/css/style.css', array(), '', 'all' );
+    wp_register_style( 'boiler-ie-only', TMPL_URL . '/css/ie.css', array(), '' );
+    wp_register_style( 'boiler-shame', TMPL_URL . '/css/shame.css', array(), '', 'all' ); //enable below as needed
+ 
 
     //Register 3rd Party Hosted Libraries --------------------
     wp_enqueue_script('bootstrap-cdn', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
     wp_register_style('font-awesome-cdn', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0', 'all' );
 
 
-
     //Enqueue styles  --------------------
     wp_enqueue_style( 'font-awesome-cdn' );
     wp_enqueue_style( 'boiler-stylesheet' );
-    wp_enqueue_style( 'boiler-ie-only' );
-    $wp_styles->add_data( 'boiler-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
-    wp_enqueue_style( 'boiler-shame' );  //Enable as needed
+    
 
+    //Optional styles, enable as needed   --------------------
+    //wp_enqueue_style( 'boiler-ie-only' );
+    //$wp_styles->add_data( 'boiler-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+    //wp_enqueue_style( 'boiler-shame' );  //Enable as needed
+
+
+    //Optional scripts, enable as needed   --------------------
+    //wp_enqueue_script( 'boiler-bootstrap' ); //Enable to serve locally
+    //wp_enqueue_script( 'fitvids');
 
     //Enqueue scripts --------------------
     wp_enqueue_script( 'jquery' );
-    //wp_enqueue_script( 'boiler-bootstrap' );
     wp_enqueue_script( 'bootstrap-cdn' );
-    wp_enqueue_script( 'fitvids');
+
     wp_enqueue_script( 'boiler-modernizr' );
     wp_enqueue_script( 'boiler-js' );
 

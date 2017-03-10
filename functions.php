@@ -17,16 +17,27 @@ require_once( 'library/utilities.php' ); // misc generic helpers
 
 
 
-//http://www.advancedcustomfields.com/resources/features/options-page/
-if( function_exists('acf_add_options_page') ) {
-	acf_add_options_page();
-}
-
-
-
-
 
 /************* BREW & BOILER FILES ********************/
+
+$protocol = isset($_SERVER['HTTPS']) ? 'https' : 'http';
+define('PROTOCOL', $protocol); // are we in http / https 
+define('TMPL_URL', rtrim( get_template_directory_uri() , '/' )); // full URL, no trailing slash
+define('TMPL_DIR', rtrim( get_template_directory() , '/' ) ); // full directory all the way to root, no trailing slash
+
+
+
+function boiler_dependencies() {
+  if( ! function_exists('acf_add_options_page') )
+    echo '<div class="error"><p> Warning: The theme needs ACF Plugin installed and activated to function </p></div>';
+}
+add_action( 'admin_notices', 'boiler_dependencies' );
+
+//http://www.advancedcustomfields.com/resources/features/options-page/
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page();
+}
+
 
 
 /* library/bones.php (functions specific to BREW)
@@ -51,8 +62,6 @@ require_once( 'library/brew.php' ); // if you remove this, BREW will break
 	- adding custom fields to user profiles
 */
 require_once( 'library/bones.php' ); // if you remove this, bones will break
-
-
 
 
 //Optional for Boiler
