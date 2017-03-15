@@ -15,8 +15,8 @@ require_once( 'library/utilities.php' ); // misc generic helpers
 
 /************* SETUP DEFAULT PAGES ON ACTIVATION ***************/
 
-// NOTE
-// Disable this section after preliminary theme activation until we move it into a dedicated function
+// Disable this section until we move it into a dedicated function
+/*
 require_once( 'library/site_init.php' ); 
 
 $pages = array(
@@ -28,6 +28,7 @@ $pages = array(
   );
 
 add_pages($pages);
+*/
 
 /************* INSERT THEME FUNCTIONS HERE ********************/
 
