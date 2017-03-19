@@ -62,11 +62,12 @@ function buttons( $atts, $content = null ) {
   
   $bs_btn_classes = array('primary', 'default', 'info', 'success', 'danger', 'warning' );
 
-  if($class != "") {
+  if($class == "") {
+    $class = "btn-default";
+  }else{
     if(in_array($class, $bs_btn_classes))
       $class = "btn-" . $class;
   }
-  
 
   if($size == "default" || $size == "" )
     $size = "";
