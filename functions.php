@@ -12,6 +12,7 @@ sidebars, comments, ect.
 require_once( 'library/navwalker.php' ); // needed for bootstrap navigation
 require_once( 'library/utilities.php' ); // misc generic helpers
 
+//require_once( 'library/shortcodes.php' ); // shortcodes 
 
 /************* SETUP DEFAULT PAGES ON ACTIVATION ***************/
 
@@ -42,8 +43,8 @@ add_pages($pages);
 
 $protocol = isset($_SERVER['HTTPS']) ? 'https' : 'http';
 define('PROTOCOL', $protocol); // are we in http / https 
-define('TMPL_URL', rtrim( get_template_directory_uri() , '/' )); // full URL, no trailing slash
-define('TMPL_DIR', rtrim( get_template_directory() , '/' ) ); // full directory all the way to root, no trailing slash
+define('TMPL_URL', rtrim( get_template_directory_uri() , '/' )); // full URL, NO trailing slash
+define('TMPL_DIR', rtrim( get_template_directory() , '/' ) ); // full directory all the way to root, NO trailing slash
 
 
 
@@ -58,12 +59,6 @@ if( function_exists('acf_add_options_page') ) {
   acf_add_options_page();
 }
 
- //https://www.advancedcustomfields.com/resources/local-json/
-// function my_acf_json_save_point( $path ) {
-//   $path = get_stylesheet_directory() . '/acf-json';
-//   return $path;
-// }
-// add_filter('acf/settings/save_json', 'my_acf_json_save_point');
 
 
 /* library/bones.php (functions specific to BREW)
