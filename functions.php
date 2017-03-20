@@ -11,8 +11,7 @@ sidebars, comments, ect.
 
 require_once( 'library/navwalker.php' ); // needed for bootstrap navigation
 require_once( 'library/utilities.php' ); // misc generic helpers
-
-//require_once( 'library/shortcodes.php' ); // shortcodes 
+require_once( 'library/shortcodes.php' ); // shortcodes 
 
 /************* SETUP DEFAULT PAGES ON ACTIVATION ***************/
 

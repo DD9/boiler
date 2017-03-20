@@ -85,3 +85,31 @@ function buttons( $atts, $content = null ) {
 add_shortcode('button', 'buttons'); 
 
 
+
+/*
+ * Columns
+ * @Custom DD9, usese symple-column css since we already have that in the less files
+ *
+ */
+if( !function_exists('column_shortcode') ) {
+  function column_shortcode( $atts, $content = null ){
+    extract( shortcode_atts( array(
+      'size' => 'one-third',
+      'position' =>'first',
+      'class' => '',
+      ), $atts ) );
+    
+    $output = "";
+    
+    if ($position == 'first')
+      $output .= '<div class="shortcode-container clearfix">';  
+
+    $output .= '<div class="symple-column symple-' . $size . ' symple-column-'. $position .' '. $class .'">' . do_shortcode($content) . '</div>';
+    
+    if ($position == 'last')
+      $output .= '</div> <!-- /shortcode-container -->';
+    
+    return $output;
+  }
+  add_shortcode('column', 'column_shortcode');
+}
