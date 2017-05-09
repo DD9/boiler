@@ -140,10 +140,12 @@ function bones_scripts_and_styles() {
   if (!is_admin()) {
 
     // Register Scripts --------------------
-    wp_register_script( 'boiler-bootstrap', TMPL_URL . '/js/libs/bootstrap.min.js', array(), '3.3.6', true );  //enable below as needed
-    wp_register_script( 'boiler-modernizr', TMPL_URL . '/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
-    wp_register_script( 'fitvids', TMPL_URL . '/js/libs/jquery.fitvids.js', array('jquery'), '1.1', TRUE ); //enable below as needed
-    wp_register_script( 'boiler-js', TMPL_URL . '/js/scripts.js', array( 'jquery' ), '', true );
+
+    
+    //Minified Vendor script instead
+    wp_register_script( 'vendors-min', TMPL_URL . '/js/vendors.min.js', array('jquery'), '1.0', TRUE );
+
+    wp_register_script( 'custom-js', TMPL_URL . '/js/scripts.js', array( 'jquery' ), '', true );
     
 
     // Register Styles --------------------
@@ -153,7 +155,7 @@ function bones_scripts_and_styles() {
  
 
     //Register 3rd Party Hosted Libraries --------------------
-    wp_enqueue_script('bootstrap-cdn', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
+    //wp_enqueue_script('bootstrap-cdn', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
     wp_register_style('font-awesome-cdn', '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', array(), '4.4.0', 'all' );
 
 
@@ -169,15 +171,15 @@ function bones_scripts_and_styles() {
 
 
     //Optional scripts, enable as needed   --------------------
-    //wp_enqueue_script( 'boiler-bootstrap' ); //Enable to serve locally
-    //wp_enqueue_script( 'fitvids');
+
 
     //Enqueue scripts --------------------
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'bootstrap-cdn' );
+    wp_enqueue_script( 'jquery' );
+    //wp_enqueue_script( 'bootstrap-cdn' );
 
-    wp_enqueue_script( 'boiler-modernizr' );
-    wp_enqueue_script( 'boiler-js' );
+    wp_enqueue_script( 'vendors-min' );
+    wp_enqueue_script( 'custom-js' );
 
 
     // comment reply script for threaded comments

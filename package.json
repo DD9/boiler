@@ -1,0 +1,29 @@
+{
+  "name": "Boiler",
+  "version": "1.0.0",
+  "description": "DD9 Boilerplate Theme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dd9/boiler.git"
+  },
+  "author": "DD9",
+  "homepage": "https://github.com/dd9/boiler#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp"                      : "^3.8.11",
+    "gulp-autoprefixer"         : "^3.1.0",
+    "gulp-concat"               : "^2.5.2",
+    "gulp-notify"               : "^2.2.0",
+    "gulp-rename"               : "^1.2.0",
+    "gulp-sass"                 : "^2.0.0",
+    "gulp-sourcemaps"           : "^1.5.2",
+    "gulp-uglify"               : "^1.1.0",
+    "gulp-line-ending-corrector"  : "^1.0.1",
+    "gulp-uglifycss"            : "^1.0.4",
+    "gulp-filter"            : "",
+    "gulp-merge-media-queries"            : "",
+    "gulp-imagemin"            : "",
+    "browser-sync"            : ""
+
+  }
+}

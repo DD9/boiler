@@ -143,6 +143,30 @@ git pull -s subtree boiler master
 
 ---
 
+
+
+#NPM + GULP
+
+Configure GULP to automate several tasks, starting with compiling vendor JS files
+
+- Install Node 
+- Install NPM 
+- Install gulp globally `npm install gulp -g`
+- Verify Install
+
+```
+node -v
+npm -v
+gulp -v
+```
+
+- Navigate to theme directory and `npm install`
+- Confirm creation of /node_modules/ (which will be ignored by Git)
+- From the theme directory `gulp`
+
+
+---
+
 #Compile Boiler
 
 Configure LESS compiler to target these files in /css
