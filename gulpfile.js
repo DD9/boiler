@@ -34,6 +34,8 @@ var projectURL              = 'boilerdemo.localhost'; // Project URL. Could be s
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 // Style related.
+var styleLessSRC            = './less/style.less'; // Path to main .scss file.
+var styleLessDestination    = './css/'; // Path to place the compiled CSS file.
 var styleSRC                = './assets/css/style.scss'; // Path to main .scss file.
 var styleDestination        = './'; // Path to place the compiled CSS file.
 // Defualt set to root folder.
@@ -56,6 +58,7 @@ var imagesDestination       = './assets/img/'; // Destination folder of optimize
 
 // Watch files paths.
 var styleWatchFiles         = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
+var styleLessWatchFiles     = './less/**/*.less'; // Path to all *.less files inside css folder and inside them.
 var vendorJSWatchFiles      = './js/libs/*.js'; // Path to all vendor JS files.
 var customJSWatchFiles      = './assets/js/custom/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
@@ -86,7 +89,10 @@ const AUTOPREFIXER_BROWSERS = [
  */
 var gulp         = require('gulp'); // Gulp of-course
 
+
 // CSS related plugins.
+
+var less         = require('gulp-less'); // Gulp pluign for less compilation.
 var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation.
 var minifycss    = require('gulp-uglifycss'); // Minifies CSS files.
 var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic.
@@ -198,6 +204,20 @@ gulp.task( 'browser-sync', function() {
  });
 
 
+/* Task to compile less */
+gulp.task('compile-less', function() {  
+  gulp.src(styleLessSRC)
+    .pipe(less())
+    .pipe(gulp.dest(styleLessDestination))
+    .pipe( notify( { message: 'TASK: "compile-less" Completed! 💯', onLast: true } ) )
+}); 
+/* Task to watch less changes */
+gulp.task('watch-less', function() {  
+  gulp.watch( styleLessWatchFiles, ['compile-less']);
+});
+
+
+
  /**
   * Task: `vendorJS`.
   *
@@ -293,10 +313,12 @@ gulp.task( 'browser-sync', function() {
  // });
 
 
-gulp.task( 'default', ['vendorsJs'], function () {
+gulp.task( 'default', ['vendorsJs','watch-less'], function () {
   // gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
   // gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
+  gulp.watch( styleLessWatchFiles, [ 'watch-less' ] );
   gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
+
   //gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
 });
 

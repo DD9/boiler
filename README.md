@@ -150,8 +150,9 @@ git pull -s subtree boiler master
 Configure GULP to automate several tasks, starting with compiling vendor JS files
 
 - Install Node 
-- Install NPM 
+- Install NPM  `npm install npm -g`
 - Install gulp globally `npm install gulp -g`
+- Install less globally `npm install less -g`
 - Verify Install
 
 ```
