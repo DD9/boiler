@@ -141,7 +141,6 @@ function bones_scripts_and_styles() {
 
     // Register Scripts --------------------
 
-    
     //Minified Vendor script instead
     wp_register_script( 'vendors-min', TMPL_URL . '/js/vendors.min.js', array('jquery'), '1.0', TRUE );
 
@@ -174,7 +173,6 @@ function bones_scripts_and_styles() {
 
 
     //Enqueue scripts --------------------
-    wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'jquery' );
     //wp_enqueue_script( 'bootstrap-cdn' );
 
