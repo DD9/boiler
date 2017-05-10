@@ -6,11 +6,11 @@ Draft Instructions
 
 --
 
-#Install Boiler
+# Install Boiler
 
 --
 
-##Fork it (As a solo repo)
+## Fork it (As a solo repo)
 
 Create a WordPress install (probably local)
 
@@ -40,7 +40,7 @@ git fetch upstream
 
 --
 
-##Using Boiler as a Submodule
+## Using Boiler as a Submodule
 
 http://git-scm.com/book/en/v2/Git-Tools-Submodules
 
@@ -108,7 +108,7 @@ git subtree push --prefix=wp-content/themes/[THEMENAME] boiler master
 
 ---
 
-##Using Subtrees (unidirectional workflow)
+## Using Subtrees (unidirectional workflow)
 
 http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/
 
@@ -145,41 +145,27 @@ git pull -s subtree boiler master
 
 
 
-#NPM + GULP
+# NPM + GULP (Compile Boiler)
 
-Configure GULP to automate several tasks, starting with compiling vendor JS files
+Configure GULP to automate several tasks, starting with minifying vendor JS files and compiling LESS 
 
-- Install Node 
-- Install NPM  `npm install npm -g`
-- Install gulp globally `npm install gulp -g`
-- Install less globally `npm install less -g`
+- Install *Node* https://nodejs.org/en/
+- Install *NPM* globally  `npm install npm -g` (Node will come installed with NPM)
+- Install *gulp* globally `npm install gulp -g`
+- Install *less* globally `npm install less -g`
 - Verify Install
 
 ```
 node -v
 npm -v
 gulp -v
+less -v
 ```
 
-- Navigate to theme directory and `npm install`
+- Navigate to theme directory and from command line `npm install`
 - Confirm creation of /node_modules/ (which will be ignored by Git)
-- From the theme directory `gulp`
-
-
----
-
-#Compile Boiler
-
-Configure LESS compiler to target these files in /css
-
-```
-ie.css
-login.css
-style.css
-```
-
-
-*(We may end up removing these files because they should be generated on the theme level, not inherited from the parent repo)*
+- From the theme directory and from command line `gulp`
+- Verify gulp is monitoring for changes by tweaking .less and .js files
 
 
 
