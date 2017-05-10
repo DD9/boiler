@@ -2,9 +2,32 @@
 Boilerplate Theme
 
 ----
-Draft Instructions
 
---
+
+
+# Compile Boiler (NPM + GULP)
+
+Configure GULP to automate several tasks, starting with minifying vendor JS files and compiling LESS 
+
+- Install **Node** https://nodejs.org/en/
+- Install **NPM** globally  `npm install npm -g` (Node will come installed with NPM)
+- Install **gulp** globally `npm install gulp -g`
+- Install **less** globally `npm install less -g`
+- Verify Installs
+
+```
+node -v
+npm -v
+gulp -v
+less -v
+```
+
+- Navigate to theme directory and from command line `npm install`
+- Confirm creation of /node_modules/ (which will be ignored by Git)
+- From the theme directory and from command line `gulp`
+- Verify gulp is monitoring for changes by tweaking .less and .js files
+
+
 
 # Install Boiler
 
@@ -70,7 +93,7 @@ To push from the submodule to the boiler repo, navigate to the theme repo, check
 
 --
 
-##Using Subtrees (bidirectional workflow)
+## Using Subtrees (bidirectional workflow)
 
 http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/
 
@@ -138,34 +161,6 @@ git pull -s subtree boiler master
 
 ```
 
-
-
-
----
-
-
-
-# NPM + GULP (Compile Boiler)
-
-Configure GULP to automate several tasks, starting with minifying vendor JS files and compiling LESS 
-
-- Install *Node* https://nodejs.org/en/
-- Install *NPM* globally  `npm install npm -g` (Node will come installed with NPM)
-- Install *gulp* globally `npm install gulp -g`
-- Install *less* globally `npm install less -g`
-- Verify Install
-
-```
-node -v
-npm -v
-gulp -v
-less -v
-```
-
-- Navigate to theme directory and from command line `npm install`
-- Confirm creation of /node_modules/ (which will be ignored by Git)
-- From the theme directory and from command line `gulp`
-- Verify gulp is monitoring for changes by tweaking .less and .js files
 
 
 
