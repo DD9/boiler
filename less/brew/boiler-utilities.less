@@ -19,12 +19,18 @@ img {
   position:relative;
 }
 
+.last-child-no-bm {
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
 /* Class to make light text (for use on dark background) */
 .content-light {
   color: #FFF;
   
   h1, .h1, h2, .h2, h3, .h3, h4, .h4, 
-  h5, .h5, h6, .h6, h6.subtitle, .h6.subtitle, a, .lead,
+  h5, .h5, h6, .h6, h6.subtitle, .h6.subtitle, a:not(.btn), .lead,
   blockquote footer, blockquote small, blockquote .small,
   .pullquote-content, .pullquote-cite {
     color: #fff;
@@ -95,20 +101,6 @@ various breakpoints.
 .pbottom-100 { padding-bottom: 100px; }
 
 
-// Add an alphatransparency value to any background or border color (via Elyse Holladay)
-// https://groups.google.com/forum/#!msg/bootstrap-users/5_Mx1rDyw6A/Y2qofS6ywGcJ
-// use like this:  
-// #translucent > .background(@red, .5);
-//
-#translucent {
-  .background(@color: @white, @alpha: 1) {
-    background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
-  }
-  .border(@color: @white, @alpha: 1) {
-    border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
-  }
-}
-
 /* Borders */
 .default-border-top{
   border-top: solid 1px @default-border-color;
@@ -136,7 +128,7 @@ various breakpoints.
     position: relative;
   }
 
-  .generate-color-divs(@boiler-palette, custom);
+  .generate-color-divs(@theme-palette, custom);
   .generate-color-divs(@bootstrap-grays, grays);
   .generate-color-divs(@bootstrap-palette, bootstrap);
 }

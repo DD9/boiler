@@ -13,6 +13,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	margin: 0 0 @line-height;
 
 	a {}
+	@media (max-width: @screen-sm-min) {
+		> br {
+			display: none;
+		}
+	}
 }
 
 h1, .h1 {
@@ -43,6 +48,10 @@ h5, .h5 {}
 // -------------------------
 p {
   margin: 0 0 @line-height;
+}
+
+p:empty {
+	display: none; 
 }
 
 cite {

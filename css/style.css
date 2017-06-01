@@ -2532,26 +2532,26 @@ fieldset[disabled] .btn-warning.focus {
 }
 .btn-danger {
   color: #fff;
-  background-color: #b40027;
-  border-color: #9b0021;
+  background-color: #d9534f;
+  border-color: #d43f3a;
 }
 .btn-danger:focus,
 .btn-danger.focus {
   color: #fff;
-  background-color: #81001c;
-  border-color: #1b0006;
+  background-color: #c9302c;
+  border-color: #761c19;
 }
 .btn-danger:hover {
   color: #fff;
-  background-color: #81001c;
-  border-color: #5d0014;
+  background-color: #c9302c;
+  border-color: #ac2925;
 }
 .btn-danger:active,
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   color: #fff;
-  background-color: #81001c;
-  border-color: #5d0014;
+  background-color: #c9302c;
+  border-color: #ac2925;
 }
 .btn-danger:active:hover,
 .btn-danger.active:hover,
@@ -2563,8 +2563,8 @@ fieldset[disabled] .btn-warning.focus {
 .btn-danger.active.focus,
 .open > .dropdown-toggle.btn-danger.focus {
   color: #fff;
-  background-color: #5d0014;
-  border-color: #1b0006;
+  background-color: #ac2925;
+  border-color: #761c19;
 }
 .btn-danger:active,
 .btn-danger.active,
@@ -2580,11 +2580,11 @@ fieldset[disabled] .btn-danger:focus,
 .btn-danger.disabled.focus,
 .btn-danger[disabled].focus,
 fieldset[disabled] .btn-danger.focus {
-  background-color: #b40027;
-  border-color: #9b0021;
+  background-color: #d9534f;
+  border-color: #d43f3a;
 }
 .btn-danger .badge {
-  color: #b40027;
+  color: #d9534f;
   background-color: #fff;
 }
 .btn-link {
@@ -4085,11 +4085,11 @@ a.label:focus {
   background-color: #ec971f;
 }
 .label-danger {
-  background-color: #b40027;
+  background-color: #d9534f;
 }
 .label-danger[href]:hover,
 .label-danger[href]:focus {
-  background-color: #81001c;
+  background-color: #c9302c;
 }
 .badge {
   display: inline-block;
@@ -4359,7 +4359,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-danger {
-  background-color: #b40027;
+  background-color: #d9534f;
 }
 .progress-striped .progress-bar-danger {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -5905,7 +5905,7 @@ Stylesheet: WP Core Styles
 This stylesheet contains CSS needed for WP Core
 ******************************************************************/
 .alignnone {
-  margin: 5px 20px 20px 0;
+  margin: 5px 0 20px 0;
 }
 .aligncenter,
 div.aligncenter {
@@ -5974,7 +5974,7 @@ div.aligncenter {
   .aligncenter {
     display: block;
     float: none;
-    margin: 0 auto 24px;
+    margin: 0 auto 20px;
   }
 }
 /******************************************************************
@@ -5996,6 +5996,22 @@ h6,
   margin: 0 0 24px;
 }
 @media (max-width: 768px) {
+  h1 > br,
+  .h1 > br,
+  h2 > br,
+  .h2 > br,
+  h3 > br,
+  .h3 > br,
+  h4 > br,
+  .h4 > br,
+  h5 > br,
+  .h5 > br,
+  h6 > br,
+  .h6 > br {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
   h1,
   .h1 {
     font-size: 30px;
@@ -6014,6 +6030,9 @@ h6,
 }
 p {
   margin: 0 0 24px;
+}
+p:empty {
+  display: none;
 }
 cite {
   font-style: italic;
@@ -6673,6 +6692,58 @@ Stylesheet: Content Styles
 
 These are the styles for posts, pages, archive, & blog index
 ******************************************************************/
+/* General Content
+================================================== */
+.bg-img {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: none;
+  position: relative;
+}
+.bg-img > .container {
+  position: relative;
+}
+.bg-img-shaded::before {
+  content: "";
+  background-color: #000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.4;
+}
+/* Centered Columns
+================================================== */
+@media (min-width: 992px) {
+  /* centered columns styles */
+  .row-centered {
+    text-align: center;
+  }
+  .col-centered {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    /* reset the text-align */
+    text-align: left;
+    /* inline-block space fix */
+    margin-right: -5px;
+  }
+  .col-centered.text-center {
+    text-align: center;
+  }
+}
+.col-centered {
+  text-align: left;
+}
+.col-centered.text-center {
+  text-align: center;
+}
 #page-header-outer {
   background-color: #eeeeee;
 }
@@ -6682,9 +6753,8 @@ These are the styles for posts, pages, archive, & blog index
 .row-outer {
   padding: 48px;
 }
-/******************************************************************
-Blog Stuff
-******************************************************************/
+/* Blog Content
+================================================== */
 .byline,
 .entry-meta {
   color: #777777;
@@ -6700,12 +6770,6 @@ Blog Stuff
 }
 .entry-excerpt > *:last-child {
   margin-bottom: 0;
-}
-.sticky-ind {
-  display: none;
-}
-.sticky .sticky-ind {
-  display: inline !important;
 }
 .featured-content {
   margin-bottom: 20px;
@@ -6961,6 +7025,11 @@ Stylesheet: Shortcodes, commented out in /style.less by default
 .special_list ul li small,
 .special_list ul li .small {
   font-size: 75%;
+}
+@media (max-width: 768px) {
+  .special_list ul li > br {
+    display: none;
+  }
 }
 .special_list ul li:before {
   content: "\f054";
@@ -7233,6 +7302,9 @@ img {
 .relative {
   position: relative;
 }
+.last-child-no-bm > *:last-child {
+  margin-bottom: 0;
+}
 /* Class to make light text (for use on dark background) */
 .content-light {
   color: #FFF;
@@ -7251,7 +7323,7 @@ img {
 .content-light .h6,
 .content-light h6.subtitle,
 .content-light .h6.subtitle,
-.content-light a,
+.content-light a:not(.btn),
 .content-light .lead,
 .content-light blockquote footer,
 .content-light blockquote small,
@@ -7578,13 +7650,13 @@ various breakpoints.
   content: "gray-base";
 }
 .color-demo .color-block.bootstrap-5 {
-  background-color: #b40027;
+  background-color: #d9534f;
 }
 .color-demo .color-block.bootstrap-5:before {
   color: white;
   font-weight: bold;
   font-size: 16px;
-  content: "#b40027";
+  content: "#d9534f";
 }
 .color-demo .color-block.bootstrap-5:after {
   color: white;

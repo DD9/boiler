@@ -21,9 +21,7 @@
 				<?php if ( function_exists('custom_breadcrumb') ) { custom_breadcrumb(); } ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-					<section class="entry-content clearfix" itemprop="articleBody">
-						<?php the_content(); ?>
-					</section> 
+					<?php the_content(); ?>
 				</article> 
 			
 			</div> <!-- /col -->

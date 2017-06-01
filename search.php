@@ -6,7 +6,7 @@
 
 			<header class="entry-header text-center">
 				<h5><?php _e("Search Results for","bonestheme"); ?>: </h5>
-					<h1 class="entry-title"> <?php echo esc_attr(get_search_query()); ?></h1>
+				<h1 class="entry-title"> <?php echo esc_attr(get_search_query()); ?></h1>
 			</header> 
         
     </div> <!-- /row -->

@@ -5,6 +5,64 @@ Stylesheet: Content Styles
 These are the styles for posts, pages, archive, & blog index
 ******************************************************************/
 
+/* General Content
+================================================== */
+
+.bg-img {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: none;
+  position: relative;
+
+  > .container {
+    position: relative;
+  }
+}
+
+.bg-img-shaded::before {
+  content: "";
+  background-color:#000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0; 
+  opacity: 0.4;
+}
+
+/* Centered Columns
+================================================== */
+@media (min-width: @grid-float-breakpoint) { 
+  /* centered columns styles */
+  .row-centered {
+    text-align:center;
+  }
+  .col-centered {
+    display:inline-block;
+    float:none;
+    vertical-align: top;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-5px;
+  }
+  .col-centered.text-center {
+    text-align: center;
+  }
+}
+
+.col-centered { 
+  text-align: left;
+}
+
+.col-centered.text-center { 
+  text-align: center;
+}
 
 // Entry Header
 // -------------------------
@@ -26,9 +84,8 @@ These are the styles for posts, pages, archive, & blog index
 }
 
 
-/******************************************************************
-Blog Stuff
-******************************************************************/
+/* Blog Content
+================================================== */
 .byline,
 .entry-meta {
   color: @gray-light;
@@ -48,13 +105,6 @@ Blog Stuff
     margin-bottom: 0;
   }
 }
-
-// Sticky Indicator
-// -------------------------
-.sticky-ind {
-  display: none;
-}
-.sticky .sticky-ind {display:inline !important;}
 
 
 // Featured Image
