@@ -11,11 +11,12 @@ Stylesheet: Ninja Forms, commented out in /style.less by default
 	color: @gray;
 	height: auto;
 	width: auto;
-	background-color: @gray-lighter;
-	border: 1px solid @gray-light;
+	background-color: @gray-lightest;
+	border: 1px solid darken(@gray-lightest, 10%);
+	width: 100%;
 }
 
-.field-wrap.submit-wrap input[type=submit] {
+.field-wrap.submit-wrap input[type=button] {
 	.btn;
 	.btn-primary;
 	.transition(all .2s ease);
@@ -23,13 +24,9 @@ Stylesheet: Ninja Forms, commented out in /style.less by default
 	width: auto;
 }
 
-#content_wrapper .ninja-forms-form-wrap {
-	font-size: 15px;
-	color: @gray;
-}
-
-#content_wrapper .ninja-forms-form-wrap label {
+.ninja-forms-form-wrap label {
   font-weight: normal;
+  font-family: @font-family-ss;
 }
 
 .text-center-wrap {
@@ -53,7 +50,8 @@ Stylesheet: Ninja Forms, commented out in /style.less by default
 	border: 1px solid #DE5959;
 }
 
-.ninja-forms-required-items {
+.nf-form-fields-required {
+	font-family: @font-family-ss;
 	margin-bottom: 10px;
 }
 
@@ -68,16 +66,19 @@ Stylesheet: Ninja Forms, commented out in /style.less by default
 	}
 }
 
-.ninja-forms-success-msg {
-	background: none repeat scroll 0 0 #ebf6e0;
-  border: 1px solid #b3dc82;
-  color: #5f9025;
-  padding: 20px;
+.nf-response-msg {
+	.well;
 }
 
-.ninja-forms-error-msg {
+.nf-error-msg.nf-error-field-errors {
 	background: none repeat scroll 0 0 #ffe9e9;
   border: 1px solid #fbc4c4;
   color: #de5959;
+  font-family: @font-family-ss;
   padding: 20px;
+}
+
+.nf-error-msg.nf-error-required-error {
+	color: #de5959;
+	font-family: @font-family-ss;
 }
