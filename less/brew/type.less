@@ -58,6 +58,13 @@ cite {
   font-style: italic;
 }
 
+.lead {
+	color: @gray;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 38px;
+}
+
 // Link Styles
 // -------------------------
 a, a:visited {
@@ -83,7 +90,15 @@ a, a:visited {
 	}
 }
 
+a.link-inverted {
+	color: @text-color;
+	&:hover {
+		color: @link-color;
+	}
+}
+
 .post-edit-link{
+	.btn;
 	.btn-sm;
 	.btn-warning;
   position: fixed;
@@ -100,4 +115,22 @@ a.full-width {
   right: 0;
   top: 0;
   z-index: 10;
+}
+
+
+// Blockquote
+// -------------------------
+
+blockquote {
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 38px;
+
+	footer, small, .small {
+		letter-spacing: 0.2em;
+		font-size: 11px;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-style: normal;
+	}
 }

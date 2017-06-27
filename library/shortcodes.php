@@ -36,19 +36,30 @@ function dividerbar_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'dividerbar', 'dividerbar_shortcode' );
 
-
 // Lead text shortcode 
 function lead_shortcode( $atts, $content = null ) {
-   return '<p class="lead">' . $content . '</p>';
+	extract( shortcode_atts( array(
+		'class' => ''
+	), $atts ) );
+	
+	$output = '<p class="lead '. $class . '">' . $content . '</p>';
+	
+	return $output;
 }
-add_shortcode( 'lead', 'lead_shortcode' );
-
+add_shortcode('lead', 'lead_shortcode'); 
 
 // Small shortcode 
 function small_shortcode( $atts, $content = null ) {
    return '<small>' . $content . '</small>';
 }
 add_shortcode( 'small', 'small_shortcode' );
+
+
+// Checkmark list
+function checkmarklist_shortcode( $atts, $content = null ) {
+   return '<div class="checkmark-list">' . $content . '</div>';
+}
+add_shortcode( 'checkmarklist', 'checkmarklist_shortcode' );
 
 
 // Buttons

@@ -8,7 +8,8 @@ Stylesheet: Utilities
   word-wrap: break-word;
 }
 
-/* Images */
+/* Images
+================================================== */
 img {
   max-width: 100%;
   height: auto;
@@ -25,7 +26,38 @@ img {
   }
 }
 
-/* Class to make light text (for use on dark background) */
+/* Centered Columns
+================================================== */
+@media (min-width: @grid-float-breakpoint) { 
+  /* centered columns styles */
+  .row-centered {
+    text-align:center;
+  }
+  .col-centered {
+    display:inline-block;
+    float:none;
+    vertical-align: top;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-5px;
+  }
+  .col-centered.text-center {
+    text-align: center;
+  }
+}
+
+.col-centered { 
+  text-align: left;
+}
+
+.col-centered.text-center { 
+  text-align: center;
+}
+
+/* Class to make light text 
+// (for use on dark background)
+================================================== */
 .content-light {
   color: #FFF;
   
@@ -101,7 +133,8 @@ various breakpoints.
 .pbottom-100 { padding-bottom: 100px; }
 
 
-/* Borders */
+/* Borders
+================================================== */
 .default-border-top{
   border-top: solid 1px @default-border-color;
 }
@@ -115,8 +148,8 @@ various breakpoints.
   border-right: solid 1px @default-border-color;
 }
 
-
-/* Assets page - outputs available colors */
+/* Assets page - outputs available colors
+================================================== */
 .color-demo{
   .color-block{
     width: 100px;

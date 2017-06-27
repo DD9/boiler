@@ -53,3 +53,26 @@ Basic styling used in footer and the #author-info box
     margin-bottom: 0;
   }
 }
+
+/* Lists
+================================================== */
+.checkmark-list > ul, ul.checkmark-list {
+  .list-unstyled;
+  font-size: 110%;
+  font-family: @font-family-ss;
+  li {
+    padding: 0 0 10px 22px;
+    position: relative;
+  }
+  li::before {
+    .fa;
+    content: "\f00c";
+    color: @brand-success;
+    font-size: 80%;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 6px;
+    width: 15px;
+  }
+}

@@ -6,7 +6,6 @@
     <p class="byline vcard">
       by <span class="author"><em><?php echo bones_get_the_author_posts_link() ?></em></span> - 
       <time class="updated" datetime="<?php get_the_time('Y-m-j') ?>"><?php echo get_the_time(get_option('date_format')) ?></time>
-      <span class="sticky-ind pull-right"><i class="fa fa-star"></i></span>
     </p>
   </header>
   

@@ -71,9 +71,11 @@
     <div class="col-lg-6">
     	<h3 class="add-divider">Heading with divider</h3>
       <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-      <h5 class="add-divider">Heading with divider</h5>
-      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-      
+     
+      <h3 class="add-divider">Links to Fonts (if available online)</h3>
+      <p><a href="#" class="btn btn-default btn-sm" target="_blank">Font Name One <i class="fa fa-external-link"></i></a> </p>
+      <p><a href="#" class="btn btn-default btn-sm" target="_blank">Font Name Two <i class="fa fa-external-link"></i></a> </p>
+      <p><a href="#" class="btn btn-default btn-sm" target="_blank">Font Name Three <i class="fa fa-external-link"></i></a> </p>
     </div>
   </div><!-- /row -->
   

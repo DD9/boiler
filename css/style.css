@@ -5905,24 +5905,24 @@ Stylesheet: WP Core Styles
 This stylesheet contains CSS needed for WP Core
 ******************************************************************/
 .alignnone {
-  margin: 5px 0 20px 0;
+  margin: 0 0 20px 0;
 }
 .aligncenter,
 div.aligncenter {
   display: block;
-  margin: 5px auto 5px auto;
+  margin: 0 auto 20px auto;
 }
 .alignright {
   float: right;
-  margin: 5px 0 20px 20px;
+  margin: 0 0 20px 20px;
 }
 .alignleft {
   float: left;
-  margin: 5px 20px 20px 0;
+  margin: 0 20px 20px 0;
 }
 .aligncenter {
   display: block;
-  margin: 5px auto 5px auto;
+  margin: 0 auto 20px auto;
 }
 .wp-caption {
   max-width: 100%;
@@ -6037,6 +6037,12 @@ p:empty {
 cite {
   font-style: italic;
 }
+.lead {
+  color: #555555;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 38px;
+}
 a,
 a:visited {
   -webkit-transition: all 0.2s ease;
@@ -6061,7 +6067,31 @@ a:visited:link {
 		for mobile devices.
 		*/
 }
+a.link-inverted {
+  color: #333333;
+}
+a.link-inverted:hover {
+  color: #337ab7;
+}
 .post-edit-link {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -6073,6 +6103,41 @@ a:visited:link {
   right: 10px;
   bottom: 10px;
   z-index: 2000;
+}
+.post-edit-link:focus,
+.post-edit-link:active:focus,
+.post-edit-link.active:focus,
+.post-edit-link.focus,
+.post-edit-link:active.focus,
+.post-edit-link.active.focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.post-edit-link:hover,
+.post-edit-link:focus,
+.post-edit-link.focus {
+  color: #333;
+  text-decoration: none;
+}
+.post-edit-link:active,
+.post-edit-link.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.post-edit-link.disabled,
+.post-edit-link[disabled],
+fieldset[disabled] .post-edit-link {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+a.post-edit-link.disabled,
+fieldset[disabled] a.post-edit-link {
+  pointer-events: none;
 }
 .post-edit-link:focus,
 .post-edit-link.focus {
@@ -6134,6 +6199,20 @@ a.full-width {
   right: 0;
   top: 0;
   z-index: 10;
+}
+blockquote {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 38px;
+}
+blockquote footer,
+blockquote small,
+blockquote .small {
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: normal;
 }
 /******************************************************************
 Author: DD9
@@ -6623,6 +6702,13 @@ textareainput[type="color"],
 textarea.uneditable-input {
   height: auto;
 }
+legend {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.input-group-btn .btn {
+  white-space: nowrap;
+}
 @media (max-width: 768px) {
   .form-horizontal .control-label {
     display: block;
@@ -6718,32 +6804,6 @@ These are the styles for posts, pages, archive, & blog index
   z-index: 0;
   opacity: 0.4;
 }
-/* Centered Columns
-================================================== */
-@media (min-width: 992px) {
-  /* centered columns styles */
-  .row-centered {
-    text-align: center;
-  }
-  .col-centered {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-    /* reset the text-align */
-    text-align: left;
-    /* inline-block space fix */
-    margin-right: -5px;
-  }
-  .col-centered.text-center {
-    text-align: center;
-  }
-}
-.col-centered {
-  text-align: left;
-}
-.col-centered.text-center {
-  text-align: center;
-}
 #page-header-outer {
   background-color: #eeeeee;
 }
@@ -6751,8 +6811,43 @@ These are the styles for posts, pages, archive, & blog index
   margin-bottom: 0;
 }
 .row-outer {
-  padding: 48px;
+  position: relative;
+  padding: 48px 0;
 }
+@media (max-width: 992px) {
+  .row-outer {
+    padding: 48px 0;
+  }
+}
+.row-outer-sm {
+  position: relative;
+  padding: 24px 0;
+}
+.row-outer-lg {
+  position: relative;
+  padding: 96px 0;
+}
+@media (max-width: 992px) {
+  .row-outer-lg {
+    padding: 48px 0;
+  }
+}
+.content-block {
+  margin-bottom: 48px;
+}
+.content-block > *:last-child {
+  margin-bottom: 0;
+}
+.content-block-sm {
+  margin-bottom: 24px;
+}
+.content-block-sm > *:last-child {
+  margin-bottom: 0;
+}
+/******************************************************************
+Author: DD9
+Stylesheet: Posts
+******************************************************************/
 /* Blog Content
 ================================================== */
 .byline,
@@ -6767,9 +6862,6 @@ These are the styles for posts, pages, archive, & blog index
 }
 .entry-excerpt-meta {
   margin: 0 0 5px;
-}
-.entry-excerpt > *:last-child {
-  margin-bottom: 0;
 }
 .featured-content {
   margin-bottom: 20px;
@@ -6814,24 +6906,6 @@ These are the styles for posts, pages, archive, & blog index
 }
 .article-footer .post-link:hover {
   text-decoration: none;
-}
-.author-img {
-  float: left;
-  margin-right: 24px;
-}
-.author-desc {
-  font-size: 14px;
-  line-height: 1.6;
-}
-.author-desc h5 {
-  margin-bottom: 12px;
-}
-@media (min-width: 480px) {
-  .author-desc {
-    overflow: hidden;
-    _overflow: visible;
-    zoom: 1;
-  }
 }
 /******************************************************************
 Author: DD9
@@ -6932,6 +7006,42 @@ Basic styling used in footer and the #author-info box
 .well > *:last-child,
 .alert > *:last-child {
   margin-bottom: 0;
+}
+/* Lists
+================================================== */
+.checkmark-list > ul,
+ul.checkmark-list {
+  padding-left: 0;
+  list-style: none;
+  font-size: 110%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.checkmark-list > ul li,
+ul.checkmark-list li {
+  padding: 0 0 10px 22px;
+  position: relative;
+}
+.checkmark-list > ul li::before,
+ul.checkmark-list li::before {
+  -moz-font-feature-settings: normal;
+  -moz-font-language-override: normal;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: FontAwesome;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-rendering: auto;
+  content: "\f00c";
+  color: #5cb85c;
+  font-size: 80%;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 15px;
 }
 /******************************************************************
 Author: DD9
@@ -7293,7 +7403,8 @@ Stylesheet: Utilities
   -ms-word-wrap: break-word;
   word-wrap: break-word;
 }
-/* Images */
+/* Images
+================================================== */
 img {
   max-width: 100%;
   height: auto;
@@ -7305,7 +7416,35 @@ img {
 .last-child-no-bm > *:last-child {
   margin-bottom: 0;
 }
-/* Class to make light text (for use on dark background) */
+/* Centered Columns
+================================================== */
+@media (min-width: 992px) {
+  /* centered columns styles */
+  .row-centered {
+    text-align: center;
+  }
+  .col-centered {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    /* reset the text-align */
+    text-align: left;
+    /* inline-block space fix */
+    margin-right: -5px;
+  }
+  .col-centered.text-center {
+    text-align: center;
+  }
+}
+.col-centered {
+  text-align: left;
+}
+.col-centered.text-center {
+  text-align: center;
+}
+/* Class to make light text 
+// (for use on dark background)
+================================================== */
 .content-light {
   color: #FFF;
 }
@@ -7486,7 +7625,8 @@ various breakpoints.
 .pbottom-100 {
   padding-bottom: 100px;
 }
-/* Borders */
+/* Borders
+================================================== */
 .default-border-top {
   border-top: solid 1px #777777;
 }
@@ -7499,7 +7639,8 @@ various breakpoints.
 .default-border-right {
   border-right: solid 1px #777777;
 }
-/* Assets page - outputs available colors */
+/* Assets page - outputs available colors
+================================================== */
 .color-demo .color-block {
   width: 100px;
   height: 100px;
@@ -7509,33 +7650,19 @@ various breakpoints.
   color: white;
   position: relative;
 }
-.color-demo .color-block.custom-3 {
-  background-color: #cc6600;
-}
-.color-demo .color-block.custom-3:before {
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  content: "#cc6600";
-}
-.color-demo .color-block.custom-3:after {
-  color: white;
-  display: block;
-  content: "boiler-orange";
-}
 .color-demo .color-block.custom-2 {
-  background-color: #ffaa00;
+  background-color: #cc6600;
 }
 .color-demo .color-block.custom-2:before {
   color: white;
   font-weight: bold;
   font-size: 16px;
-  content: "#ffaa00";
+  content: "#cc6600";
 }
 .color-demo .color-block.custom-2:after {
   color: white;
   display: block;
-  content: "boiler-gold";
+  content: "boiler-orange";
 }
 .color-demo .color-block.custom-1 {
   background-color: #b40027;
@@ -7720,7 +7847,6 @@ various breakpoints.
   content: "brand-primary";
 }
 /******************************************************************
-Site Name: DD9 Boiler 
 Author: DD9
 Stylesheet: Custom Styles and Classes
 ******************************************************************/
