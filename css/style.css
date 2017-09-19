@@ -7662,7 +7662,7 @@ various breakpoints.
 .color-demo .color-block.custom-2:after {
   color: white;
   display: block;
-  content: "boiler-orange";
+  content: "orange";
 }
 .color-demo .color-block.custom-1 {
   background-color: #b40027;
@@ -7676,7 +7676,7 @@ various breakpoints.
 .color-demo .color-block.custom-1:after {
   color: white;
   display: block;
-  content: "boiler-red";
+  content: "red";
 }
 .color-demo .color-block.grays-7 {
   background-color: #eeeeee;
