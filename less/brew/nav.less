@@ -3,9 +3,11 @@ Author: DD9
 Stylesheet: Header & Navigation
 ******************************************************************/
 
-/* Main Header and Nav: Bootstrap overrides */
+/* Main Header and Nav: Bootstrap overrides
+================================================== */
 #site-header {
 	.navbar {
+		border: none;
 		margin-bottom: 0;
 	}
 	.navbar-brand{
@@ -28,7 +30,8 @@ Stylesheet: Header & Navigation
 	}
 }
 
-/* Primary Menu */
+/* Primary Menu
+================================================== */
 #menu-primary {
 	text-transform: uppercase;
 
@@ -37,4 +40,23 @@ Stylesheet: Header & Navigation
 	> .active > a:focus {
 	  color: @link-color;
 	}
+}
+
+/* Current page highlighting 
+================================================== */
+.menu-primary.nav {
+  > li.current-menu-item,
+  > li.current-menu-parent,
+  > li.current-menu-ancestor,
+  > li.current_page_parent {
+  	@media (min-width: @grid-float-breakpoint) { // Only enable on larger screens
+	    > a, > a:hover {
+	      color: @link-color;
+	    }
+	  }
+
+    .dropdown-menu > li.active > a {
+      color: @link-color;
+    }
+  }  
 }

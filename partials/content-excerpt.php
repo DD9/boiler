@@ -1,4 +1,4 @@
-<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-featured' );?>
+<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 
   <header class="entry-excerpt-header">

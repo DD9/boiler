@@ -5981,6 +5981,8 @@ div.aligncenter {
 Author: DD9
 Stylesheet: Typography
 ******************************************************************/
+/* Headings
+================================================== */
 h1,
 .h1,
 h2,
@@ -6028,6 +6030,8 @@ h6,
   clear: both;
   padding-bottom: 0.65em;
 }
+/* Body text
+================================================== */
 p {
   margin: 0 0 24px;
 }
@@ -6043,6 +6047,8 @@ cite {
   font-size: 30px;
   line-height: 38px;
 }
+/* Link Styles
+================================================== */
 a,
 a:visited {
   -webkit-transition: all 0.2s ease;
@@ -6200,6 +6206,8 @@ a.full-width {
   top: 0;
   z-index: 10;
 }
+/* Blockquote
+================================================== */
 blockquote {
   font-weight: normal;
   font-size: 30px;
@@ -6231,13 +6239,15 @@ Stylesheet: Comments
 #comments .comment-container {
   padding: 20px 20px;
 }
-/* author vcard */
+/* author vcard 
+================================================== */
 .vcard img.avatar {
   padding: 2px;
   border: 1px solid #cecece;
   background: #fff;
 }
-/* comment content */
+/* comment content 
+================================================== */
 .comment-content {
   width: 88%;
   margin-left: 2%;
@@ -6709,6 +6719,8 @@ legend {
 .input-group-btn .btn {
   white-space: nowrap;
 }
+/* RESPONSIVE
+================================================== */
 @media (max-width: 768px) {
   .form-horizontal .control-label {
     display: block;
@@ -6736,13 +6748,16 @@ Stylesheet: Sidebars
 .widget select {
   margin-bottom: 10px;
 }
-/* Blog Sidebar - Mobile Devices */
+/* Blog Sidebar - Mobile Devices 
+================================================== */
 #sidebar-mobile {
   display: none;
 }
 #sidebar-mobile .widgettitle {
   display: none;
 }
+/* RESPONSIVE
+================================================== */
 @media (max-width: 992px) {
   .sidebar-blog {
     display: none;
@@ -6804,12 +6819,16 @@ These are the styles for posts, pages, archive, & blog index
   z-index: 0;
   opacity: 0.4;
 }
+/* Entry Header
+================================================== */
 #page-header-outer {
   background-color: #eeeeee;
 }
 #page-header-outer .entry-header > *:last-child {
   margin-bottom: 0;
 }
+/* Entry Content
+================================================== */
 .row-outer {
   position: relative;
   padding: 48px 0;
@@ -6863,6 +6882,8 @@ Stylesheet: Posts
 .entry-excerpt-meta {
   margin: 0 0 5px;
 }
+/* Featured Image
+================================================== */
 .featured-content {
   margin-bottom: 20px;
 }
@@ -6877,6 +6898,8 @@ Stylesheet: Posts
   width: 100%;
   height: auto;
 }
+/* Entry Footer
+================================================== */
 .article-footer {
   padding: 10px 0;
   border-top: 1px solid #eeeeee;
@@ -6911,8 +6934,10 @@ Stylesheet: Posts
 Author: DD9
 Stylesheet: Header & Navigation
 ******************************************************************/
-/* Main Header and Nav: Bootstrap overrides */
+/* Main Header and Nav: Bootstrap overrides
+================================================== */
 #site-header .navbar {
+  border: none;
   margin-bottom: 0;
 }
 #site-header .navbar-brand {
@@ -6931,13 +6956,34 @@ Stylesheet: Header & Navigation
   white-space: normal;
   line-height: inherit;
 }
-/* Primary Menu */
+/* Primary Menu
+================================================== */
 #menu-primary {
   text-transform: uppercase;
 }
 #menu-primary > .active > a,
 #menu-primary > .active > a:hover,
 #menu-primary > .active > a:focus {
+  color: #337ab7;
+}
+/* Current page highlighting 
+================================================== */
+@media (min-width: 992px) {
+  .menu-primary.nav > li.current-menu-item > a,
+  .menu-primary.nav > li.current-menu-parent > a,
+  .menu-primary.nav > li.current-menu-ancestor > a,
+  .menu-primary.nav > li.current_page_parent > a,
+  .menu-primary.nav > li.current-menu-item > a:hover,
+  .menu-primary.nav > li.current-menu-parent > a:hover,
+  .menu-primary.nav > li.current-menu-ancestor > a:hover,
+  .menu-primary.nav > li.current_page_parent > a:hover {
+    color: #337ab7;
+  }
+}
+.menu-primary.nav > li.current-menu-item .dropdown-menu > li.active > a,
+.menu-primary.nav > li.current-menu-parent .dropdown-menu > li.active > a,
+.menu-primary.nav > li.current-menu-ancestor .dropdown-menu > li.active > a,
+.menu-primary.nav > li.current_page_parent .dropdown-menu > li.active > a {
   color: #337ab7;
 }
 /******************************************************************
@@ -7480,7 +7526,7 @@ Use ONLY for overrides, or in singular instances.
 Otherwise, declare margin and padding in a 
 reusable class that can also be styled at
 various breakpoints. 
-*/
+================================================== */
 .mtop-0 {
   margin-top: 0px;
 }
