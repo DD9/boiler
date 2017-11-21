@@ -1,11 +1,8 @@
- <article id="post-not-found" class="hentry">
-  <header class="article-header">
-    <h1><?php _e( 'Post Not Found', 'bonestheme' ); ?></h1>
+ <article id="post-not-found" class="text-center">
+  <header>
+    <h3><?php _e( 'Nothing Found', 'bonestheme' ); ?></h3>
   </header>
-  <section class="entry-content">
-    <p><?php _e( 'Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-  </section>
-  <footer class="article-footer">
-      <p><?php _e( 'This is an error message.', 'bonestheme' ); ?></p>
-  </footer>
+	 
+	<p><?php get_search_form(); ?></p>
+	 
 </article>
