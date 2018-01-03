@@ -6884,17 +6884,28 @@ Stylesheet: Posts
 }
 /* Featured Image
 ================================================== */
-.featured-content {
-  margin-bottom: 20px;
-}
-.featured-img-bg {
-  height: 300px;
+.excerpt-img-bg {
+  height: 200px;
   background-width: 100% !important;
   background-size: cover !important;
   background-repeat: none !important;
   background-position: center center !important;
 }
-.featured-img img {
+@media (min-width: 991px) {
+  .excerpt-img-bg {
+    height: 300px;
+  }
+}
+.excerpt-img {
+  margin-bottom: 20px;
+}
+@media (min-width: 991px) {
+  .excerpt-img {
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+}
+.excerpt-img img {
   width: 100%;
   height: auto;
 }

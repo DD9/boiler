@@ -23,19 +23,26 @@ Stylesheet: Posts
 
 /* Featured Image
 ================================================== */
-.featured-content {
-  margin-bottom: 20px;
-}
 
-.featured-img-bg {
-  height: 300px;
+.excerpt-img-bg {
+  height: 200px;
   background-width: 100% !important;
   background-size: cover !important;
   background-repeat: none !important;
   background-position: center center !important;
+
+  @media (min-width: @screen-sm-max) {
+    height: 300px;
+  }
 }
 
-.featured-img { 
+.excerpt-img { 
+  margin-bottom: 20px;
+  @media (min-width: @screen-sm-max) {
+    margin-right: @line-height;
+    margin-bottom: 0;
+  }
+
   img {
     width: 100%;
     height: auto;
