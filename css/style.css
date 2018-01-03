@@ -6968,22 +6968,21 @@ Stylesheet: Header & Navigation
 }
 /* Current page highlighting 
 ================================================== */
-@media (min-width: 992px) {
-  .menu-primary.nav > li.current-menu-item > a,
-  .menu-primary.nav > li.current-menu-parent > a,
-  .menu-primary.nav > li.current-menu-ancestor > a,
-  .menu-primary.nav > li.current_page_parent > a,
-  .menu-primary.nav > li.current-menu-item > a:hover,
-  .menu-primary.nav > li.current-menu-parent > a:hover,
-  .menu-primary.nav > li.current-menu-ancestor > a:hover,
-  .menu-primary.nav > li.current_page_parent > a:hover {
-    color: #337ab7;
-  }
+#menu-primary > .active > a > a,
+#menu-primary > li.current-menu-item > a,
+#menu-primary > li.current-menu-parent > a,
+#menu-primary > li.current-menu-ancestor > a,
+#menu-primary > .active > a > a:hover,
+#menu-primary > li.current-menu-item > a:hover,
+#menu-primary > li.current-menu-parent > a:hover,
+#menu-primary > li.current-menu-ancestor > a:hover,
+#menu-primary > .active > a > a:focus,
+#menu-primary > li.current-menu-item > a:focus,
+#menu-primary > li.current-menu-parent > a:focus,
+#menu-primary > li.current-menu-ancestor > a:focus {
+  color: #337ab7;
 }
-.menu-primary.nav > li.current-menu-item .dropdown-menu > li.active > a,
-.menu-primary.nav > li.current-menu-parent .dropdown-menu > li.active > a,
-.menu-primary.nav > li.current-menu-ancestor .dropdown-menu > li.active > a,
-.menu-primary.nav > li.current_page_parent .dropdown-menu > li.active > a {
+#menu-primary .dropdown-menu > li.active > a {
   color: #337ab7;
 }
 /******************************************************************
